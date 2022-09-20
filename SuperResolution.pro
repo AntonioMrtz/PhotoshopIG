@@ -38,3 +38,8 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+INCLUDEPATH += "C:\OpenCV\OpenCV4.6.0G\include"
+LIBS += -L"C:\OpenCV\OpenCV4.6.0G\lib"\
+ -llibopencv_world460
+
