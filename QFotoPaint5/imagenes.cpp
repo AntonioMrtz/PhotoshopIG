@@ -514,11 +514,17 @@ void ver_suavizado (int nfoto, int ntipo, int tamx, int tamy, bool guardar)
 {
     assert(nfoto>=0 && nfoto<MAX_VENTANAS && foto[nfoto].usada);
     assert(tamx>0 && tamx&1 && tamy>0 && tamy&1);
-    Mat img= foto[nfoto].img.clone();
+    Mat img = foto[nfoto].img.clone();
+    Rect2d roi = foto[nfoto].roi;
+    Mat img2 = img(roi);
+
     if (ntipo == 1)
-        GaussianBlur(foto[nfoto].img, img, Size(tamx, tamy), 0);
+        GaussianBlur(img2, img, Size(tamx, tamy), 0);
     else if (ntipo == 2)
-        blur(foto[nfoto].img, img, Size(tamx, tamy));
+        blur(img2, img, Size(tamx, tamy));
+    else if (ntipo == 3)
+        medianBlur(img2, img, tamx*tamy);
+
     imshow(foto[nfoto].nombre, img);
     if (guardar) {
         img.copyTo(foto[nfoto].img);

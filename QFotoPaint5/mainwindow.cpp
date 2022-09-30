@@ -318,3 +318,11 @@ void MainWindow::on_actionRectangulo_triggered()
     herr_actual=HER_RECTANGULO;
     ui->toolButton_7->setChecked(true);
 }
+
+void MainWindow::on_actionMediana_triggered()
+{
+    if (foto_activa() != -1) {
+        suavizados sg(foto_activa(), 3, this);
+        sg.exec();
+    }
+}

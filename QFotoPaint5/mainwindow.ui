@@ -413,6 +413,7 @@ p, li { white-space: pre-wrap; }
      </property>
      <addaction name="actionGausiano"/>
      <addaction name="actionMedia"/>
+     <addaction name="actionMediana"/>
     </widget>
     <addaction name="menuSuavizado"/>
    </widget>
@@ -580,6 +581,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionRectangulo">
    <property name="text">
     <string>Rectangulo</string>
+   </property>
+  </action>
+  <action name="actionMediana">
+   <property name="text">
+    <string>Mediana</string>
    </property>
   </action>
  </widget>
