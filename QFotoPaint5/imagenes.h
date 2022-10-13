@@ -40,7 +40,7 @@ struct ventana {
 //    Enumerado con los distintos tipos posibles de herramientas
 //    que se pueden usar. Añadir nuevas aquí
 
-enum tipo_herramienta {HER_PUNTO, HER_LINEA, HER_SELECCION, HER_RECTANGULO};
+enum tipo_herramienta {HER_PUNTO, HER_LINEA, HER_SELECCION, HER_RECTANGULO,HER_ARCO_IRIS};
 
 
 ///////////////////////////////////////////////////////////////////
@@ -158,5 +158,10 @@ void media_ponderada (int nf1, int nf2, int nueva, double peso);
 
 string Lt1(string cadena);
 // Convertir una cadena de UTF8 a Latin1
+
+
+void ver_histograma(int nfotos,int nres,int canal);
+// Mostrar el histograma de la imagen nfoto, y canal dado guardando en nres
+
 
 #endif // IMAGENES_H

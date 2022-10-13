@@ -274,7 +274,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QToolButton" name="toolButton_6">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>250</x>
       <y>0</y>
       <width>41</width>
       <height>41</height>
@@ -319,7 +319,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QToolButton" name="toolButton_7">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>290</x>
       <y>0</y>
       <width>41</width>
       <height>41</height>
@@ -339,6 +339,19 @@ p, li { white-space: pre-wrap; }
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QToolButton" name="toolButton_8">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>0</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Arcoiris</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -355,6 +368,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionNueva_imagen"/>
     <addaction name="actionAbrir_imagen"/>
+    <addaction name="actionCaptura_de_c_mara"/>
     <addaction name="separator"/>
     <addaction name="actionGuardar"/>
     <addaction name="actionGuardar_como"/>
@@ -373,9 +387,20 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionColor_del_pincel"/>
      <addaction name="actionPreguntar_si_guardar"/>
     </widget>
+    <widget class="QMenu" name="menuHistograma">
+     <property name="title">
+      <string>Histograma</string>
+     </property>
+     <addaction name="actionGrises"/>
+     <addaction name="actionRojo"/>
+     <addaction name="actionVerde"/>
+     <addaction name="actionAzul"/>
+    </widget>
     <addaction name="actionSeleccionar_todo"/>
     <addaction name="separator"/>
     <addaction name="menuOpciones"/>
+    <addaction name="actionCopiar_a_nueva"/>
+    <addaction name="menuHistograma"/>
    </widget>
    <widget class="QMenu" name="menuHerramientas">
     <property name="title">
@@ -385,6 +410,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionLinea"/>
     <addaction name="actionRectangulo"/>
     <addaction name="actionSeleccionar"/>
+    <addaction name="actionArcoiris"/>
    </widget>
    <widget class="QMenu" name="menuTransformar">
     <property name="title">
@@ -586,6 +612,41 @@ p, li { white-space: pre-wrap; }
   <action name="actionMediana">
    <property name="text">
     <string>Mediana</string>
+   </property>
+  </action>
+  <action name="actionCopiar_a_nueva">
+   <property name="text">
+    <string>Copiar a nueva</string>
+   </property>
+  </action>
+  <action name="actionCaptura_de_c_mara">
+   <property name="text">
+    <string>Captura de cámara</string>
+   </property>
+  </action>
+  <action name="actionArcoiris">
+   <property name="text">
+    <string>Arcoiris</string>
+   </property>
+  </action>
+  <action name="actionGrises">
+   <property name="text">
+    <string>Grises</string>
+   </property>
+  </action>
+  <action name="actionVerde">
+   <property name="text">
+    <string>Verde</string>
+   </property>
+  </action>
+  <action name="actionRojo">
+   <property name="text">
+    <string>Rojo</string>
+   </property>
+  </action>
+  <action name="actionAzul">
+   <property name="text">
+    <string>Azul</string>
    </property>
   </action>
  </widget>

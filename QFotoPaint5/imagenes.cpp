@@ -371,6 +371,60 @@ void cb_ver_seleccion (int factual, int x, int y, bool foto_roi)
 
 //---------------------------------------------------------------------------
 
+Scalar ColorArcoIris(){
+
+    static Scalar colorActual= CV_RGB(255,0,0);
+    static int estado=0;
+    switch(estado){
+
+    case 0:
+            colorActual.val[1]+=8;   //TODO OPCIONAL
+            if(colorActual.val[1]==255) estado=1;
+            break;
+
+    case 1: if(--colorActual.val[2]==0) estado=2;
+            break;
+
+    case 2: if (++colorActual.val[0]==255) estado=3;
+            break;
+
+    case 3:if (--colorActual.val[1]==0) estado=4;
+            break;
+
+    case 4 :if(++colorActual[2]=255) estado=5;
+            break;
+
+    case 5: if(--colorActual[0]==0) estado=0;
+
+
+    }
+
+    return colorActual;
+}
+
+
+void cb_arco_iris (int factual, int x, int y)
+{
+    Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
+    if (difum_pincel==0)
+        circle(im, Point(x, y), radio_pincel, ColorArcoIris(), -1, LINE_AA);
+    else {
+        Mat res(im.size(), im.type(), ColorArcoIris());
+        Mat cop(im.size(), im.type(), CV_RGB(0,0,0));
+        circle(cop, Point(x, y), radio_pincel, CV_RGB(255,255,255), -1, LINE_AA);
+        blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
+        multiply(res, cop, res, 1.0/255.0);
+        bitwise_not(cop, cop);
+        multiply(im, cop, im, 1.0/255.0);
+        im= res + im;
+    }
+    imshow(foto[factual].nombre, im);
+    foto[factual].modificada= true;
+}
+
+
+//---------------------------------------------------------------------------
+
 void callback (int event, int x, int y, int flags, void *_nfoto)
 {
     int factual= reinterpret_cast<int>(_nfoto);
@@ -431,6 +485,15 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
         else
             ninguna_accion(factual, x, y);
         break;
+
+    case HER_ARCO_IRIS:
+        if (flags==EVENT_FLAG_LBUTTON)
+            cb_arco_iris(factual, x, y);
+        else
+            ninguna_accion(factual, x, y);
+        break;
+
+
     }
     escribir_barra_estado();
 }
@@ -555,3 +618,74 @@ string Lt1(string cadena)
 }
 
 //---------------------------------------------------------------------------
+
+void ver_histograma(int nfotos,int nres,int canal){
+
+
+
+    QImage imq= QImage(":/imagenes/histbase.png");
+    Mat imghist(imq.height(),imq.width(),CV_8UC4,imq.scanLine(0));
+    cvtColor(imghist, imghist, COLOR_RGBA2RGB);
+
+    Mat gris;
+    Mat hist;
+    cvtColor(foto[nfotos].img, gris, COLOR_BGR2GRAY);  // Conversión a gris
+    int canales[1]= {0};
+    int bins[1]= {256};
+    float rango[2]= {0, 256};
+    const float *rangos[]= {rango};
+    double vmin,vmax;
+
+    if(canal==3){
+
+        calcHist(&gris, 1, canales, noArray(), hist, 1, bins, rangos);
+    }
+    else{
+
+        calcHist(&foto[nfotos].img, 1, canales, noArray(), hist, 1, bins, rangos);
+    }
+
+
+    minMaxLoc(hist,&vmin,&vmax);
+    for (int i= 0; i<256; i++){
+
+        float poshist= 185 - hist.at<float>(i)/vmax*182;
+        rectangle(imghist,Point(3+i*391.0/256,185),Point(3+(i+1)*391.0/256,poshist),CV_RGB(canal==2?255:0,canal==1?255:0,canal==0?255:0),-1);
+        //qDebug("Celda %d: %g", i, hist.at<float>(i));
+    }
+
+    crear_nueva(nres,imghist);
+}
+
+
+
+//---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
