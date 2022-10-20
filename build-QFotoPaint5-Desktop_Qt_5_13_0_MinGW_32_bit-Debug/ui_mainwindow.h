@@ -61,6 +61,7 @@ public:
     QAction *actionVerde;
     QAction *actionRojo;
     QAction *actionAzul;
+    QAction *actionBajorrelieve;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -169,6 +170,8 @@ public:
         actionRojo->setObjectName(QString::fromUtf8("actionRojo"));
         actionAzul = new QAction(MainWindow);
         actionAzul->setObjectName(QString::fromUtf8("actionAzul"));
+        actionBajorrelieve = new QAction(MainWindow);
+        actionBajorrelieve->setObjectName(QString::fromUtf8("actionBajorrelieve"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -341,6 +344,7 @@ public:
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
         menuEfectos->addAction(menuSuavizado->menuAction());
+        menuEfectos->addAction(actionBajorrelieve);
         menuSuavizado->addAction(actionGausiano);
         menuSuavizado->addAction(actionMedia);
         menuSuavizado->addAction(actionMediana);
@@ -392,6 +396,7 @@ public:
         actionVerde->setText(QCoreApplication::translate("MainWindow", "Verde", nullptr));
         actionRojo->setText(QCoreApplication::translate("MainWindow", "Rojo", nullptr));
         actionAzul->setText(QCoreApplication::translate("MainWindow", "Azul", nullptr));
+        actionBajorrelieve->setText(QCoreApplication::translate("MainWindow", "Bajorrelieve...", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

@@ -597,6 +597,42 @@ void ver_suavizado (int nfoto, int ntipo, int tamx, int tamy, bool guardar)
 
 //---------------------------------------------------------------------------
 
+void ver_bajorelieve(int nfoto, double angulo, double grado, int fondo,
+                     bool guardar)
+{
+    QString nombres[4]= {":/imagenes/arena.jpg",":/imagenes/cielo.jpg",":/imagenes/gris_fondo.jpg",":/imagenes/madera.jpg"};
+    QImage imq = QImage(nombres[fondo]);
+    Mat imgfondo(imq.height(),imq.width(),CV_8UC4,imq.scanLine(0));
+    cvtColor(imgfondo,imgfondo,COLOR_RGBA2RGB);
+    resize(imgfondo,imgfondo,foto[nfoto].img.size());
+    imshow("Fondo",imgfondo);
+
+
+    Mat gris;
+    cvtColor(foto[nfoto].img, gris, COLOR_BGR2GRAY);
+    Mat rotada;
+    rotar_angulo(gris,rotada,angulo,1.0,1);
+    Mat sobel;
+    Sobel(rotada,sobel,CV_8U,1,0,3,grado,128);
+    rotar_angulo(sobel,rotada,-angulo,1.0,0);
+    gris = rotada(Rect((rotada.cols-gris.cols)/2,(rotada.rows-gris.rows)/2,gris.cols,gris.rows));
+
+    Mat array[3] = {gris,gris,gris};
+    Mat res;
+    merge(array,3,res);
+
+    addWeighted(imgfondo,1.0,res,1.0,-128,res);
+    if(guardar){
+        crear_nueva(primera_libre(),res);
+    }
+    else{
+        imshow("Bajorrelieve",res);
+    }
+
+}
+
+//---------------------------------------------------------------------------
+
 void media_ponderada (int nf1, int nf2, int nueva, double peso)
 {
     assert(nf1>=0 && nf1<MAX_VENTANAS && foto[nf1].usada);

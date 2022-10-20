@@ -442,6 +442,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionMediana"/>
     </widget>
     <addaction name="menuSuavizado"/>
+    <addaction name="actionBajorrelieve"/>
    </widget>
    <widget class="QMenu" name="menuV_deo">
     <property name="title">
@@ -647,6 +648,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionAzul">
    <property name="text">
     <string>Azul</string>
+   </property>
+  </action>
+  <action name="actionBajorrelieve">
+   <property name="text">
+    <string>Bajorrelieve...</string>
    </property>
   </action>
  </widget>

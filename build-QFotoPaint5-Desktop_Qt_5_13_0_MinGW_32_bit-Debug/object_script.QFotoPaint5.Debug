@@ -1,4 +1,5 @@
 debug/main.o
+debug/bajorrelieve.o
 debug/mainwindow.o
 debug/imagenes.o
 debug/dialognueva.o
@@ -11,6 +12,7 @@ debug/acercade.o
 debug/mediadevideo.o
 debug/qrc_recursos.o
 debug/moc_mainwindow.o
+debug/moc_bajorrelieve.o
 debug/moc_dialognueva.o
 debug/moc_brillocontraste.o
 debug/moc_suavizados.o
