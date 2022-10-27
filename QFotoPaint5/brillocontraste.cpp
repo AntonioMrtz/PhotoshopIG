@@ -9,7 +9,7 @@ brillocontraste::brillocontraste(int numfoto, QWidget *parent) :
 {
     ui->setupUi(this);
     nfoto= numfoto;
-    set_callback_foto(nfoto, false);
+    //set_callback_foto(nfoto, false);
     suma= 0.0;
     multiplica= 1.0;
     if (parent)

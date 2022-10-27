@@ -368,6 +368,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionNueva_imagen"/>
     <addaction name="actionAbrir_imagen"/>
+    <addaction name="actionCapturar_de_video"/>
     <addaction name="actionCaptura_de_c_mara"/>
     <addaction name="separator"/>
     <addaction name="actionGuardar"/>
@@ -428,6 +429,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionInvertir"/>
     <addaction name="menuRotar"/>
     <addaction name="actionMedia_ponderada"/>
+    <addaction name="actionAjuste_lineal"/>
    </widget>
    <widget class="QMenu" name="menuEfectos">
     <property name="title">
@@ -653,6 +655,16 @@ p, li { white-space: pre-wrap; }
   <action name="actionBajorrelieve">
    <property name="text">
     <string>Bajorrelieve...</string>
+   </property>
+  </action>
+  <action name="actionAjuste_lineal">
+   <property name="text">
+    <string>Ajuste lineal</string>
+   </property>
+  </action>
+  <action name="actionCapturar_de_video">
+   <property name="text">
+    <string>Capturar de video...</string>
    </property>
   </action>
  </widget>

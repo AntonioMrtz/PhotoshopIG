@@ -15,7 +15,9 @@ TEMPLATE = app
 CONFIG += c++11
 
 SOURCES += main.cpp\
+    ajustelineal.cpp \
     bajorrelieve.cpp \
+    capturarvideo.cpp \
     mainwindow.cpp \
     imagenes.cpp \
     dialognueva.cpp \
@@ -28,7 +30,9 @@ SOURCES += main.cpp\
     mediadevideo.cpp
 
 HEADERS  += mainwindow.h \
+    ajustelineal.h \
     bajorrelieve.h \
+    capturarvideo.h \
     imagenes.h \
     dialognueva.h \
     brillocontraste.h \
@@ -40,7 +44,9 @@ HEADERS  += mainwindow.h \
     mediadevideo.h
 
 FORMS    += mainwindow.ui \
+    ajustelineal.ui \
     bajorrelieve.ui \
+    capturarvideo.ui \
     dialognueva.ui \
     brillocontraste.ui \
     suavizados.ui \

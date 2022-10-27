@@ -17,6 +17,8 @@ using namespace cv;
 #include "suavizados.h"
 #include "video.h"
 #include "bajorrelieve.h"
+#include "ajustelineal.h"
+#include "capturarvideo.h"
 QString FiltroImagen = "Todos los formatos (*.jpg *.jpeg *.jpe .jp2 *.tif *.tiff *.png *.gif *.bmp *.dib *.webp *.ppm);;Archivos JPG (*.jpg *.jpeg *.jpe);;Archivos TIF (*.tif *.tiff);;Archivos PNG (*.png);;Archivos GIF (*.gif);;Archivos BMP (*.bmp *.dib);;Otros (*.*)";
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -399,3 +401,21 @@ void MainWindow::on_actionBajorrelieve_triggered()
         b.exec();
     }
 }
+
+void MainWindow::on_actionAjuste_lineal_triggered()
+{
+    if(foto_activa()!=-1){
+        Ajustelineal al(foto_activa());
+        al.exec();
+    }
+}
+
+void MainWindow::on_actionCapturar_de_video_triggered()
+{
+    QString nombre=QFileDialog::getOpenFileName();
+    if(!nombre.isEmpty()){
+        Capturarvideo cv(nombre);
+        cv.exec();
+    }
+}
+

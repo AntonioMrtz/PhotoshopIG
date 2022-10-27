@@ -633,6 +633,58 @@ void ver_bajorelieve(int nfoto, double angulo, double grado, int fondo,
 
 //---------------------------------------------------------------------------
 
+
+void ver_ajuste_lineal (int nfoto, double pmin, double pmax,bool guardar)
+{
+
+    Mat gris;
+    cvtColor(foto[nfoto].img,gris,COLOR_BGR2GRAY);
+
+    int canales[1]={0};
+    int bins[1]={256};
+    float rango[2]={0,256};
+    const float *rangos[]={rango};
+    Mat hist;
+
+    calcHist(&gris,1,canales,noArray(),hist,1,bins,rangos);
+    normalize(hist,hist,100,0,NORM_L1);
+    double acum=0;
+    int vmin=0;
+
+    for(;vmin<256 && acum<pmin;vmin++){
+
+        acum+=hist.at<float>(vmin);
+    }
+
+    acum=0;
+    int vmax=255;
+
+    for(;vmax>=0 && acum<pmax;vmax--){
+
+        acum+=hist.at<float>(vmax);
+    }
+
+    if(vmin>=vmax) vmax=vmin+1;
+
+    double a=255.0/(vmax-vmin);
+    double b=-vmin*a;
+
+    Mat res;
+
+    foto[nfoto].img.convertTo(res,CV_8U,a,b);
+    imshow(foto[nfoto].nombre,res);
+
+    if(guardar){
+
+        res.copyTo(foto[nfoto].img);
+        foto[nfoto].modificada=true;
+    }
+
+
+}
+
+//---------------------------------------------------------------------------
+
 void media_ponderada (int nf1, int nf2, int nueva, double peso)
 {
     assert(nf1>=0 && nf1<MAX_VENTANAS && foto[nf1].usada);

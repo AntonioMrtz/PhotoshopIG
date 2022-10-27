@@ -69,6 +69,8 @@ private slots:
     void on_actionRojo_triggered();
     void on_actionVerde_triggered();
     void on_actionBajorrelieve_triggered();
+    void on_actionAjuste_lineal_triggered();
+    void on_actionCapturar_de_video_triggered();
 };
 
 extern MainWindow *w;
