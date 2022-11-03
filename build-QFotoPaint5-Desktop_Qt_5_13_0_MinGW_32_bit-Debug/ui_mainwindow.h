@@ -62,6 +62,10 @@ public:
     QAction *actionRojo;
     QAction *actionAzul;
     QAction *actionBajorrelieve;
+    QAction *actionAjuste_lineal;
+    QAction *actionCapturar_de_video;
+    QAction *actionEscala_de_color;
+    QAction *actionPinchar_Estirar;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -172,6 +176,14 @@ public:
         actionAzul->setObjectName(QString::fromUtf8("actionAzul"));
         actionBajorrelieve = new QAction(MainWindow);
         actionBajorrelieve->setObjectName(QString::fromUtf8("actionBajorrelieve"));
+        actionAjuste_lineal = new QAction(MainWindow);
+        actionAjuste_lineal->setObjectName(QString::fromUtf8("actionAjuste_lineal"));
+        actionCapturar_de_video = new QAction(MainWindow);
+        actionCapturar_de_video->setObjectName(QString::fromUtf8("actionCapturar_de_video"));
+        actionEscala_de_color = new QAction(MainWindow);
+        actionEscala_de_color->setObjectName(QString::fromUtf8("actionEscala_de_color"));
+        actionPinchar_Estirar = new QAction(MainWindow);
+        actionPinchar_Estirar->setObjectName(QString::fromUtf8("actionPinchar_Estirar"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -313,6 +325,7 @@ public:
         menuBar->addAction(menuAyuda->menuAction());
         menuArchivo->addAction(actionNueva_imagen);
         menuArchivo->addAction(actionAbrir_imagen);
+        menuArchivo->addAction(actionCapturar_de_video);
         menuArchivo->addAction(actionCaptura_de_c_mara);
         menuArchivo->addSeparator();
         menuArchivo->addAction(actionGuardar);
@@ -340,11 +353,14 @@ public:
         menuTransformar->addAction(actionInvertir);
         menuTransformar->addAction(menuRotar->menuAction());
         menuTransformar->addAction(actionMedia_ponderada);
+        menuTransformar->addAction(actionAjuste_lineal);
+        menuTransformar->addAction(actionEscala_de_color);
         menuRotar->addAction(actionRotar_90);
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
         menuEfectos->addAction(menuSuavizado->menuAction());
         menuEfectos->addAction(actionBajorrelieve);
+        menuEfectos->addAction(actionPinchar_Estirar);
         menuSuavizado->addAction(actionGausiano);
         menuSuavizado->addAction(actionMedia);
         menuSuavizado->addAction(actionMediana);
@@ -397,6 +413,10 @@ public:
         actionRojo->setText(QCoreApplication::translate("MainWindow", "Rojo", nullptr));
         actionAzul->setText(QCoreApplication::translate("MainWindow", "Azul", nullptr));
         actionBajorrelieve->setText(QCoreApplication::translate("MainWindow", "Bajorrelieve...", nullptr));
+        actionAjuste_lineal->setText(QCoreApplication::translate("MainWindow", "Ajuste lineal", nullptr));
+        actionCapturar_de_video->setText(QCoreApplication::translate("MainWindow", "Capturar de video...", nullptr));
+        actionEscala_de_color->setText(QCoreApplication::translate("MainWindow", "Escala de color", nullptr));
+        actionPinchar_Estirar->setText(QCoreApplication::translate("MainWindow", "Pinchar/Estirar...", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

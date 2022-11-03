@@ -391,7 +391,7 @@ Scalar ColorArcoIris(){
     case 3:if (--colorActual.val[1]==0) estado=4;
             break;
 
-    case 4 :if(++colorActual[2]=255) estado=5;
+    case 4 :if(++colorActual[2]==255) estado=5;
             break;
 
     case 5: if(--colorActual[0]==0) estado=0;
@@ -681,6 +681,95 @@ void ver_ajuste_lineal (int nfoto, double pmin, double pmax,bool guardar)
     }
 
 
+}
+
+
+//---------------------------------------------------------------------------
+
+void escala_color(int nfoto, int nres)
+{
+    Mat gris;
+    cvtColor(foto[nfoto].img,gris,COLOR_BGR2GRAY);
+    cvtColor(gris,gris,COLOR_GRAY2BGR);
+    Mat lut(1,256,CV_8UC3);
+    int vb = color_pincel.val[0];
+    int vg = color_pincel.val[1];
+    int vr = color_pincel.val[2];
+    for(int A=0; A<256;A++){
+        //mejora a realizar que este 128 no sea fijo, revisar segun color objetivo
+        if(A<128){
+            lut.at<Vec3b>(A) = Vec3b(vb*A/128, vg*A/128,vr*A/128);
+        }else{
+            lut.at<Vec3b>(A) = Vec3b(vb+(255-vb)*(A-128)/128, vg+(255-vg)*(A-128)/128, vr+(255-vr)*(A-128)/128);
+        }
+    }
+    Mat res;
+    LUT(gris,lut,res);
+    crear_nueva(nres,res);
+}
+
+//---------------------------------------------------------------------------
+
+void ver_pinchar_estirar_onda(int nfoto, int cx, int cy, double radio, double grado, bool guardar){
+
+    // grado deformacion, fase y frecuencia se necesitarian añadir, centro x y cento y, no modificar grado con radio
+    Mat S(foto[nfoto].img.rows, foto[nfoto].img.cols, CV_32FC1);
+    for(int y=0;y<S.rows;y++){
+        for(int x=0;x<S.cols;x++){
+            S.at<float>(y,x)= sin(sqrt((x-cx)*(x-cx)+(y-cy)*(y-cy))/100.0+radio/100.0);
+        }
+    }
+    Mat Gx,Gy;
+    Sobel(S,Gx,CV_32F, 1,0,3,grado,0,BORDER_REFLECT);
+    Sobel(S,Gy,CV_32F, 0,1,3,grado,0,BORDER_REFLECT);
+    multiply(S,Gx,Gx);
+    multiply(S,Gy,Gy);
+
+
+    for(int y=0; y<S.rows;y++)
+        for(int x=0;x<S.cols;x++){
+            Gx.at<float>(y,x)+=x;
+            Gy.at<float>(y,x)+=y;
+        }
+    Mat res;
+    remap(foto[nfoto].img, res, Gx,Gy,INTER_LINEAR,BORDER_REFLECT);
+    imshow("Pinchar/Estirar",res);
+    if(guardar){
+        res.copyTo(foto[nfoto].img);
+        mostrar(nfoto);
+        foto[nfoto].modificada=true;
+    }
+}
+
+//---------------------------------------------------------------------------
+
+void ver_pinchar_estirar(int nfoto, int cx, int cy, double radio, double grado, bool guardar){
+    Mat S(foto[nfoto].img.rows, foto[nfoto].img.cols, CV_32FC1);
+    for(int y=0;y<S.rows;y++){
+        for(int x=0;x<S.cols;x++){
+            S.at<float>(y,x)= exp(-((x-cx)*(x-cx)+(y-cy)*(y-cy))/(radio*radio));
+        }
+    }
+    Mat Gx,Gy;
+    Sobel(S,Gx,CV_32F, 1,0,3,grado,0,BORDER_REFLECT);
+    Sobel(S,Gy,CV_32F, 0,1,3,grado,0,BORDER_REFLECT);
+    multiply(S,Gx,Gx);
+    multiply(S,Gy,Gy);
+
+
+    for(int y=0; y<S.rows;y++)
+        for(int x=0;x<S.cols;x++){
+            Gx.at<float>(y,x)+=x;
+            Gy.at<float>(y,x)+=y;
+        }
+    Mat res;
+    remap(foto[nfoto].img, res, Gx,Gy,INTER_LINEAR,BORDER_REFLECT);
+    imshow("Pinchar/Estirar",res);
+    if(guardar){
+        res.copyTo(foto[nfoto].img);
+        mostrar(nfoto);
+        foto[nfoto].modificada=true;
+    }
 }
 
 //---------------------------------------------------------------------------

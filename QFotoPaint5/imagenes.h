@@ -154,6 +154,10 @@ void ver_ajuste_lineal (int nfoto, double pmin, double pmax,bool guardar=false);
 
 // Operacion de ajuste lineal del histograma
 
+void ver_pinchar_estirar(int nfoto, int cx, int cy, double radio, double grado, bool guardar=false);
+//Transformacion deformante gausiana
+void escala_color(int nfoto, int nres);
+//Transformacion de escala de color usando color_pincel
 void ver_bajorelieve(int nfoto, double angulo, double grado, int fondo,
                      bool guardar=false);
 

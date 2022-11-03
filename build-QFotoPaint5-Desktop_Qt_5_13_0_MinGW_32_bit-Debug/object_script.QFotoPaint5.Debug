@@ -1,9 +1,12 @@
 debug/main.o
+debug/ajustelineal.o
 debug/bajorrelieve.o
+debug/capturarvideo.o
 debug/mainwindow.o
 debug/imagenes.o
 debug/dialognueva.o
 debug/brillocontraste.o
+debug/pinchar_estirar.o
 debug/suavizados.o
 debug/video.o
 debug/rotaravideo.o
@@ -12,9 +15,12 @@ debug/acercade.o
 debug/mediadevideo.o
 debug/qrc_recursos.o
 debug/moc_mainwindow.o
+debug/moc_ajustelineal.o
 debug/moc_bajorrelieve.o
+debug/moc_capturarvideo.o
 debug/moc_dialognueva.o
 debug/moc_brillocontraste.o
+debug/moc_pinchar_estirar.o
 debug/moc_suavizados.o
 debug/moc_rotaravideo.o
 debug/moc_mediaponderada.o
