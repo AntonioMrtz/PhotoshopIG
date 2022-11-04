@@ -73,6 +73,8 @@ private slots:
     void on_actionCapturar_de_video_triggered();
     void on_actionEscala_de_color_triggered();
     void on_actionPinchar_Estirar_triggered();
+    void on_actionMatiz_saturaci_n_luminosidad_triggered();
+    void on_actionPerfilar_triggered();
 };
 
 extern MainWindow *w;

@@ -66,6 +66,8 @@ public:
     QAction *actionCapturar_de_video;
     QAction *actionEscala_de_color;
     QAction *actionPinchar_Estirar;
+    QAction *actionMatiz_saturaci_n_luminosidad;
+    QAction *actionPerfilar;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -184,6 +186,10 @@ public:
         actionEscala_de_color->setObjectName(QString::fromUtf8("actionEscala_de_color"));
         actionPinchar_Estirar = new QAction(MainWindow);
         actionPinchar_Estirar->setObjectName(QString::fromUtf8("actionPinchar_Estirar"));
+        actionMatiz_saturaci_n_luminosidad = new QAction(MainWindow);
+        actionMatiz_saturaci_n_luminosidad->setObjectName(QString::fromUtf8("actionMatiz_saturaci_n_luminosidad"));
+        actionPerfilar = new QAction(MainWindow);
+        actionPerfilar->setObjectName(QString::fromUtf8("actionPerfilar"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -352,6 +358,7 @@ public:
         menuTransformar->addAction(actionBrillo_contraste);
         menuTransformar->addAction(actionInvertir);
         menuTransformar->addAction(menuRotar->menuAction());
+        menuTransformar->addAction(actionMatiz_saturaci_n_luminosidad);
         menuTransformar->addAction(actionMedia_ponderada);
         menuTransformar->addAction(actionAjuste_lineal);
         menuTransformar->addAction(actionEscala_de_color);
@@ -359,6 +366,7 @@ public:
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
         menuEfectos->addAction(menuSuavizado->menuAction());
+        menuEfectos->addAction(actionPerfilar);
         menuEfectos->addAction(actionBajorrelieve);
         menuEfectos->addAction(actionPinchar_Estirar);
         menuSuavizado->addAction(actionGausiano);
@@ -417,6 +425,8 @@ public:
         actionCapturar_de_video->setText(QCoreApplication::translate("MainWindow", "Capturar de video...", nullptr));
         actionEscala_de_color->setText(QCoreApplication::translate("MainWindow", "Escala de color", nullptr));
         actionPinchar_Estirar->setText(QCoreApplication::translate("MainWindow", "Pinchar/Estirar...", nullptr));
+        actionMatiz_saturaci_n_luminosidad->setText(QCoreApplication::translate("MainWindow", "Matiz/saturaci\303\263n/luminosidad...", nullptr));
+        actionPerfilar->setText(QCoreApplication::translate("MainWindow", "Perfilar...", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

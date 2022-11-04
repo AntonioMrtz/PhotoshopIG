@@ -158,6 +158,15 @@ void ver_pinchar_estirar(int nfoto, int cx, int cy, double radio, double grado, 
 //Transformacion deformante gausiana
 void escala_color(int nfoto, int nres);
 //Transformacion de escala de color usando color_pincel
+
+
+void ver_matiz_saturacion_luminosidad(int nfoto,int matiz,double satu,double lumi,bool guardar=false);
+//modificacion matiz/saturacion/luminosidad
+
+
+void ver_perfilado(int nfoto,int tam,double grado,bool guardar=false);
+//Operacion de perfilado usando la laplaciana
+
 void ver_bajorelieve(int nfoto, double angulo, double grado, int fondo,
                      bool guardar=false);
 

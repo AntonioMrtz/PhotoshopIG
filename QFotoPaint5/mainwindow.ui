@@ -428,6 +428,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionBrillo_contraste"/>
     <addaction name="actionInvertir"/>
     <addaction name="menuRotar"/>
+    <addaction name="actionMatiz_saturaci_n_luminosidad"/>
     <addaction name="actionMedia_ponderada"/>
     <addaction name="actionAjuste_lineal"/>
     <addaction name="actionEscala_de_color"/>
@@ -445,6 +446,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionMediana"/>
     </widget>
     <addaction name="menuSuavizado"/>
+    <addaction name="actionPerfilar"/>
     <addaction name="actionBajorrelieve"/>
     <addaction name="actionPinchar_Estirar"/>
    </widget>
@@ -677,6 +679,16 @@ p, li { white-space: pre-wrap; }
   <action name="actionPinchar_Estirar">
    <property name="text">
     <string>Pinchar/Estirar...</string>
+   </property>
+  </action>
+  <action name="actionMatiz_saturaci_n_luminosidad">
+   <property name="text">
+    <string>Matiz/saturación/luminosidad...</string>
+   </property>
+  </action>
+  <action name="actionPerfilar">
+   <property name="text">
+    <string>Perfilar...</string>
    </property>
   </action>
  </widget>
