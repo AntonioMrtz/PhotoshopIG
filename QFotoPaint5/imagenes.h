@@ -183,5 +183,7 @@ string Lt1(string cadena);
 void ver_histograma(int nfotos,int nres,int canal);
 // Mostrar el histograma de la imagen nfoto, y canal dado guardando en nres
 
+void ver_perspectiva(int nfoto1, int nfoto2, Point2f pt1[], Point2f pt2[], bool guardar=false);
+//Transformacion perspectiva de nfoto1 a nfoto2
 
 #endif // IMAGENES_H

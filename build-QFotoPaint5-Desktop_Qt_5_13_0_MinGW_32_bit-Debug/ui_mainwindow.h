@@ -68,6 +68,7 @@ public:
     QAction *actionPinchar_Estirar;
     QAction *actionMatiz_saturaci_n_luminosidad;
     QAction *actionPerfilar;
+    QAction *actionPerspectiva;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -190,6 +191,8 @@ public:
         actionMatiz_saturaci_n_luminosidad->setObjectName(QString::fromUtf8("actionMatiz_saturaci_n_luminosidad"));
         actionPerfilar = new QAction(MainWindow);
         actionPerfilar->setObjectName(QString::fromUtf8("actionPerfilar"));
+        actionPerspectiva = new QAction(MainWindow);
+        actionPerspectiva->setObjectName(QString::fromUtf8("actionPerspectiva"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -362,6 +365,7 @@ public:
         menuTransformar->addAction(actionMedia_ponderada);
         menuTransformar->addAction(actionAjuste_lineal);
         menuTransformar->addAction(actionEscala_de_color);
+        menuTransformar->addAction(actionPerspectiva);
         menuRotar->addAction(actionRotar_90);
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
@@ -427,6 +431,7 @@ public:
         actionPinchar_Estirar->setText(QCoreApplication::translate("MainWindow", "Pinchar/Estirar...", nullptr));
         actionMatiz_saturaci_n_luminosidad->setText(QCoreApplication::translate("MainWindow", "Matiz/saturaci\303\263n/luminosidad...", nullptr));
         actionPerfilar->setText(QCoreApplication::translate("MainWindow", "Perfilar...", nullptr));
+        actionPerspectiva->setText(QCoreApplication::translate("MainWindow", "Perspectiva...", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

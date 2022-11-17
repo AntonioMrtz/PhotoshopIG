@@ -24,6 +24,7 @@ SOURCES += main.cpp\
     brillocontraste.cpp \
     matsatlum.cpp \
     perfilado.cpp \
+    perspectiva.cpp \
     pinchar_estirar.cpp \
     suavizados.cpp \
     video.cpp \
@@ -41,6 +42,7 @@ HEADERS  += mainwindow.h \
     brillocontraste.h \
     matsatlum.h \
     perfilado.h \
+    perspectiva.h \
     pinchar_estirar.h \
     suavizados.h \
     video.h \
@@ -57,6 +59,7 @@ FORMS    += mainwindow.ui \
     brillocontraste.ui \
     matsatlum.ui \
     perfilado.ui \
+    perspectiva.ui \
     pinchar_estirar.ui \
     suavizados.ui \
     rotaravideo.ui \

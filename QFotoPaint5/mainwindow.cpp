@@ -23,6 +23,7 @@ using namespace cv;
 #include "pinchar_estirar.h"
 #include "matsatlum.h"
 #include "perfilado.h"
+#include "perspectiva.h"
 QString FiltroImagen = "Todos los formatos (*.jpg *.jpeg *.jpe .jp2 *.tif *.tiff *.png *.gif *.bmp *.dib *.webp *.ppm);;Archivos JPG (*.jpg *.jpeg *.jpe);;Archivos TIF (*.tif *.tiff);;Archivos PNG (*.png);;Archivos GIF (*.gif);;Archivos BMP (*.bmp *.dib);;Otros (*.*)";
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -457,5 +458,13 @@ void MainWindow::on_actionPerfilar_triggered()
 
         Perfilado pf(foto_activa());
         pf.exec();
+    }
+}
+
+void MainWindow::on_actionPerspectiva_triggered()
+{
+    if(foto_activa()!=-1){
+        Perspectiva p;
+        p.exec();
     }
 }
