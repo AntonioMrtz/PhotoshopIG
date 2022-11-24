@@ -69,6 +69,7 @@ public:
     QAction *actionMatiz_saturaci_n_luminosidad;
     QAction *actionPerfilar;
     QAction *actionPerspectiva;
+    QAction *actionMovimiento;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -193,6 +194,8 @@ public:
         actionPerfilar->setObjectName(QString::fromUtf8("actionPerfilar"));
         actionPerspectiva = new QAction(MainWindow);
         actionPerspectiva->setObjectName(QString::fromUtf8("actionPerspectiva"));
+        actionMovimiento = new QAction(MainWindow);
+        actionMovimiento->setObjectName(QString::fromUtf8("actionMovimiento"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -381,6 +384,7 @@ public:
         menuV_deo->addAction(actionV_deo_a_video);
         menuImagen_a_v_deo->addAction(actionRotar_imagen);
         menuV_deo_a_imagen->addAction(actionImagen_media);
+        menuV_deo_a_imagen->addAction(actionMovimiento);
         menuAyuda->addAction(actionAcerca_de);
 
         retranslateUi(MainWindow);
@@ -432,6 +436,7 @@ public:
         actionMatiz_saturaci_n_luminosidad->setText(QCoreApplication::translate("MainWindow", "Matiz/saturaci\303\263n/luminosidad...", nullptr));
         actionPerfilar->setText(QCoreApplication::translate("MainWindow", "Perfilar...", nullptr));
         actionPerspectiva->setText(QCoreApplication::translate("MainWindow", "Perspectiva...", nullptr));
+        actionMovimiento->setText(QCoreApplication::translate("MainWindow", "Movimiento...", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
