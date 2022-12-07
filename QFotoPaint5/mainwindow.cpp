@@ -485,3 +485,15 @@ void MainWindow::on_actionMovimiento_triggered()
 
     }
 }
+
+void MainWindow::on_actionCopiar_triggered()
+{
+    herr_actual=HER_COPIAR;
+}
+
+void MainWindow::on_actionColor_Falso_triggered()
+{
+    if(foto_activa()!=-1 && primera_libre()!=-1){
+        color_falso(foto_activa(),primera_libre());
+    }
+}

@@ -412,6 +412,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionRectangulo"/>
     <addaction name="actionSeleccionar"/>
     <addaction name="actionArcoiris"/>
+    <addaction name="actionCopiar"/>
    </widget>
    <widget class="QMenu" name="menuTransformar">
     <property name="title">
@@ -433,6 +434,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionAjuste_lineal"/>
     <addaction name="actionEscala_de_color"/>
     <addaction name="actionPerspectiva"/>
+    <addaction name="actionColor_Falso"/>
    </widget>
    <widget class="QMenu" name="menuEfectos">
     <property name="title">
@@ -701,6 +703,16 @@ p, li { white-space: pre-wrap; }
   <action name="actionMovimiento">
    <property name="text">
     <string>Movimiento...</string>
+   </property>
+  </action>
+  <action name="actionCopiar">
+   <property name="text">
+    <string>Copiar</string>
+   </property>
+  </action>
+  <action name="actionColor_Falso">
+   <property name="text">
+    <string>Color Falso</string>
    </property>
   </action>
  </widget>

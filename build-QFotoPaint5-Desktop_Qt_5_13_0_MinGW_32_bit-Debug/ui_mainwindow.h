@@ -70,6 +70,8 @@ public:
     QAction *actionPerfilar;
     QAction *actionPerspectiva;
     QAction *actionMovimiento;
+    QAction *actionCopiar;
+    QAction *actionColor_Falso;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -196,6 +198,10 @@ public:
         actionPerspectiva->setObjectName(QString::fromUtf8("actionPerspectiva"));
         actionMovimiento = new QAction(MainWindow);
         actionMovimiento->setObjectName(QString::fromUtf8("actionMovimiento"));
+        actionCopiar = new QAction(MainWindow);
+        actionCopiar->setObjectName(QString::fromUtf8("actionCopiar"));
+        actionColor_Falso = new QAction(MainWindow);
+        actionColor_Falso->setObjectName(QString::fromUtf8("actionColor_Falso"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -361,6 +367,7 @@ public:
         menuHerramientas->addAction(actionRectangulo);
         menuHerramientas->addAction(actionSeleccionar);
         menuHerramientas->addAction(actionArcoiris);
+        menuHerramientas->addAction(actionCopiar);
         menuTransformar->addAction(actionBrillo_contraste);
         menuTransformar->addAction(actionInvertir);
         menuTransformar->addAction(menuRotar->menuAction());
@@ -369,6 +376,7 @@ public:
         menuTransformar->addAction(actionAjuste_lineal);
         menuTransformar->addAction(actionEscala_de_color);
         menuTransformar->addAction(actionPerspectiva);
+        menuTransformar->addAction(actionColor_Falso);
         menuRotar->addAction(actionRotar_90);
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
@@ -437,6 +445,8 @@ public:
         actionPerfilar->setText(QCoreApplication::translate("MainWindow", "Perfilar...", nullptr));
         actionPerspectiva->setText(QCoreApplication::translate("MainWindow", "Perspectiva...", nullptr));
         actionMovimiento->setText(QCoreApplication::translate("MainWindow", "Movimiento...", nullptr));
+        actionCopiar->setText(QCoreApplication::translate("MainWindow", "Copiar", nullptr));
+        actionColor_Falso->setText(QCoreApplication::translate("MainWindow", "Color Falso", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

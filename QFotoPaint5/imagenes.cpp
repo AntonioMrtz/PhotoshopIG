@@ -24,7 +24,12 @@ int difum_pincel= 10;
 
 bool preguntar_guardar= true;
 
+bool imagen_copiada = false;
+
+Mat imagen_a_copiar;
+
 static int numpos= 0; // Número actual en el orden de posición de las ventanas
+
 
 ///////////////////////////////////////////////////////////////////
 /////////  FUNCIONES DE MANEJO DE VENTANAS           //////////////
@@ -371,6 +376,54 @@ void cb_ver_seleccion (int factual, int x, int y, bool foto_roi)
 
 //---------------------------------------------------------------------------
 
+void cb_copiar (int factual, int x, int y)
+{
+    Mat im= foto[factual].img;
+    Rect copiarRegion= Rect(min(downx, x), min(downy, y),
+                     max(downx, x)-min(downx, x)+1, max(downy, y)-min(downy, y)+1);
+    imagen_a_copiar = im(copiarRegion);
+}
+
+//---------------------------------------------------------------------------
+
+void cb_pegar (int factual, int x, int y)
+{
+    Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
+    Mat destImg;
+    Point center(100,100);
+    int radius=50;
+    int thickness = 2;
+    Scalar line_Color(0, 0, 0);
+    resize(imagen_a_copiar,destImg,Size(200,200),0,0);
+
+
+        Mat res(Size(200,200), destImg.type(), color_pincel);
+        Mat cop(Size(200,200), destImg.type(), CV_RGB(0,0,0));
+        circle(cop, Point(100, 100), 50, CV_RGB(255,255,255), -1, LINE_AA);
+        blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
+        multiply(destImg, cop, destImg, 1.0/255.0);
+
+        Mat nueva2(im.size(), im.type(),CV_RGB(0,0,0));
+        Mat nueva(im.size(), im.type(),CV_RGB(0,0,0));
+
+        destImg.copyTo(nueva(Rect(0,0,200,200)));
+
+        circle(nueva2, Point(100, 100), 50, CV_RGB(255,255,255), -1, LINE_AA);
+        bitwise_not(nueva2, nueva2);
+        multiply(im, nueva2, im, 1.0/255.0);
+
+
+        im = nueva + im;
+
+
+
+
+    imshow(foto[factual].nombre, im);
+    foto[factual].modificada= true;
+}
+
+//---------------------------------------------------------------------------
+
 Scalar ColorArcoIris(){
 
     static Scalar colorActual= CV_RGB(255,0,0);
@@ -489,6 +542,26 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
     case HER_ARCO_IRIS:
         if (flags==EVENT_FLAG_LBUTTON)
             cb_arco_iris(factual, x, y);
+        else
+            ninguna_accion(factual, x, y);
+        break;
+    case HER_COPIAR:
+
+        if (event==EVENT_LBUTTONUP){
+            qDebug("Button Up");
+            if(!imagen_copiada){
+                qDebug("copiada");
+                cb_copiar(factual, x, y);
+                imagen_copiada=true;
+            }
+            else{
+                qDebug("sinCopi");
+                cb_pegar(factual, x, y);
+                imagen_copiada=false;
+            }
+        }
+        else if (!imagen_copiada && event==EVENT_MOUSEMOVE && flags==EVENT_FLAG_LBUTTON)
+            cb_ver_rectangulo(factual, x, y);
         else
             ninguna_accion(factual, x, y);
         break;
@@ -732,6 +805,33 @@ void escala_color(int nfoto, int nres)
     LUT(gris,lut,res);
     crear_nueva(nres,res);
 }
+
+//---------------------------------------------------------------------------
+
+void color_falso(int nfoto, int nres)
+{
+    Mat res;
+    Mat im = foto[nfoto].img;
+    applyColorMap(im,res,COLORMAP_JET);
+    crear_nueva(nres,res);
+}
+
+//---------------------------------------------------------------------------
+
+void transformar_modelo_color(int nfoto, bool guardar)
+{
+    Mat res;
+    Mat im = foto[nfoto].img;
+    cvtColor(im,res,COLOR_RGB2BGR);
+    imshow("Pinchar/Estirar",res);
+    if(guardar){
+        res.copyTo(foto[nfoto].img);
+        mostrar(nfoto);
+        foto[nfoto].modificada=true;
+    }
+
+}
+//Interfaz o no
 
 //---------------------------------------------------------------------------
 

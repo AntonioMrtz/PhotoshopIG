@@ -40,7 +40,7 @@ struct ventana {
 //    Enumerado con los distintos tipos posibles de herramientas
 //    que se pueden usar. Añadir nuevas aquí
 
-enum tipo_herramienta {HER_PUNTO, HER_LINEA, HER_SELECCION, HER_RECTANGULO,HER_ARCO_IRIS};
+enum tipo_herramienta {HER_PUNTO, HER_LINEA, HER_SELECCION, HER_RECTANGULO,HER_ARCO_IRIS, HER_COPIAR};
 
 
 ///////////////////////////////////////////////////////////////////
@@ -158,6 +158,7 @@ void ver_pinchar_estirar(int nfoto, int cx, int cy, double radio, double grado, 
 //Transformacion deformante gausiana
 void escala_color(int nfoto, int nres);
 //Transformacion de escala de color usando color_pincel
+void color_falso(int nfoto, int nres);
 
 
 void ver_matiz_saturacion_luminosidad(int nfoto,int matiz,double satu,double lumi,bool guardar=false);
