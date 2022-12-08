@@ -79,6 +79,7 @@ private slots:
     void on_actionMovimiento_triggered();
     void on_actionCopiar_triggered();
     void on_actionColor_Falso_triggered();
+    void on_actionRellenar_triggered();
 };
 
 extern MainWindow *w;

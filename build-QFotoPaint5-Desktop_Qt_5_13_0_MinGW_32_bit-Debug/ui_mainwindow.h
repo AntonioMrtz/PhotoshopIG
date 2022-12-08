@@ -72,6 +72,7 @@ public:
     QAction *actionMovimiento;
     QAction *actionCopiar;
     QAction *actionColor_Falso;
+    QAction *actionRellenar;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -202,6 +203,8 @@ public:
         actionCopiar->setObjectName(QString::fromUtf8("actionCopiar"));
         actionColor_Falso = new QAction(MainWindow);
         actionColor_Falso->setObjectName(QString::fromUtf8("actionColor_Falso"));
+        actionRellenar = new QAction(MainWindow);
+        actionRellenar->setObjectName(QString::fromUtf8("actionRellenar"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -368,6 +371,7 @@ public:
         menuHerramientas->addAction(actionSeleccionar);
         menuHerramientas->addAction(actionArcoiris);
         menuHerramientas->addAction(actionCopiar);
+        menuHerramientas->addAction(actionRellenar);
         menuTransformar->addAction(actionBrillo_contraste);
         menuTransformar->addAction(actionInvertir);
         menuTransformar->addAction(menuRotar->menuAction());
@@ -447,6 +451,7 @@ public:
         actionMovimiento->setText(QCoreApplication::translate("MainWindow", "Movimiento...", nullptr));
         actionCopiar->setText(QCoreApplication::translate("MainWindow", "Copiar", nullptr));
         actionColor_Falso->setText(QCoreApplication::translate("MainWindow", "Color Falso", nullptr));
+        actionRellenar->setText(QCoreApplication::translate("MainWindow", "Rellenar", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

@@ -40,7 +40,7 @@ struct ventana {
 //    Enumerado con los distintos tipos posibles de herramientas
 //    que se pueden usar. Añadir nuevas aquí
 
-enum tipo_herramienta {HER_PUNTO, HER_LINEA, HER_SELECCION, HER_RECTANGULO,HER_ARCO_IRIS, HER_COPIAR};
+enum tipo_herramienta {HER_PUNTO, HER_LINEA, HER_SELECCION, HER_RECTANGULO,HER_ARCO_IRIS, HER_COPIAR,HER_RELLENAR};
 
 
 ///////////////////////////////////////////////////////////////////
@@ -153,6 +153,7 @@ void ver_suavizado (int nfoto, int ntipo, int tamx, int tamy,
 void ver_ajuste_lineal (int nfoto, double pmin, double pmax,bool guardar=false);
 
 // Operacion de ajuste lineal del histograma
+void ver_rellenar(int nfoto, int x, int y, bool guardar=false);
 
 void ver_pinchar_estirar(int nfoto, int cx, int cy, double radio, double grado, bool guardar=false);
 //Transformacion deformante gausiana

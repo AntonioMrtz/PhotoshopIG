@@ -390,34 +390,33 @@ void cb_pegar (int factual, int x, int y)
 {
     Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
     Mat destImg;
-    Point center(100,100);
-    int radius=50;
-    int thickness = 2;
-    Scalar line_Color(0, 0, 0);
-    resize(imagen_a_copiar,destImg,Size(200,200),0,0);
+    int tamX = 400;
+    int tamY = 400;
+    if(x+400>im.cols){
+        tamX=im.cols-x;
+    }
+    if(y+400>im.rows){
+        tamY=im.rows-y;
+    }
+
+    resize(imagen_a_copiar,destImg,Size(tamX,tamY),0,0);
 
 
-        Mat res(Size(200,200), destImg.type(), color_pincel);
-        Mat cop(Size(200,200), destImg.type(), CV_RGB(0,0,0));
-        circle(cop, Point(100, 100), 50, CV_RGB(255,255,255), -1, LINE_AA);
-        blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
-        multiply(destImg, cop, destImg, 1.0/255.0);
+    Mat res(Size(tamX,tamY), destImg.type(), color_pincel);
+    Mat cop(Size(tamX,tamY), destImg.type(), CV_RGB(0,0,0));
+    circle(cop, Point(tamX/2, tamY/2), min(tamX,tamY)/4, CV_RGB(255,255,255), -1, LINE_AA);
+    blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
+    multiply(destImg, cop, destImg, 1.0/255.0);
 
-        Mat nueva2(im.size(), im.type(),CV_RGB(0,0,0));
-        Mat nueva(im.size(), im.type(),CV_RGB(0,0,0));
-
-        destImg.copyTo(nueva(Rect(0,0,200,200)));
-
-        circle(nueva2, Point(100, 100), 50, CV_RGB(255,255,255), -1, LINE_AA);
-        bitwise_not(nueva2, nueva2);
-        multiply(im, nueva2, im, 1.0/255.0);
+    Mat nueva2(im.size(), im.type(),CV_RGB(0,0,0));
+    Mat nueva(im.size(), im.type(),CV_RGB(0,0,0));
+    destImg.copyTo(nueva(Rect(x,y,tamX,tamY)));
+    circle(nueva2, Point(x+tamX/2, y+tamY/2), min(tamX,tamY)/4, CV_RGB(255,255,255), -1, LINE_AA);
+    bitwise_not(nueva2, nueva2);
+    multiply(im, nueva2, im, 1.0/255.0);
 
 
-        im = nueva + im;
-
-
-
-
+    im = nueva + im;
     imshow(foto[factual].nombre, im);
     foto[factual].modificada= true;
 }
@@ -501,6 +500,10 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
         downy= y;
     }
 
+    if(imagen_copiada && herr_actual!=HER_COPIAR){
+        imagen_copiada=false;
+    }
+
     // 2. Según la herramienta actual
     switch (herr_actual) {
 
@@ -545,6 +548,12 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
         else
             ninguna_accion(factual, x, y);
         break;
+    case HER_RELLENAR:
+        if (flags==EVENT_FLAG_LBUTTON)
+            ver_rellenar(factual, x, y);
+        else
+            ninguna_accion(factual, x, y);
+        break;
     case HER_COPIAR:
 
         if (event==EVENT_LBUTTONUP){
@@ -557,7 +566,6 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
             else{
                 qDebug("sinCopi");
                 cb_pegar(factual, x, y);
-                imagen_copiada=false;
             }
         }
         else if (!imagen_copiada && event==EVENT_MOUSEMOVE && flags==EVENT_FLAG_LBUTTON)
@@ -779,6 +787,24 @@ void ver_ajuste_lineal (int nfoto, double pmin, double pmax,bool guardar)
     }
 
 
+}
+
+//---------------------------------------------------------------------------
+
+void ver_rellenar(int nfoto, int x, int y, bool guardar)
+{
+
+    Mat imres = foto[nfoto].img.clone();
+    Rect r;
+    //qUE NO SEAN NEGATIVOS LOS VALORES DE SCALAR
+    //La imagen no tiene cuatro canales?
+    floodFill(imres,Point(x,y),Scalar(255,0,0,255),&r,Scalar(imres.at<Vec3b>(x,y)[0]-radio_pincel,imres.at<Vec3b>(x,y)[1]-radio_pincel,imres.at<Vec3b>(x,y)[2]-radio_pincel),Scalar(imres.at<Vec3b>(x,y)[0]+radio_pincel,imres.at<Vec3b>(x,y)[1]+radio_pincel,imres.at<Vec3b>(x,y)[2]+radio_pincel),FLOODFILL_FIXED_RANGE);
+    imshow("Perspectiva",imres);
+
+    if(guardar){
+        foto[nfoto].modificada=true;
+        mostrar(nfoto);
+    }
 }
 
 

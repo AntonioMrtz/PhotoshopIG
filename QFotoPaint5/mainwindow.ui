@@ -413,6 +413,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionSeleccionar"/>
     <addaction name="actionArcoiris"/>
     <addaction name="actionCopiar"/>
+    <addaction name="actionRellenar"/>
    </widget>
    <widget class="QMenu" name="menuTransformar">
     <property name="title">
@@ -713,6 +714,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionColor_Falso">
    <property name="text">
     <string>Color Falso</string>
+   </property>
+  </action>
+  <action name="actionRellenar">
+   <property name="text">
+    <string>Rellenar</string>
    </property>
   </action>
  </widget>

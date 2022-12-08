@@ -497,3 +497,8 @@ void MainWindow::on_actionColor_Falso_triggered()
         color_falso(foto_activa(),primera_libre());
     }
 }
+
+void MainWindow::on_actionRellenar_triggered()
+{
+    herr_actual=HER_RELLENAR;
+}
