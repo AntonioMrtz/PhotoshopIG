@@ -28,6 +28,8 @@ bool imagen_copiada = false;
 
 Mat imagen_a_copiar;
 
+Point punto_anterior=Point(-1,-1);
+
 static int numpos= 0; // Número actual en el orden de posición de las ventanas
 
 
@@ -299,6 +301,32 @@ void cb_linea (int factual, int x, int y)
 
 //---------------------------------------------------------------------------
 
+void cb_trazo (int factual, int x, int y)
+{
+    Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
+    if(punto_anterior.x>-1){
+        if (difum_pincel==0)
+            line(im, punto_anterior, Point(x,y), color_pincel, radio_pincel*2+1);
+        else {
+            Mat res(im.size(), im.type(), color_pincel);
+            Mat cop(im.size(), im.type(), CV_RGB(0,0,0));
+            line(cop, punto_anterior, Point(x,y), CV_RGB(255,255,255), radio_pincel*2+1);
+            blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
+            multiply(res, cop, res, 1.0/255.0);
+            bitwise_not(cop, cop);
+            multiply(im, cop, im, 1.0/255.0);
+            im= res + im;
+        }
+    }else{
+        cb_punto(factual,x,y);
+    }
+    punto_anterior=Point(x,y);
+    imshow(foto[factual].nombre, im);
+    foto[factual].modificada= true;
+}
+
+//---------------------------------------------------------------------------
+
 void cb_rectangulo (int factual, int x, int y)
 {
     Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
@@ -554,6 +582,16 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
         else
             ninguna_accion(factual, x, y);
         break;
+    case HER_TRAZAR:
+        if (event==EVENT_LBUTTONUP){
+            ninguna_accion(factual, x, y);
+            punto_anterior= Point(-1,-1);
+        }
+        else if (event==EVENT_MOUSEMOVE && flags==EVENT_FLAG_LBUTTON)
+            cb_trazo(factual,x,y);
+        else
+            ninguna_accion(factual, x, y);
+        break;
     case HER_COPIAR:
 
         if (event==EVENT_LBUTTONUP){
@@ -796,9 +834,9 @@ void ver_rellenar(int nfoto, int x, int y, bool guardar)
 
     Mat imres = foto[nfoto].img.clone();
     Rect r;
-    //qUE NO SEAN NEGATIVOS LOS VALORES DE SCALAR
     //La imagen no tiene cuatro canales?
-    floodFill(imres,Point(x,y),Scalar(255,0,0,255),&r,Scalar(imres.at<Vec3b>(x,y)[0]-radio_pincel,imres.at<Vec3b>(x,y)[1]-radio_pincel,imres.at<Vec3b>(x,y)[2]-radio_pincel),Scalar(imres.at<Vec3b>(x,y)[0]+radio_pincel,imres.at<Vec3b>(x,y)[1]+radio_pincel,imres.at<Vec3b>(x,y)[2]+radio_pincel),FLOODFILL_FIXED_RANGE);
+
+    floodFill(imres,Point(x,y),Scalar(255,0,0,255),&r,Scalar(radio_pincel,radio_pincel,radio_pincel),Scalar(radio_pincel,radio_pincel,radio_pincel),FLOODFILL_FIXED_RANGE);
     imshow("Perspectiva",imres);
 
     if(guardar){

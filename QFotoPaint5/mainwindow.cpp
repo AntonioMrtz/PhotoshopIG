@@ -524,3 +524,8 @@ void MainWindow::on_actionEspectro_de_intensidad_triggered()
         espectro_imagen(foto_activa(),primera_libre());
     }
 }
+
+void MainWindow::on_actionTrazos_triggered()
+{
+    herr_actual=HER_TRAZAR;
+}

@@ -76,6 +76,7 @@ public:
     QAction *actionBalance_de_blancos;
     QAction *actionEcualizacion_del_histograma;
     QAction *actionEspectro_de_intensidad;
+    QAction *actionTrazos;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -214,6 +215,8 @@ public:
         actionEcualizacion_del_histograma->setObjectName(QString::fromUtf8("actionEcualizacion_del_histograma"));
         actionEspectro_de_intensidad = new QAction(MainWindow);
         actionEspectro_de_intensidad->setObjectName(QString::fromUtf8("actionEspectro_de_intensidad"));
+        actionTrazos = new QAction(MainWindow);
+        actionTrazos->setObjectName(QString::fromUtf8("actionTrazos"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -381,6 +384,7 @@ public:
         menuHerramientas->addAction(actionArcoiris);
         menuHerramientas->addAction(actionCopiar);
         menuHerramientas->addAction(actionRellenar);
+        menuHerramientas->addAction(actionTrazos);
         menuTransformar->addAction(actionBrillo_contraste);
         menuTransformar->addAction(actionInvertir);
         menuTransformar->addAction(menuRotar->menuAction());
@@ -467,6 +471,7 @@ public:
         actionBalance_de_blancos->setText(QCoreApplication::translate("MainWindow", "Balance de blancos", nullptr));
         actionEcualizacion_del_histograma->setText(QCoreApplication::translate("MainWindow", "Ecualizacion del histograma", nullptr));
         actionEspectro_de_intensidad->setText(QCoreApplication::translate("MainWindow", "Espectro de intensidad", nullptr));
+        actionTrazos->setText(QCoreApplication::translate("MainWindow", "Trazos", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
