@@ -177,6 +177,7 @@ void media_ponderada (int nf1, int nf2, int nueva, double peso);
 // y almacena el resultado en la posición nueva. Se aplica la fórmula:
 // nueva(x,y):= peso*nf1(x,y)+(1-peso)*nf2(x,y). La imagen nf2 se reescala al
 // tamaño de nf1
+void ver_balance_blancos(int nfoto,bool guarda);
 
 string Lt1(string cadena);
 // Convertir una cadena de UTF8 a Latin1
@@ -187,5 +188,7 @@ void ver_histograma(int nfotos,int nres,int canal);
 
 void ver_perspectiva(int nfoto1, int nfoto2, Point2f pt1[], Point2f pt2[], bool guardar=false);
 //Transformacion perspectiva de nfoto1 a nfoto2
+void ecualizar_histograma(int nfotos,int nres,int canales[],int numCanales);
+void espectro_imagen(int nfotos,int nres);
 
 #endif // IMAGENES_H

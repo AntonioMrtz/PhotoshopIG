@@ -80,6 +80,9 @@ private slots:
     void on_actionCopiar_triggered();
     void on_actionColor_Falso_triggered();
     void on_actionRellenar_triggered();
+    void on_actionBalance_de_blancos_triggered();
+    void on_actionEcualizacion_del_histograma_triggered();
+    void on_actionEspectro_de_intensidad_triggered();
 };
 
 extern MainWindow *w;

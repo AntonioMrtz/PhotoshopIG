@@ -436,6 +436,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionEscala_de_color"/>
     <addaction name="actionPerspectiva"/>
     <addaction name="actionColor_Falso"/>
+    <addaction name="actionEcualizacion_del_histograma"/>
+    <addaction name="actionEspectro_de_intensidad"/>
    </widget>
    <widget class="QMenu" name="menuEfectos">
     <property name="title">
@@ -453,6 +455,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionPerfilar"/>
     <addaction name="actionBajorrelieve"/>
     <addaction name="actionPinchar_Estirar"/>
+    <addaction name="actionBalance_de_blancos"/>
    </widget>
    <widget class="QMenu" name="menuV_deo">
     <property name="title">
@@ -719,6 +722,21 @@ p, li { white-space: pre-wrap; }
   <action name="actionRellenar">
    <property name="text">
     <string>Rellenar</string>
+   </property>
+  </action>
+  <action name="actionBalance_de_blancos">
+   <property name="text">
+    <string>Balance de blancos</string>
+   </property>
+  </action>
+  <action name="actionEcualizacion_del_histograma">
+   <property name="text">
+    <string>Ecualizacion del histograma</string>
+   </property>
+  </action>
+  <action name="actionEspectro_de_intensidad">
+   <property name="text">
+    <string>Espectro de intensidad</string>
    </property>
   </action>
  </widget>

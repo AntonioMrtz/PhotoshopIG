@@ -859,6 +859,26 @@ void transformar_modelo_color(int nfoto, bool guardar)
 }
 //Interfaz o no
 
+void ver_balance_blancos(int nfoto,bool guarda)
+{
+    assert(nfoto>=0 && nfoto<MAX_VENTANAS && foto[nfoto].usada);
+    Mat res;
+    cvtColor(foto[nfoto].img,res,COLOR_RGB2YCrCb);
+
+    Scalar media = mean(res);
+    res+= Scalar( 0 , 128-media[1], 128-media[2]);
+
+
+    cvtColor(res,res,COLOR_YCrCb2RGB);
+    imshow("res",res);
+
+    if(guarda){
+        res.copyTo(foto[nfoto].img);
+        mostrar(nfoto);
+        foto[nfoto].modificada=true;
+    }
+
+}
 //---------------------------------------------------------------------------
 
 void ver_pinchar_estirar_onda(int nfoto, int cx, int cy, double radio, double grado, bool guardar){
@@ -1023,7 +1043,7 @@ void ver_histograma(int nfotos,int nres,int canal){
     }
     else{
 
-        calcHist(&foto[nfotos].img, 1, canales, noArray(), hist, 1, bins, rangos);
+        calcHist(&foto[nfotos].img, 1, &canal, noArray(), hist, 1, bins, rangos);
     }
 
 
@@ -1042,6 +1062,62 @@ void ver_histograma(int nfotos,int nres,int canal){
 
 //---------------------------------------------------------------------------
 
+void ecualizar_histograma(int nfotos,int nres, int canales[],int numCanales){
+
+    Mat ycrcb = foto[nfotos].img;
+    //cvtColor(foto[nfotos].img,ycrcb,COLOR_BGR2YCrCb);
+
+    vector<Mat> channels;
+
+    split(ycrcb,channels);
+
+    /*equalizeHist(channels[0],channels[0]);
+
+
+    Mat result;
+    merge(channels,ycrcb);
+    cvtColor(ycrcb,result,COLOR_YCrCb2BGR);*/
+
+    for(int i=0;i<numCanales;i++){
+        if(canales[i]<4){
+            equalizeHist(channels[canales[i]],channels[canales[i]]);
+        }
+    }
+
+    Mat result2;
+    merge(channels,ycrcb);
+    //cvtColor(ycrcb,result2,COLOR_YCrCb2BGR);
+
+    //crear_nueva(nres,result);
+    crear_nueva(nres,ycrcb);
+}
+
+void espectro_imagen(int nfotos,int nres){
+/*
+    Mat I =foto[nfotos].img.clone();
+    cvtColor(I,I,COLOR_BGR2GRAY);
+         Mat padded;                            //expand input image to optimal size
+         int m = getOptimalDFTSize( I.rows );
+         int n = getOptimalDFTSize( I.cols ); // on the border add zero values
+         copyMakeBorder(I, padded, 0, m - I.rows, 0, n - I.cols, BORDER_CONSTANT, Scalar::all(0));
+
+         Mat planes[] = {Mat_<float>(padded), Mat::zeros(padded.size(), CV_32F)};
+         Mat complexI;
+         merge(planes, 2, complexI);         // Add to the expanded another plane with zeros
+
+         dft(complexI, complexI);            // this way the result may fit in the source matrix
+        imshow("complex", complexI);
+         // compute the magnitude and switch to logarithmic scale
+         // => log(1 + sqrt(Re(DFT(I))^2 + Im(DFT(I))^2))
+         split(complexI, planes);                   // planes[0] = Re(DFT(I), planes[1] = Im(DFT(I))
+         magnitude(planes[0], planes[1], planes[0]);// planes[0] = magnitude
+         Mat magI = planes[0];
+          normalize(magI, magI, 0, 1, NORM_MINMAX);
+    imshow("dft", magI);
+
+/*
+    crear_nueva(nres,ycrcb);*/
+}
 
 
 

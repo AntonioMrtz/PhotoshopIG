@@ -502,3 +502,25 @@ void MainWindow::on_actionRellenar_triggered()
 {
     herr_actual=HER_RELLENAR;
 }
+
+void MainWindow::on_actionBalance_de_blancos_triggered()
+{
+    if(foto_activa()!=-1 ){
+        ver_balance_blancos(foto_activa(),false);
+    }
+}
+
+void MainWindow::on_actionEcualizacion_del_histograma_triggered()
+{
+    int canales[3]={0,1,2};
+    if(foto_activa()!=-1 && primera_libre()!=-1){
+        ecualizar_histograma(foto_activa(),primera_libre(),canales,1);
+    }
+}
+
+void MainWindow::on_actionEspectro_de_intensidad_triggered()
+{
+    if(foto_activa()!=-1 && primera_libre()!=-1){
+        espectro_imagen(foto_activa(),primera_libre());
+    }
+}

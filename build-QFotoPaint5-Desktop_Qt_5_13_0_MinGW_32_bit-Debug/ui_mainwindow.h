@@ -73,6 +73,9 @@ public:
     QAction *actionCopiar;
     QAction *actionColor_Falso;
     QAction *actionRellenar;
+    QAction *actionBalance_de_blancos;
+    QAction *actionEcualizacion_del_histograma;
+    QAction *actionEspectro_de_intensidad;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -205,6 +208,12 @@ public:
         actionColor_Falso->setObjectName(QString::fromUtf8("actionColor_Falso"));
         actionRellenar = new QAction(MainWindow);
         actionRellenar->setObjectName(QString::fromUtf8("actionRellenar"));
+        actionBalance_de_blancos = new QAction(MainWindow);
+        actionBalance_de_blancos->setObjectName(QString::fromUtf8("actionBalance_de_blancos"));
+        actionEcualizacion_del_histograma = new QAction(MainWindow);
+        actionEcualizacion_del_histograma->setObjectName(QString::fromUtf8("actionEcualizacion_del_histograma"));
+        actionEspectro_de_intensidad = new QAction(MainWindow);
+        actionEspectro_de_intensidad->setObjectName(QString::fromUtf8("actionEspectro_de_intensidad"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -381,6 +390,8 @@ public:
         menuTransformar->addAction(actionEscala_de_color);
         menuTransformar->addAction(actionPerspectiva);
         menuTransformar->addAction(actionColor_Falso);
+        menuTransformar->addAction(actionEcualizacion_del_histograma);
+        menuTransformar->addAction(actionEspectro_de_intensidad);
         menuRotar->addAction(actionRotar_90);
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
@@ -388,6 +399,7 @@ public:
         menuEfectos->addAction(actionPerfilar);
         menuEfectos->addAction(actionBajorrelieve);
         menuEfectos->addAction(actionPinchar_Estirar);
+        menuEfectos->addAction(actionBalance_de_blancos);
         menuSuavizado->addAction(actionGausiano);
         menuSuavizado->addAction(actionMedia);
         menuSuavizado->addAction(actionMediana);
@@ -452,6 +464,9 @@ public:
         actionCopiar->setText(QCoreApplication::translate("MainWindow", "Copiar", nullptr));
         actionColor_Falso->setText(QCoreApplication::translate("MainWindow", "Color Falso", nullptr));
         actionRellenar->setText(QCoreApplication::translate("MainWindow", "Rellenar", nullptr));
+        actionBalance_de_blancos->setText(QCoreApplication::translate("MainWindow", "Balance de blancos", nullptr));
+        actionEcualizacion_del_histograma->setText(QCoreApplication::translate("MainWindow", "Ecualizacion del histograma", nullptr));
+        actionEspectro_de_intensidad->setText(QCoreApplication::translate("MainWindow", "Espectro de intensidad", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
