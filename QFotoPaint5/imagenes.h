@@ -162,6 +162,15 @@ void escala_color(int nfoto, int nres);
 void color_falso(int nfoto, int nres);
 
 
+void transformar_modelo_color(int nfoto,int type,bool guardar=false);
+
+void copiar_portapapeles(int nfoto);
+
+void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int type,bool guardar=false);
+
+
+
+
 void ver_matiz_saturacion_luminosidad(int nfoto,int matiz,double satu,double lumi,bool guardar=false);
 //modificacion matiz/saturacion/luminosidad
 
@@ -177,7 +186,7 @@ void media_ponderada (int nf1, int nf2, int nueva, double peso);
 // y almacena el resultado en la posición nueva. Se aplica la fórmula:
 // nueva(x,y):= peso*nf1(x,y)+(1-peso)*nf2(x,y). La imagen nf2 se reescala al
 // tamaño de nf1
-void ver_balance_blancos(int nfoto,bool guarda);
+void ver_balance_blancos(int nfoto);
 
 string Lt1(string cadena);
 // Convertir una cadena de UTF8 a Latin1

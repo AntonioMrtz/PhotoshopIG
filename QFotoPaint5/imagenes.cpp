@@ -6,6 +6,7 @@
 #include <QApplication>
 #include <QMessageBox>
 #include <QFileDialog>
+#include <QClipboard>
 #include <assert.h>
 
 ///////////////////////////////////////////////////////////////////
@@ -883,12 +884,36 @@ void color_falso(int nfoto, int nres)
 
 //---------------------------------------------------------------------------
 
-void transformar_modelo_color(int nfoto, bool guardar)
+void transformar_modelo_color(int nfoto, bool guardar,int type)
 {
     Mat res;
     Mat im = foto[nfoto].img;
-    cvtColor(im,res,COLOR_RGB2BGR);
-    imshow("Pinchar/Estirar",res);
+
+    //RGB, HLS, HSV, XYZ, YUV
+
+    if(type==0)
+
+        cvtColor(im,res,COLOR_BGR2RGB);
+
+    else if(type==1)
+        cvtColor(im,res,COLOR_BGR2HLS);
+
+    else if(type==2)
+        cvtColor(im,res,COLOR_BGR2HSV);
+
+    else if(type==3)
+        cvtColor(im,res,COLOR_BGR2XYZ);
+
+    else if(type==4)
+        cvtColor(im,res,COLOR_BGR2YUV);
+
+    Mat canales[3];
+    split(res,canales);
+
+    imshow("canal 0",canales[0]);
+    imshow("canal 1",canales[1]);
+    imshow("canal 2",canales[2]);
+
     if(guardar){
         res.copyTo(foto[nfoto].img);
         mostrar(nfoto);
@@ -896,9 +921,77 @@ void transformar_modelo_color(int nfoto, bool guardar)
     }
 
 }
-//Interfaz o no
 
-void ver_balance_blancos(int nfoto,bool guarda)
+void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int type,bool guardar){
+
+    Mat img=foto[nfoto].img;
+    Mat res;
+
+    Mat canales[3];
+    split(img,canales);
+
+    // type 0 = sumar
+    // type 1 = multiplicar
+
+    //comprobar no pasarse  de 0 - 255
+
+    azul=0;
+    verde=0;
+    rojo=111110;
+
+    if(type==0){
+
+        canales[0]+=azul;
+        canales[1]+=verde;
+        canales[2]+=rojo;
+
+
+    }
+
+    else if(type==1){
+
+        canales[0]*=azul;
+        canales[1]*=verde;
+        canales[2]*=rojo;
+
+
+    }
+
+    for(int i=0;i<3;i++){
+
+    }
+
+    merge(canales,3,res);
+
+
+   imshow("Ajuste Rojo Azul Verde",res);
+
+
+    if (guardar) {
+        res.copyTo(foto[nfoto].img);
+        foto[nfoto].modificada= true;
+    }
+
+
+}
+
+void copiar_portapapeles(int nfoto){
+
+    Mat img=foto[nfoto].img;
+    Mat res;
+
+
+    QClipboard *clipboard = QApplication::clipboard();
+    cvtColor(img, res,COLOR_BGR2RGB); // pasamos a RGB primero porque si no no coge los colores bien
+    QImage dest((const uchar *) res.data, res.cols, res.rows, res.step, QImage::Format_RGB888);
+    dest.bits(); // enforce deep copy, see documentation // Sacado de internet , si no los valores son corruptos ( se cambian los colores)
+
+
+    clipboard->setImage(dest); // put current image on the clipboard.
+
+}
+
+void ver_balance_blancos(int nfoto)
 {
     assert(nfoto>=0 && nfoto<MAX_VENTANAS && foto[nfoto].usada);
     Mat res;
@@ -911,11 +1004,8 @@ void ver_balance_blancos(int nfoto,bool guarda)
     cvtColor(res,res,COLOR_YCrCb2RGB);
     imshow("res",res);
 
-    if(guarda){
-        res.copyTo(foto[nfoto].img);
-        mostrar(nfoto);
-        foto[nfoto].modificada=true;
-    }
+    crear_nueva(primera_libre(),res);
+
 
 }
 //---------------------------------------------------------------------------

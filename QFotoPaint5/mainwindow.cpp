@@ -505,8 +505,8 @@ void MainWindow::on_actionRellenar_triggered()
 
 void MainWindow::on_actionBalance_de_blancos_triggered()
 {
-    if(foto_activa()!=-1 ){
-        ver_balance_blancos(foto_activa(),false);
+    if(foto_activa()!=-1 && primera_libre()!=-1){
+        ver_balance_blancos(foto_activa());
     }
 }
 
