@@ -87,11 +87,8 @@ private slots:
     void on_actionEcualizacion_local_triggered();
     void on_actionCambiar_modelo_de_color_triggered();
     void on_actionCopiar_a_portapapeles_triggered();
-<<<<<<< HEAD
     void on_actionRotar_y_reescalar_triggered();
-=======
     void on_actionAjuste_rojo_azul_verde_triggered();
->>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
 };
 
 extern MainWindow *w;

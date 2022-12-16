@@ -559,19 +559,18 @@ void MainWindow::on_actionCopiar_a_portapapeles_triggered()
     }
 }
 
-<<<<<<< HEAD
 void MainWindow::on_actionRotar_y_reescalar_triggered()
 {
     if(foto_activa()!=-1){
         rotar_y_reescalar(foto_activa(),90,2);
     }
 
-=======
+}
 void MainWindow::on_actionAjuste_rojo_azul_verde_triggered()
 {
     if(foto_activa()!=-1 && primera_libre()!=-1){
         Ajuste_rojo_verde_azul a(foto_activa());
         a.exec();
     }
->>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
 }
+

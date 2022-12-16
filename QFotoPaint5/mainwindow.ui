@@ -442,11 +442,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionEspectro_de_intensidad"/>
     <addaction name="actionEcualizacion_local"/>
     <addaction name="actionCambiar_modelo_de_color"/>
-<<<<<<< HEAD
     <addaction name="actionRotar_y_reescalar"/>
-=======
     <addaction name="actionAjuste_rojo_azul_verde"/>
->>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
    </widget>
    <widget class="QMenu" name="menuEfectos">
     <property name="title">
@@ -768,15 +765,14 @@ p, li { white-space: pre-wrap; }
     <string>Copiar a portapapeles</string>
    </property>
   </action>
-<<<<<<< HEAD
   <action name="actionRotar_y_reescalar">
    <property name="text">
     <string>Rotar y reescalar</string>
-=======
+   </property>
+  </action>
   <action name="actionAjuste_rojo_azul_verde">
    <property name="text">
     <string>Ajuste rojo/azul/verde</string>
->>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
    </property>
   </action>
  </widget>

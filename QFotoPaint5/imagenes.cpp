@@ -794,17 +794,17 @@ void rotar_y_reescalar(int nfoto, double angulo, double escala,bool guarda){
     Mat M= getRotationMatrix2D(center, -angulo, escala);
     //Creamos un Rectangulo con el tamaño de la imagen aplicandole la escala y se
     //le aplica una rotacion de "angulo" grados
-    Rect2f tamañoNecesarioSalida = RotatedRect(Point2f(),Size(escala*img.size().width,escala*img.size().height),angulo).boundingRect2f();
+    Rect2f tamanoNecesarioSalida = RotatedRect(Point2f(),Size(escala*img.size().width,escala*img.size().height),angulo).boundingRect2f();
     //Ajustamos la matriz de rotacion al nuevo luegar donde se
     //encuentra el centro, cosa que sabemos gracias al rectangulo
     //calculado anteriormente
-    M.at<double>(0,2)+=((tamañoNecesarioSalida.width/2.0)) - img.cols/2.0;
-    M.at<double>(1,2)+=((tamañoNecesarioSalida.height/2.0)) - img.rows/2.0;
+    M.at<double>(0,2)+=((tamanoNecesarioSalida.width/2.0)) - img.cols/2.0;
+    M.at<double>(1,2)+=((tamanoNecesarioSalida.height/2.0)) - img.rows/2.0;
     Mat res;
     //Aplicamos la matriz de rotacion sobre img obteniendo el resultado deseado
     //especificandole el tamaño de la imagen resultando basandonos en el rectangulo
     //creado anteriormente
-    warpAffine(img,res,M,tamañoNecesarioSalida.size());
+    warpAffine(img,res,M,tamanoNecesarioSalida.size());
     imshow("modo 0",res);
 
 
