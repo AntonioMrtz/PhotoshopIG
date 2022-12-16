@@ -1176,7 +1176,7 @@ void espectro_imagen(int nfotos,int nres){
 void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanales,bool ecualizacionConjunta){
 
     Mat img = foto[nfotos].img;
-    int vecindad = 10;
+    int vecindad = 25;
     Mat res = foto[nfotos].img.clone();
     Mat hist;
     int bins[1]= {256};
@@ -1246,11 +1246,15 @@ void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanale
 
                     for (int bit= 0; bit<=(int)channelsRes[canales[can]].at<uchar>(j,i); bit++){
                         //Sumamos esos valores
+
                         percentil+= hist.at<float>(bit);
+                        if(canales[can]==0){
+                            qDebug("%d %d %d %f",i,j,canales[can],percentil);
+                        }
                     }
                     //Dividimos el valor obtenido entre el numero de pixeles del rectangulo ancho+1 * alto+1
                     percentil=percentil/((posLargo+1)*(posAncho+1));
-                    //qDebug("%d %d %d %f",i,j,canales[can],percentil);
+
                     //Al canal correspondiente de la imagen de salida se sustituye su valor por percentil*255
                     channelsRes[canales[can]].at<uchar>(j,i)=  (int)(percentil*255);
             }
