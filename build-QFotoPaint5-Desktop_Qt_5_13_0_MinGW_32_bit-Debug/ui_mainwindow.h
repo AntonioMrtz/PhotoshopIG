@@ -77,6 +77,7 @@ public:
     QAction *actionEcualizacion_del_histograma;
     QAction *actionEspectro_de_intensidad;
     QAction *actionTrazos;
+    QAction *actionEcualizacion_local;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -217,6 +218,8 @@ public:
         actionEspectro_de_intensidad->setObjectName(QString::fromUtf8("actionEspectro_de_intensidad"));
         actionTrazos = new QAction(MainWindow);
         actionTrazos->setObjectName(QString::fromUtf8("actionTrazos"));
+        actionEcualizacion_local = new QAction(MainWindow);
+        actionEcualizacion_local->setObjectName(QString::fromUtf8("actionEcualizacion_local"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -396,6 +399,7 @@ public:
         menuTransformar->addAction(actionColor_Falso);
         menuTransformar->addAction(actionEcualizacion_del_histograma);
         menuTransformar->addAction(actionEspectro_de_intensidad);
+        menuTransformar->addAction(actionEcualizacion_local);
         menuRotar->addAction(actionRotar_90);
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
@@ -472,6 +476,7 @@ public:
         actionEcualizacion_del_histograma->setText(QCoreApplication::translate("MainWindow", "Ecualizacion del histograma", nullptr));
         actionEspectro_de_intensidad->setText(QCoreApplication::translate("MainWindow", "Espectro de intensidad", nullptr));
         actionTrazos->setText(QCoreApplication::translate("MainWindow", "Trazos", nullptr));
+        actionEcualizacion_local->setText(QCoreApplication::translate("MainWindow", "Ecualizacion local", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

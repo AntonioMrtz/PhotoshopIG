@@ -514,7 +514,7 @@ void MainWindow::on_actionEcualizacion_del_histograma_triggered()
 {
     int canales[3]={0,1,2};
     if(foto_activa()!=-1 && primera_libre()!=-1){
-        ecualizar_histograma(foto_activa(),primera_libre(),canales,1);
+        ecualizar_histograma(foto_activa(),primera_libre(),canales,1,true);
     }
 }
 
@@ -528,4 +528,12 @@ void MainWindow::on_actionEspectro_de_intensidad_triggered()
 void MainWindow::on_actionTrazos_triggered()
 {
     herr_actual=HER_TRAZAR;
+}
+
+void MainWindow::on_actionEcualizacion_local_triggered()
+{
+    int canales[3]={0,1,2};
+    if(foto_activa()!=-1 && primera_libre()!=-1){
+        ecualizar_histograma_local(foto_activa(),primera_libre(),canales,3,true);
+    }
 }

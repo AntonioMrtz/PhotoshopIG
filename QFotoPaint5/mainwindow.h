@@ -84,6 +84,7 @@ private slots:
     void on_actionEcualizacion_del_histograma_triggered();
     void on_actionEspectro_de_intensidad_triggered();
     void on_actionTrazos_triggered();
+    void on_actionEcualizacion_local_triggered();
 };
 
 extern MainWindow *w;

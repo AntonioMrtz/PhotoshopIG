@@ -153,7 +153,7 @@ void ver_suavizado (int nfoto, int ntipo, int tamx, int tamy,
 void ver_ajuste_lineal (int nfoto, double pmin, double pmax,bool guardar=false);
 
 // Operacion de ajuste lineal del histograma
-void ver_rellenar(int nfoto, int x, int y, bool guardar=false);
+void ver_rellenar(int nfoto, int x, int y);
 
 void ver_pinchar_estirar(int nfoto, int cx, int cy, double radio, double grado, bool guardar=false);
 //Transformacion deformante gausiana
@@ -188,7 +188,8 @@ void ver_histograma(int nfotos,int nres,int canal);
 
 void ver_perspectiva(int nfoto1, int nfoto2, Point2f pt1[], Point2f pt2[], bool guardar=false);
 //Transformacion perspectiva de nfoto1 a nfoto2
-void ecualizar_histograma(int nfotos,int nres,int canales[],int numCanales);
+void ecualizar_histograma(int nfotos,int nres,int canales[],int numCanales,bool ecualizacionConjunta);
 void espectro_imagen(int nfotos,int nres);
+void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanales,bool ecualizacionConjunta);
 
 #endif // IMAGENES_H

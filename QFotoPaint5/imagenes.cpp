@@ -303,6 +303,7 @@ void cb_linea (int factual, int x, int y)
 
 void cb_trazo (int factual, int x, int y)
 {
+    qDebug("%d %d",x,y);
     Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
     if(punto_anterior.x>-1){
         if (difum_pincel==0)
@@ -520,8 +521,10 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
         foto[factual].orden= numpos++;
     }
     // 1.3. El ratón se sale de la ventana
-    if (x<0 || x>=foto[factual].img.size().width || y<0 || y>=foto[factual].img.size().height)
+    if (x<0 || x>=foto[factual].img.size().width || y<0 || y>=foto[factual].img.size().height){
+        punto_anterior= Point(-1,-1);
         return;
+     }
     // 1.4. Se inicia la pulsación del ratón
     if (event==EVENT_LBUTTONDOWN) {
         downx= x;
@@ -569,7 +572,6 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
         else
             ninguna_accion(factual, x, y);
         break;
-
     case HER_ARCO_IRIS:
         if (flags==EVENT_FLAG_LBUTTON)
             cb_arco_iris(factual, x, y);
@@ -588,8 +590,10 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
             punto_anterior= Point(-1,-1);
         }
         else if (event==EVENT_MOUSEMOVE && flags==EVENT_FLAG_LBUTTON)
+
             cb_trazo(factual,x,y);
         else
+            punto_anterior= Point(-1,-1);
             ninguna_accion(factual, x, y);
         break;
     case HER_COPIAR:
@@ -829,20 +833,17 @@ void ver_ajuste_lineal (int nfoto, double pmin, double pmax,bool guardar)
 
 //---------------------------------------------------------------------------
 
-void ver_rellenar(int nfoto, int x, int y, bool guardar)
+void ver_rellenar(int nfoto, int x, int y)
 {
 
+    Mat originalImage = foto[nfoto].img;
     Mat imres = foto[nfoto].img.clone();
     Rect r;
-    //La imagen no tiene cuatro canales?
 
-    floodFill(imres,Point(x,y),Scalar(255,0,0,255),&r,Scalar(radio_pincel,radio_pincel,radio_pincel),Scalar(radio_pincel,radio_pincel,radio_pincel),FLOODFILL_FIXED_RANGE);
-    imshow("Perspectiva",imres);
-
-    if(guardar){
-        foto[nfoto].modificada=true;
-        mostrar(nfoto);
-    }
+    floodFill(imres,Point(x,y),color_pincel,&r,Scalar(radio_pincel,radio_pincel,radio_pincel),Scalar(radio_pincel,radio_pincel,radio_pincel),FLOODFILL_FIXED_RANGE);
+    double transparencia = (difum_pincel+1)/121.0;
+    addWeighted(originalImage,transparencia,imres,1-transparencia,0,originalImage);
+    foto[nfoto].modificada=true;
 }
 
 
@@ -1100,61 +1101,169 @@ void ver_histograma(int nfotos,int nres,int canal){
 
 //---------------------------------------------------------------------------
 
-void ecualizar_histograma(int nfotos,int nres, int canales[],int numCanales){
+void ecualizar_histograma(int nfotos,int nres, int canales[],int numCanales,bool ecualizacionConjunta){
 
-    Mat ycrcb = foto[nfotos].img;
-    //cvtColor(foto[nfotos].img,ycrcb,COLOR_BGR2YCrCb);
+    Mat img = foto[nfotos].img;
+    Mat res;
 
+    if(!ecualizacionConjunta)
+    {
     vector<Mat> channels;
 
-    split(ycrcb,channels);
-
-    /*equalizeHist(channels[0],channels[0]);
-
-
-    Mat result;
-    merge(channels,ycrcb);
-    cvtColor(ycrcb,result,COLOR_YCrCb2BGR);*/
+    split(img,channels);
 
     for(int i=0;i<numCanales;i++){
         if(canales[i]<4){
             equalizeHist(channels[canales[i]],channels[canales[i]]);
         }
     }
-
-    Mat result2;
-    merge(channels,ycrcb);
-    //cvtColor(ycrcb,result2,COLOR_YCrCb2BGR);
-
-    //crear_nueva(nres,result);
-    crear_nueva(nres,ycrcb);
+    merge(channels,res);
+    }else{
+        Mat gris, hist;
+        cvtColor(img,gris,COLOR_BGR2GRAY);
+        int canales[1]={0}, bins[1]={256};
+        float rango[2]={0,256};
+        const float *rangos[]={rango};
+        calcHist(&gris,1,canales,noArray(),hist,1,bins,rangos);
+        hist*= 255.0/norm(hist,NORM_L1);
+        Mat lut(1,256,CV_8UC1);
+        float acum=0.0;
+        for(int i = 0;i<256;i++){
+            lut.at<uchar>(0,i)=acum;
+            acum+=hist.at<float>(i);
+        }
+        LUT(img,lut,res);
+    }
+    crear_nueva(nres,res);
 }
 
 void espectro_imagen(int nfotos,int nres){
-/*
-    Mat I =foto[nfotos].img.clone();
-    cvtColor(I,I,COLOR_BGR2GRAY);
-         Mat padded;                            //expand input image to optimal size
-         int m = getOptimalDFTSize( I.rows );
-         int n = getOptimalDFTSize( I.cols ); // on the border add zero values
-         copyMakeBorder(I, padded, 0, m - I.rows, 0, n - I.cols, BORDER_CONSTANT, Scalar::all(0));
 
-         Mat planes[] = {Mat_<float>(padded), Mat::zeros(padded.size(), CV_32F)};
-         Mat complexI;
-         merge(planes, 2, complexI);         // Add to the expanded another plane with zeros
+    //Mat I = imread("D:/Descargas/1.png", IMREAD_GRAYSCALE);
+    Mat image = foto[nfotos].img;
+    cvtColor(image,image,COLOR_BGR2GRAY);
+    Mat escala;
+    image.convertTo(escala,CV_32FC1,1.0/255);
+    Mat imagenDFT;
+    dft(escala, imagenDFT,DFT_COMPLEX_OUTPUT);
+    vector<Mat> canales;
+    split(imagenDFT,canales);
+    pow(canales[0],2,canales[0]);
+    pow(canales[1],2,canales[1]);
+    pow(canales[0]+canales[1],0.5,imagenDFT);
+    Mat res;
+    imagenDFT.convertTo(res,CV_8UC1,-1,255);
 
-         dft(complexI, complexI);            // this way the result may fit in the source matrix
-        imshow("complex", complexI);
-         // compute the magnitude and switch to logarithmic scale
-         // => log(1 + sqrt(Re(DFT(I))^2 + Im(DFT(I))^2))
-         split(complexI, planes);                   // planes[0] = Re(DFT(I), planes[1] = Im(DFT(I))
-         magnitude(planes[0], planes[1], planes[0]);// planes[0] = magnitude
-         Mat magI = planes[0];
-          normalize(magI, magI, 0, 1, NORM_MINMAX);
-    imshow("dft", magI);
+    int cx = res.cols/2;
+    int cy = res.rows/2;
+    Mat q0(res, Rect(0, 0, cx, cy));   // Top-Left - Create a ROI per quadrant
+    Mat q1(res, Rect(cx, 0, cx, cy));  // Top-Right
+    Mat q2(res, Rect(0, cy, cx, cy));  // Bottom-Left
+    Mat q3(res, Rect(cx, cy, cx, cy)); // Bottom-Right
+    Mat tmp;                           // swap quadrants (Top-Left with Bottom-Right)
+    q0.copyTo(tmp);
+    q3.copyTo(q0);
+    tmp.copyTo(q3);
+    q1.copyTo(tmp);                    // swap quadrant (Top-Right with Bottom-Left)
+    q2.copyTo(q1);
+    tmp.copyTo(q2);
 
-/*
-    crear_nueva(nres,ycrcb);*/
+    imshow("magnitud",res);
+
+//    crear_nueva(nres,I);
+}
+
+void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanales,bool ecualizacionConjunta){
+
+    Mat img = foto[nfotos].img;
+    int vecindad = 10;
+    Mat res = foto[nfotos].img.clone();
+    Mat hist;
+    int bins[1]= {256};
+    float rango[2]= {0, 256};
+    const float *rangos[]= {rango};
+
+    vector<Mat> channels;
+    vector<Mat> channelsRes;
+    double percentil=0;
+    Point puntoEnPorcion;
+
+    split(res,channelsRes);
+    int posInicioX, posInicioY, posAncho, posLargo;
+    for(int i= 0; i< img.cols-1;i++){
+        for(int j=0;j<img.rows-1;j++){
+
+            Mat porcionImagen;
+            puntoEnPorcion=Point(vecindad,vecindad);
+            posInicioX=i-vecindad;
+            posInicioY=j-vecindad;
+            posAncho=vecindad*2;
+            posLargo=vecindad*2;
+
+            if(posInicioX<0){
+                puntoEnPorcion.x=vecindad+posInicioX;
+                posAncho=posAncho+(posInicioX);
+                posInicioX=0;
+            }
+            if(posInicioY<0){
+                puntoEnPorcion.y=vecindad+posInicioY;
+                posLargo=posLargo+(posInicioY);
+                posInicioY=0;
+            }
+            if((posAncho+posInicioX)>=img.cols){
+                posAncho=img.cols-2-posInicioX;
+            }
+            if((posLargo+posInicioY)>=img.rows){
+                posLargo=img.rows-2-posInicioY;
+            }
+
+            porcionImagen= img(Rect(posInicioX,posInicioY,posAncho,posLargo));
+
+
+            if(ecualizacionConjunta){
+                int canalesGris[1]={0};
+                Mat porcionEnGris;
+                cvtColor(porcionImagen,porcionEnGris,COLOR_BGR2GRAY);
+                calcHist(&porcionEnGris, 1, canalesGris, noArray(), hist, 1, bins, rangos);
+            }else{
+                //Dividimos la porcion de la imagen en sus distintos canales R, G y B
+                split(porcionImagen,channels);
+            }
+
+
+            //Iteramos por los distintos canales R, G y B
+            for(int can=0;can<numCanales;can++){
+
+                    //Variable usada como contador
+                    percentil=0;
+
+                    //Calculamos el histograma de un canal concreto, ya sea R o G o B
+                    if(!ecualizacionConjunta){
+
+                        calcHist(&channels[canales[can]], 1, 0, noArray(), hist, 1, bins, rangos);
+                    }
+                    //Iteramos desde 0 hasta el valor del pixel que estamos tratando Pixel(i,j) del canal R o G o B de la imagen original en "channelRes"
+
+                    for (int bit= 0; bit<=(int)channelsRes[canales[can]].at<uchar>(j,i); bit++){
+                        //Sumamos esos valores
+                        percentil+= hist.at<float>(bit);
+                    }
+                    //Dividimos el valor obtenido entre el numero de pixeles del rectangulo ancho+1 * alto+1
+                    percentil=percentil/((posLargo+1)*(posAncho+1));
+                    //qDebug("%d %d %d %f",i,j,canales[can],percentil);
+                    //Al canal correspondiente de la imagen de salida se sustituye su valor por percentil*255
+                    channelsRes[canales[can]].at<uchar>(j,i)=  (int)(percentil*255);
+            }
+
+        }
+    }
+
+    merge(channelsRes,res);
+    //juntamos los canales calculados
+
+    imshow("nueva",res);
+
+    //crear_nueva(nres,res);
 }
 
 
