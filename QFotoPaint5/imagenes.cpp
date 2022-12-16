@@ -1266,7 +1266,7 @@ void espectro_imagen(int nfotos,int nres){
 void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanales,bool ecualizacionConjunta){
 
     Mat img = foto[nfotos].img;
-    int vecindad = 25;
+    int vecindad = 50;
     Mat res = foto[nfotos].img.clone();
     Mat hist;
     int bins[1]= {256};
@@ -1277,20 +1277,32 @@ void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanale
     vector<Mat> channelsRes;
     double percentil=0;
     Point puntoEnPorcion;
-
+    //Dividimos la imagen objetivo en sus distintos canales
     split(res,channelsRes);
+
     int posInicioX, posInicioY, posAncho, posLargo;
+    //Para cada pixel
     for(int i= 0; i< img.cols-1;i++){
         for(int j=0;j<img.rows-1;j++){
-
+            //Porcion de la imagen
             Mat porcionImagen;
+            //En esta variable almacenaremos el lugar en el que
+            //estara el pixel que estamos tratando dentro de la
+            //imagen
             puntoEnPorcion=Point(vecindad,vecindad);
+            //Establecemos los valores del rectangulo
             posInicioX=i-vecindad;
             posInicioY=j-vecindad;
             posAncho=vecindad*2;
             posLargo=vecindad*2;
-
+            //Tratamos los valores para que sean validos
             if(posInicioX<0){
+                //en caso de modificar esta posicion
+                //deberemos cambiar el ancho de la imagen
+                //ya que el punto de inicio sera mas cercano
+                //al punto a analizar
+                //Tambien cambiamos la posicion del pixel dentro
+                //del rectangulo
                 puntoEnPorcion.x=vecindad+posInicioX;
                 posAncho=posAncho+(posInicioX);
                 posInicioX=0;
@@ -1307,16 +1319,19 @@ void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanale
                 posLargo=img.rows-2-posInicioY;
             }
 
+            //Obtenemos la porcion de la imagen
             porcionImagen= img(Rect(posInicioX,posInicioY,posAncho,posLargo));
 
 
             if(ecualizacionConjunta){
+                //En caso de ser ecualizacion pasamos la seccion de la imagen a
+                //Grises y calculamos su histograma
                 int canalesGris[1]={0};
                 Mat porcionEnGris;
                 cvtColor(porcionImagen,porcionEnGris,COLOR_BGR2GRAY);
                 calcHist(&porcionEnGris, 1, canalesGris, noArray(), hist, 1, bins, rangos);
             }else{
-                //Dividimos la porcion de la imagen en sus distintos canales R, G y B
+                //Sino dividimos la porcion de la imagen en sus distintos canales R, G y B
                 split(porcionImagen,channels);
             }
 
@@ -1327,20 +1342,18 @@ void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanale
                     //Variable usada como contador
                     percentil=0;
 
-                    //Calculamos el histograma de un canal concreto, ya sea R o G o B
+                    //Calculamos el histograma de un canal concreto, ya sea R o G o B en caso
+                    //de no ser ecualización conjunta, ya que sino emplearemos el histograma
+                    //de los grises
                     if(!ecualizacionConjunta){
 
                         calcHist(&channels[canales[can]], 1, 0, noArray(), hist, 1, bins, rangos);
                     }
                     //Iteramos desde 0 hasta el valor del pixel que estamos tratando Pixel(i,j) del canal R o G o B de la imagen original en "channelRes"
-
                     for (int bit= 0; bit<=(int)channelsRes[canales[can]].at<uchar>(j,i); bit++){
                         //Sumamos esos valores
-
                         percentil+= hist.at<float>(bit);
-                        if(canales[can]==0){
-                            qDebug("%d %d %d %f",i,j,canales[can],percentil);
-                        }
+
                     }
                     //Dividimos el valor obtenido entre el numero de pixeles del rectangulo ancho+1 * alto+1
                     percentil=percentil/((posLargo+1)*(posAncho+1));
@@ -1352,12 +1365,11 @@ void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanale
         }
     }
 
-    merge(channelsRes,res);
     //juntamos los canales calculados
+    merge(channelsRes,res);
+
 
     imshow("nueva",res);
-
-    //crear_nueva(nres,res);
 }
 
 
