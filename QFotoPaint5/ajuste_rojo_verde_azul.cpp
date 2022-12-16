@@ -13,8 +13,7 @@ Ajuste_rojo_verde_azul::Ajuste_rojo_verde_azul(int numfoto,QWidget *parent) :
     verde=0;
     azul=0;
     rojo=0;
-    flag_suma=1;
-    flag_multiplicar=0;
+    flag_operacion=0;
 
 }
 
@@ -30,14 +29,14 @@ Ajuste_rojo_verde_azul::~Ajuste_rojo_verde_azul()
 void Ajuste_rojo_verde_azul::actualizar(){
 
 
-    if(flag_suma==1){
+    if(flag_operacion==0){
 
         ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,0);
 
     }
-    else if(flag_suma==0){
+    else{
 
-        ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,2);
+        ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,1);
 
     }
 
@@ -72,25 +71,13 @@ void Ajuste_rojo_verde_azul::on_horizontalSlider_3_valueChanged(int value)
 void Ajuste_rojo_verde_azul::on_radioButton_clicked()
 {
 
-    flag_suma=1;
-    flag_multiplicar=0;
+    flag_operacion=0;
 }
 
 void Ajuste_rojo_verde_azul::on_radioButton_2_clicked()
 {
-    flag_suma=0;
-    flag_multiplicar=1;
+    flag_operacion=1;
 }
-
-
-
-
-void Ajuste_rojo_verde_azul::on_spinBox_valueChanged(const QString &arg1)
-{
-
-}
-
-
 
 void Ajuste_rojo_verde_azul::on_Ajuste_rojo_verde_azul_rejected()
 {
@@ -99,8 +86,8 @@ void Ajuste_rojo_verde_azul::on_Ajuste_rojo_verde_azul_rejected()
 
 void Ajuste_rojo_verde_azul::on_Ajuste_rojo_verde_azul_accepted()
 {
-    ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,flag_multiplicar,true);
+    ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,flag_operacion,true);
+    destroyWindow("Ajuste Rojo Azul Verde");
 
 
 }
-

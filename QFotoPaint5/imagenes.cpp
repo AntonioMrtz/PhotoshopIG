@@ -1019,7 +1019,7 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
        qDebug("holasaddddddddddddddddd");
        imshow(foto[nfoto].nombre, img);
 
-           img.copyTo(foto[nfoto].img);
+           res.copyTo(foto[nfoto].img);
            foto[nfoto].modificada= true;
 
    }
