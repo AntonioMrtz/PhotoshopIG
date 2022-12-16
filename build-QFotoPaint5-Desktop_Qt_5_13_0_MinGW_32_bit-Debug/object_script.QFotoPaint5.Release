@@ -2,6 +2,7 @@ release/main.o
 release/ajustelineal.o
 release/bajorrelieve.o
 release/capturarvideo.o
+release/color_falso.o
 release/mainwindow.o
 release/imagenes.o
 release/dialognueva.o
@@ -23,6 +24,7 @@ release/moc_mainwindow.o
 release/moc_ajustelineal.o
 release/moc_bajorrelieve.o
 release/moc_capturarvideo.o
+release/moc_color_falso.o
 release/moc_dialognueva.o
 release/moc_brillocontraste.o
 release/moc_matsatlum.o

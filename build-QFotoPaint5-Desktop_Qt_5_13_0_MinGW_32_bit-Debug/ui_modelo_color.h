@@ -32,10 +32,10 @@ public:
         Modelo_color->resize(400, 300);
         radioButton = new QRadioButton(Modelo_color);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
-        radioButton->setGeometry(QRect(100, 20, 95, 20));
+        radioButton->setGeometry(QRect(100, 40, 95, 20));
         radioButton_2 = new QRadioButton(Modelo_color);
         radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
-        radioButton_2->setGeometry(QRect(100, 60, 95, 20));
+        radioButton_2->setGeometry(QRect(100, 70, 95, 20));
         radioButton_3 = new QRadioButton(Modelo_color);
         radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
         radioButton_3->setGeometry(QRect(100, 100, 95, 20));
@@ -44,7 +44,7 @@ public:
         radioButton_4->setGeometry(QRect(100, 130, 95, 20));
         radioButton_5 = new QRadioButton(Modelo_color);
         radioButton_5->setObjectName(QString::fromUtf8("radioButton_5"));
-        radioButton_5->setGeometry(QRect(100, 170, 95, 20));
+        radioButton_5->setGeometry(QRect(100, 160, 95, 20));
 
         retranslateUi(Modelo_color);
 
