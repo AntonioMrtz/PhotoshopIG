@@ -88,8 +88,9 @@ void Capturarvideo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         switch (_id) {
         case 0: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 1: _t->on_spinBox_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 2: _t->on_Capturarvideo_accepted(); break;
-        case 3: _t->on_Capturarvideo_rejected(); break;
+        case 2: _t->on_buttonBox_accepted(); break;
+        case 3: _t->on_Capturarvideo_accepted(); break;
+        case 4: _t->on_Capturarvideo_rejected(); break;
         default: ;
         }
     }

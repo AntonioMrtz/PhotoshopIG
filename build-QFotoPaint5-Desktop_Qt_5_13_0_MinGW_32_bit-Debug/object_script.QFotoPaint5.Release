@@ -1,4 +1,5 @@
 release/main.o
+release/ajuste_rojo_verde_azul.o
 release/ajustelineal.o
 release/bajorrelieve.o
 release/capturarvideo.o
@@ -21,6 +22,7 @@ release/acercade.o
 release/mediadevideo.o
 release/qrc_recursos.o
 release/moc_mainwindow.o
+release/moc_ajuste_rojo_verde_azul.o
 release/moc_ajustelineal.o
 release/moc_bajorrelieve.o
 release/moc_capturarvideo.o

@@ -15,6 +15,7 @@ TEMPLATE = app
 CONFIG += c++11
 
 SOURCES += main.cpp\
+    ajuste_rojo_verde_azul.cpp \
     ajustelineal.cpp \
     bajorrelieve.cpp \
     capturarvideo.cpp \
@@ -37,6 +38,7 @@ SOURCES += main.cpp\
     mediadevideo.cpp
 
 HEADERS  += mainwindow.h \
+    ajuste_rojo_verde_azul.h \
     ajustelineal.h \
     bajorrelieve.h \
     capturarvideo.h \
@@ -58,6 +60,7 @@ HEADERS  += mainwindow.h \
     mediadevideo.h
 
 FORMS    += mainwindow.ui \
+    ajuste_rojo_verde_azul.ui \
     ajustelineal.ui \
     bajorrelieve.ui \
     capturarvideo.ui \
