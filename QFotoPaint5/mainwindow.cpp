@@ -27,6 +27,7 @@ using namespace cv;
 #include "movimiento.h"
 #include "modelo_color.h"
 #include "color_falso.h"
+#include "ajuste_rojo_verde_azul.h"
 QString FiltroImagen = "Todos los formatos (*.jpg *.jpeg *.jpe .jp2 *.tif *.tiff *.png *.gif *.bmp *.dib *.webp *.ppm);;Archivos JPG (*.jpg *.jpeg *.jpe);;Archivos TIF (*.tif *.tiff);;Archivos PNG (*.png);;Archivos GIF (*.gif);;Archivos BMP (*.bmp *.dib);;Otros (*.*)";
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -558,10 +559,19 @@ void MainWindow::on_actionCopiar_a_portapapeles_triggered()
     }
 }
 
+<<<<<<< HEAD
 void MainWindow::on_actionRotar_y_reescalar_triggered()
 {
     if(foto_activa()!=-1){
         rotar_y_reescalar(foto_activa(),90,2);
     }
 
+=======
+void MainWindow::on_actionAjuste_rojo_azul_verde_triggered()
+{
+    if(foto_activa()!=-1 && primera_libre()!=-1){
+        Ajuste_rojo_verde_azul a(foto_activa());
+        a.exec();
+    }
+>>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
 }

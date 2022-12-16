@@ -988,9 +988,6 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
 
     //comprobar no pasarse  de 0 - 255
 
-    azul=0;
-    verde=0;
-    rojo=111110;
 
     if(type==0){
 
@@ -1010,9 +1007,6 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
 
     }
 
-    for(int i=0;i<3;i++){
-
-    }
 
     merge(canales,3,res);
 
@@ -1020,10 +1014,15 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
    imshow("Ajuste Rojo Azul Verde",res);
 
 
-    if (guardar) {
-        res.copyTo(foto[nfoto].img);
-        foto[nfoto].modificada= true;
-    }
+   if (guardar) {
+
+       qDebug("holasaddddddddddddddddd");
+       imshow(foto[nfoto].nombre, img);
+
+           img.copyTo(foto[nfoto].img);
+           foto[nfoto].modificada= true;
+
+   }
 
 
 }

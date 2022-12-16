@@ -71,3 +71,8 @@ void Capturarvideo::on_Capturarvideo_rejected()
     destroyWindow("Frame del video");
 
 }
+
+void Capturarvideo::on_buttonBox_accepted()
+{
+
+}

@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QLabel>
@@ -33,7 +32,6 @@ public:
     QLabel *label;
     QLabel *label_2;
     QLabel *label_3;
-    QCheckBox *checkBox;
     QSpinBox *spinBox;
     QSpinBox *spinBox_2;
     QSpinBox *spinBox_3;
@@ -83,9 +81,6 @@ public:
         label_3 = new QLabel(Ajuste_rojo_verde_azul);
         label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setGeometry(QRect(30, 170, 55, 16));
-        checkBox = new QCheckBox(Ajuste_rojo_verde_azul);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
-        checkBox->setGeometry(QRect(280, 10, 111, 20));
         spinBox = new QSpinBox(Ajuste_rojo_verde_azul);
         spinBox->setObjectName(QString::fromUtf8("spinBox"));
         spinBox->setGeometry(QRect(340, 90, 42, 22));
@@ -117,7 +112,6 @@ public:
         label->setText(QCoreApplication::translate("Ajuste_rojo_verde_azul", "Rojo", nullptr));
         label_2->setText(QCoreApplication::translate("Ajuste_rojo_verde_azul", "Verde", nullptr));
         label_3->setText(QCoreApplication::translate("Ajuste_rojo_verde_azul", "Azul", nullptr));
-        checkBox->setText(QCoreApplication::translate("Ajuste_rojo_verde_azul", "Previsualizar", nullptr));
     } // retranslateUi
 
 };

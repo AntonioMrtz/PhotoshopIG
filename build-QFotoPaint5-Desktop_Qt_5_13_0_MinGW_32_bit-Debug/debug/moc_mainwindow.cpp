@@ -23,7 +23,11 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[66];
+<<<<<<< HEAD
     char stringdata0[1956];
+=======
+    char stringdata0[1961];
+>>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -97,7 +101,11 @@ QT_MOC_LITERAL(61, 1771, 25), // "on_actionTrazos_triggered"
 QT_MOC_LITERAL(62, 1797, 37), // "on_actionEcualizacion_local_t..."
 QT_MOC_LITERAL(63, 1835, 42), // "on_actionCambiar_modelo_de_co..."
 QT_MOC_LITERAL(64, 1878, 40), // "on_actionCopiar_a_portapapele..."
+<<<<<<< HEAD
 QT_MOC_LITERAL(65, 1919, 36) // "on_actionRotar_y_reescalar_tr..."
+=======
+QT_MOC_LITERAL(65, 1919, 41) // "on_actionAjuste_rojo_azul_ver..."
+>>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
 
     },
     "MainWindow\0on_actionImagen_media_triggered\0"
@@ -158,7 +166,11 @@ QT_MOC_LITERAL(65, 1919, 36) // "on_actionRotar_y_reescalar_tr..."
     "on_actionEcualizacion_local_triggered\0"
     "on_actionCambiar_modelo_de_color_triggered\0"
     "on_actionCopiar_a_portapapeles_triggered\0"
+<<<<<<< HEAD
     "on_actionRotar_y_reescalar_triggered"
+=======
+    "on_actionAjuste_rojo_azul_verde_triggered"
+>>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
 };
 #undef QT_MOC_LITERAL
 
@@ -376,7 +388,11 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 59: _t->on_actionEcualizacion_local_triggered(); break;
         case 60: _t->on_actionCambiar_modelo_de_color_triggered(); break;
         case 61: _t->on_actionCopiar_a_portapapeles_triggered(); break;
+<<<<<<< HEAD
         case 62: _t->on_actionRotar_y_reescalar_triggered(); break;
+=======
+        case 62: _t->on_actionAjuste_rojo_azul_verde_triggered(); break;
+>>>>>>> 2157d57 (ajustar rojo verde azul interfaz sin guardar imagen)
         default: ;
         }
     }
