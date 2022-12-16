@@ -159,7 +159,7 @@ void ver_pinchar_estirar(int nfoto, int cx, int cy, double radio, double grado, 
 //Transformacion deformante gausiana
 void escala_color(int nfoto, int nres);
 //Transformacion de escala de color usando color_pincel
-void color_falso(int nfoto, int nres);
+void color_falso(int nfoto, int nres,int type);
 
 
 void transformar_modelo_color(int nfoto,int type,bool guardar=false);

@@ -402,6 +402,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuOpciones"/>
     <addaction name="actionCopiar_a_nueva"/>
     <addaction name="menuHistograma"/>
+    <addaction name="actionCopiar_a_portapapeles"/>
    </widget>
    <widget class="QMenu" name="menuHerramientas">
     <property name="title">
@@ -755,6 +756,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionCambiar_modelo_de_color">
    <property name="text">
     <string>Cambiar modelo de color</string>
+   </property>
+  </action>
+  <action name="actionCopiar_a_portapapeles">
+   <property name="text">
+    <string>Copiar a portapapeles</string>
    </property>
   </action>
  </widget>

@@ -79,6 +79,7 @@ public:
     QAction *actionTrazos;
     QAction *actionEcualizacion_local;
     QAction *actionCambiar_modelo_de_color;
+    QAction *actionCopiar_a_portapapeles;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -223,6 +224,8 @@ public:
         actionEcualizacion_local->setObjectName(QString::fromUtf8("actionEcualizacion_local"));
         actionCambiar_modelo_de_color = new QAction(MainWindow);
         actionCambiar_modelo_de_color->setObjectName(QString::fromUtf8("actionCambiar_modelo_de_color"));
+        actionCopiar_a_portapapeles = new QAction(MainWindow);
+        actionCopiar_a_portapapeles->setObjectName(QString::fromUtf8("actionCopiar_a_portapapeles"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -377,6 +380,7 @@ public:
         menuEdici_n->addAction(menuOpciones->menuAction());
         menuEdici_n->addAction(actionCopiar_a_nueva);
         menuEdici_n->addAction(menuHistograma->menuAction());
+        menuEdici_n->addAction(actionCopiar_a_portapapeles);
         menuOpciones->addAction(actionColor_del_pincel);
         menuOpciones->addAction(actionPreguntar_si_guardar);
         menuHistograma->addAction(actionGrises);
@@ -482,6 +486,7 @@ public:
         actionTrazos->setText(QCoreApplication::translate("MainWindow", "Trazos", nullptr));
         actionEcualizacion_local->setText(QCoreApplication::translate("MainWindow", "Ecualizacion local", nullptr));
         actionCambiar_modelo_de_color->setText(QCoreApplication::translate("MainWindow", "Cambiar modelo de color", nullptr));
+        actionCopiar_a_portapapeles->setText(QCoreApplication::translate("MainWindow", "Copiar a portapapeles", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

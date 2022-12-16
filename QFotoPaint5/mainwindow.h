@@ -86,6 +86,7 @@ private slots:
     void on_actionTrazos_triggered();
     void on_actionEcualizacion_local_triggered();
     void on_actionCambiar_modelo_de_color_triggered();
+    void on_actionCopiar_a_portapapeles_triggered();
 };
 
 extern MainWindow *w;

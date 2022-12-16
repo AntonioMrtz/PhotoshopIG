@@ -495,7 +495,7 @@ void MainWindow::on_actionCopiar_triggered()
 void MainWindow::on_actionColor_Falso_triggered()
 {
     if(foto_activa()!=-1 && primera_libre()!=-1){
-        color_falso(foto_activa(),primera_libre());
+        color_falso(foto_activa(),primera_libre(),1);
     }
 }
 
@@ -547,4 +547,11 @@ void MainWindow::on_actionCambiar_modelo_de_color_triggered()
         m.exec();
     }
 
+}
+
+void MainWindow::on_actionCopiar_a_portapapeles_triggered()
+{
+    if(foto_activa()!=-1){
+       copiar_portapapeles(foto_activa());
+    }
 }

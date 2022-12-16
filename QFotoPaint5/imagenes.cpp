@@ -874,11 +874,29 @@ void escala_color(int nfoto, int nres)
 
 //---------------------------------------------------------------------------
 
-void color_falso(int nfoto, int nres)
+void color_falso(int nfoto, int nres,int type)
 {
     Mat res;
     Mat im = foto[nfoto].img;
-    applyColorMap(im,res,COLORMAP_JET);
+
+    // JET = 0
+    // WINTER = 1
+    // SPRING = 2
+    // HSV = 3
+
+
+    if(type==0)
+        applyColorMap(im,res,COLORMAP_JET);
+
+    else if(type==1)
+        applyColorMap(im,res,COLORMAP_WINTER);
+
+    else if(type==2)
+        applyColorMap(im,res,COLORMAP_SPRING);
+
+    else if(type==3)
+        applyColorMap(im,res,COLORMAP_HSV);
+
     crear_nueva(nres,res);
 }
 
