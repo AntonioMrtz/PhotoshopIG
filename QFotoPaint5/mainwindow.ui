@@ -440,6 +440,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionEcualizacion_del_histograma"/>
     <addaction name="actionEspectro_de_intensidad"/>
     <addaction name="actionEcualizacion_local"/>
+    <addaction name="actionCambiar_modelo_de_color"/>
    </widget>
    <widget class="QMenu" name="menuEfectos">
     <property name="title">
@@ -749,6 +750,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionEcualizacion_local">
    <property name="text">
     <string>Ecualizacion local</string>
+   </property>
+  </action>
+  <action name="actionCambiar_modelo_de_color">
+   <property name="text">
+    <string>Cambiar modelo de color</string>
    </property>
   </action>
  </widget>

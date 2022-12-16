@@ -884,7 +884,7 @@ void color_falso(int nfoto, int nres)
 
 //---------------------------------------------------------------------------
 
-void transformar_modelo_color(int nfoto, bool guardar,int type)
+void transformar_modelo_color(int nfoto,int type,bool guardar)
 {
     Mat res;
     Mat im = foto[nfoto].img;

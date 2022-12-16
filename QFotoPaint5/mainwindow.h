@@ -85,6 +85,7 @@ private slots:
     void on_actionEspectro_de_intensidad_triggered();
     void on_actionTrazos_triggered();
     void on_actionEcualizacion_local_triggered();
+    void on_actionCambiar_modelo_de_color_triggered();
 };
 
 extern MainWindow *w;

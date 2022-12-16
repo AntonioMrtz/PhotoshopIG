@@ -7,6 +7,7 @@ debug/imagenes.o
 debug/dialognueva.o
 debug/brillocontraste.o
 debug/matsatlum.o
+debug/modelo_color.o
 debug/movimiento.o
 debug/perfilado.o
 debug/perspectiva.o
@@ -25,6 +26,7 @@ debug/moc_capturarvideo.o
 debug/moc_dialognueva.o
 debug/moc_brillocontraste.o
 debug/moc_matsatlum.o
+debug/moc_modelo_color.o
 debug/moc_movimiento.o
 debug/moc_perfilado.o
 debug/moc_perspectiva.o

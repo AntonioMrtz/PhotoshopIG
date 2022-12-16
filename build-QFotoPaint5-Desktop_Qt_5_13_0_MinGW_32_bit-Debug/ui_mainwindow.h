@@ -78,6 +78,7 @@ public:
     QAction *actionEspectro_de_intensidad;
     QAction *actionTrazos;
     QAction *actionEcualizacion_local;
+    QAction *actionCambiar_modelo_de_color;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -220,6 +221,8 @@ public:
         actionTrazos->setObjectName(QString::fromUtf8("actionTrazos"));
         actionEcualizacion_local = new QAction(MainWindow);
         actionEcualizacion_local->setObjectName(QString::fromUtf8("actionEcualizacion_local"));
+        actionCambiar_modelo_de_color = new QAction(MainWindow);
+        actionCambiar_modelo_de_color->setObjectName(QString::fromUtf8("actionCambiar_modelo_de_color"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -400,6 +403,7 @@ public:
         menuTransformar->addAction(actionEcualizacion_del_histograma);
         menuTransformar->addAction(actionEspectro_de_intensidad);
         menuTransformar->addAction(actionEcualizacion_local);
+        menuTransformar->addAction(actionCambiar_modelo_de_color);
         menuRotar->addAction(actionRotar_90);
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
@@ -477,6 +481,7 @@ public:
         actionEspectro_de_intensidad->setText(QCoreApplication::translate("MainWindow", "Espectro de intensidad", nullptr));
         actionTrazos->setText(QCoreApplication::translate("MainWindow", "Trazos", nullptr));
         actionEcualizacion_local->setText(QCoreApplication::translate("MainWindow", "Ecualizacion local", nullptr));
+        actionCambiar_modelo_de_color->setText(QCoreApplication::translate("MainWindow", "Cambiar modelo de color", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
