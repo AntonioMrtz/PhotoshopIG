@@ -442,6 +442,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionEspectro_de_intensidad"/>
     <addaction name="actionEcualizacion_local"/>
     <addaction name="actionCambiar_modelo_de_color"/>
+    <addaction name="actionRotar_y_reescalar"/>
    </widget>
    <widget class="QMenu" name="menuEfectos">
     <property name="title">
@@ -761,6 +762,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionCopiar_a_portapapeles">
    <property name="text">
     <string>Copiar a portapapeles</string>
+   </property>
+  </action>
+  <action name="actionRotar_y_reescalar">
+   <property name="text">
+    <string>Rotar y reescalar</string>
    </property>
   </action>
  </widget>

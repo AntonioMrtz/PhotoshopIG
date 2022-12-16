@@ -646,6 +646,7 @@ void rotar_angulo (Mat imagen, Mat &imgRes, double angulo, double escala, int mo
     }
     else if (modo==1)  // Reescalar y ampliar para caber entera
         sres.width= sres.height= int(sqrt(w*w + h*h)*escala);
+
     else               // Reescalar y recortar para no mostrar borde
         sres.width= sres.height= int(min(w, h)*escala/sqrt(2.0));
     imgRes.create(sres, imagen.type());
@@ -781,6 +782,40 @@ void ver_perspectiva(int nfoto1, int nfoto2, Point2f pt1[], Point2f pt2[], bool 
 }
 
 //---------------------------------------------------------------------------
+
+void rotar_y_reescalar(int nfoto, double angulo, double escala,bool guarda){
+
+
+
+    Mat img = foto[nfoto].img.clone();
+    //Obtenemos el centro para rotar la imagen desde este
+    Point2f center(((img.cols-1)/2.0),((img.rows-1)/2.0));
+    //Creamos matriz de rotacion que emplearemos para aplicar la rotacion
+    Mat M= getRotationMatrix2D(center, -angulo, escala);
+    //Creamos un Rectangulo con el tamaño de la imagen aplicandole la escala y se
+    //le aplica una rotacion de "angulo" grados
+    Rect2f tamañoNecesarioSalida = RotatedRect(Point2f(),Size(escala*img.size().width,escala*img.size().height),angulo).boundingRect2f();
+    //Ajustamos la matriz de rotacion al nuevo luegar donde se
+    //encuentra el centro, cosa que sabemos gracias al rectangulo
+    //calculado anteriormente
+    M.at<double>(0,2)+=((tamañoNecesarioSalida.width/2.0)) - img.cols/2.0;
+    M.at<double>(1,2)+=((tamañoNecesarioSalida.height/2.0)) - img.rows/2.0;
+    Mat res;
+    //Aplicamos la matriz de rotacion sobre img obteniendo el resultado deseado
+    //especificandole el tamaño de la imagen resultando basandonos en el rectangulo
+    //creado anteriormente
+    warpAffine(img,res,M,tamañoNecesarioSalida.size());
+    imshow("modo 0",res);
+
+
+    if(guarda){
+        res.copyTo(foto[nfoto].img);
+        mostrar(nfoto);
+        foto[nfoto].modificada=true;
+    }
+
+
+}
 
 
 void ver_ajuste_lineal (int nfoto, double pmin, double pmax,bool guardar)

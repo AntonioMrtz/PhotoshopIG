@@ -557,3 +557,11 @@ void MainWindow::on_actionCopiar_a_portapapeles_triggered()
        copiar_portapapeles(foto_activa());
     }
 }
+
+void MainWindow::on_actionRotar_y_reescalar_triggered()
+{
+    if(foto_activa()!=-1){
+        rotar_y_reescalar(foto_activa(),90,2);
+    }
+
+}
