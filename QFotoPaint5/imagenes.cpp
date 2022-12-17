@@ -1054,7 +1054,7 @@ void ver_balance_blancos(int nfoto)
 
 
     cvtColor(res,res,COLOR_YCrCb2RGB);
-    imshow("res",res);
+    //imshow("res",res);
 
     crear_nueva(primera_libre(),res);
 
