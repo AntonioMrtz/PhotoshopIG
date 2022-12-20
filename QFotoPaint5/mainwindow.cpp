@@ -28,6 +28,7 @@ using namespace cv;
 #include "modelo_color.h"
 #include "color_falso.h"
 #include "ajuste_rojo_verde_azul.h"
+#include "ecualizar_histograma.h"
 QString FiltroImagen = "Todos los formatos (*.jpg *.jpeg *.jpe .jp2 *.tif *.tiff *.png *.gif *.bmp *.dib *.webp *.ppm);;Archivos JPG (*.jpg *.jpeg *.jpe);;Archivos TIF (*.tif *.tiff);;Archivos PNG (*.png);;Archivos GIF (*.gif);;Archivos BMP (*.bmp *.dib);;Otros (*.*)";
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -574,3 +575,11 @@ void MainWindow::on_actionAjuste_rojo_azul_verde_triggered()
     }
 }
 
+
+void MainWindow::on_actionEcualizar_histograma_triggered()
+{
+    if(foto_activa()!=-1 && primera_libre()!=-1){
+        Ecualizar_histograma h(foto_activa());
+        h.exec();
+    }
+}

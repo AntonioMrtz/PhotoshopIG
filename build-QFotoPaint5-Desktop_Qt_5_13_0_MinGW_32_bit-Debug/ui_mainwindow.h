@@ -82,6 +82,7 @@ public:
     QAction *actionCopiar_a_portapapeles;
     QAction *actionRotar_y_reescalar;
     QAction *actionAjuste_rojo_azul_verde;
+    QAction *actionEcualizar_histograma;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -232,6 +233,8 @@ public:
         actionRotar_y_reescalar->setObjectName(QString::fromUtf8("actionRotar_y_reescalar"));
         actionAjuste_rojo_azul_verde = new QAction(MainWindow);
         actionAjuste_rojo_azul_verde->setObjectName(QString::fromUtf8("actionAjuste_rojo_azul_verde"));
+        actionEcualizar_histograma = new QAction(MainWindow);
+        actionEcualizar_histograma->setObjectName(QString::fromUtf8("actionEcualizar_histograma"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -416,6 +419,7 @@ public:
         menuTransformar->addAction(actionCambiar_modelo_de_color);
         menuTransformar->addAction(actionRotar_y_reescalar);
         menuTransformar->addAction(actionAjuste_rojo_azul_verde);
+        menuTransformar->addAction(actionEcualizar_histograma);
         menuRotar->addAction(actionRotar_90);
         menuRotar->addAction(actionRotar_180);
         menuRotar->addAction(actionRotar_91);
@@ -497,6 +501,7 @@ public:
         actionCopiar_a_portapapeles->setText(QCoreApplication::translate("MainWindow", "Copiar a portapapeles", nullptr));
         actionRotar_y_reescalar->setText(QCoreApplication::translate("MainWindow", "Rotar y reescalar", nullptr));
         actionAjuste_rojo_azul_verde->setText(QCoreApplication::translate("MainWindow", "Ajuste rojo/azul/verde", nullptr));
+        actionEcualizar_histograma->setText(QCoreApplication::translate("MainWindow", "Ecualizar histograma", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"

@@ -1,6 +1,5 @@
 #include "ajuste_rojo_verde_azul.h"
 #include "ui_ajuste_rojo_verde_azul.h"
-
 #include "imagenes.h"
 
 

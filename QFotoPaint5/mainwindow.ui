@@ -444,6 +444,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionCambiar_modelo_de_color"/>
     <addaction name="actionRotar_y_reescalar"/>
     <addaction name="actionAjuste_rojo_azul_verde"/>
+    <addaction name="actionEcualizar_histograma"/>
    </widget>
    <widget class="QMenu" name="menuEfectos">
     <property name="title">
@@ -773,6 +774,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionAjuste_rojo_azul_verde">
    <property name="text">
     <string>Ajuste rojo/azul/verde</string>
+   </property>
+  </action>
+  <action name="actionEcualizar_histograma">
+   <property name="text">
+    <string>Ecualizar histograma</string>
    </property>
   </action>
  </widget>

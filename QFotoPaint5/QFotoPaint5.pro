@@ -20,6 +20,7 @@ SOURCES += main.cpp\
     bajorrelieve.cpp \
     capturarvideo.cpp \
     color_falso.cpp \
+    ecualizar_histograma.cpp \
     mainwindow.cpp \
     imagenes.cpp \
     dialognueva.cpp \
@@ -43,6 +44,7 @@ HEADERS  += mainwindow.h \
     bajorrelieve.h \
     capturarvideo.h \
     color_falso.h \
+    ecualizar_histograma.h \
     imagenes.h \
     dialognueva.h \
     brillocontraste.h \
@@ -67,6 +69,7 @@ FORMS    += mainwindow.ui \
     color_falso.ui \
     dialognueva.ui \
     brillocontraste.ui \
+    ecualizar_histograma.ui \
     matsatlum.ui \
     modelo_color.ui \
     movimiento.ui \

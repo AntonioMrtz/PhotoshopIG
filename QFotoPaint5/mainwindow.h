@@ -89,6 +89,7 @@ private slots:
     void on_actionCopiar_a_portapapeles_triggered();
     void on_actionRotar_y_reescalar_triggered();
     void on_actionAjuste_rojo_azul_verde_triggered();
+    void on_actionEcualizar_histograma_triggered();
 };
 
 extern MainWindow *w;
