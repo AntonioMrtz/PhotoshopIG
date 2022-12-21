@@ -110,8 +110,7 @@ void Ajuste_rojo_verde_azul::qt_static_metacall(QObject *_o, QMetaObject::Call _
         case 0: _t->on_horizontalSlider_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 2: _t->on_horizontalSlider_2_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: _t->on_horizontalSlider_3_valueChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 5: _t->on_radioButton_clicked(); break;
-        case 6: _t->on_radioButton_2_clicked(); break;
+        case 4: _t->on_checkBox_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 7: _t->on_Ajuste_rojo_verde_azul_rejected(); break;
         case 8: _t->on_Ajuste_rojo_verde_azul_accepted(); break;
         default: ;

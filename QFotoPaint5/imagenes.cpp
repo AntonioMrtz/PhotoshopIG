@@ -975,7 +975,7 @@ void transformar_modelo_color(int nfoto,int type,bool guardar)
 
 }
 
-void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int type,bool guardar){
+void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int type[],bool guardar){
 
     Mat img=foto[nfoto].img;
     Mat res;
@@ -989,22 +989,28 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
     //comprobar no pasarse  de 0 - 255
 
 
-    if(type==0){
+    if(type[0]==0){
 
         canales[0]+=azul;
-        canales[1]+=verde;
-        canales[2]+=rojo;
-
-
-    }
-
-    else if(type==1){
+    }else{
 
         canales[0]*=azul;
+    }
+
+    if(type[1]==0){
+
+        canales[1]+=verde;
+    }else{
+
         canales[1]*=verde;
+    }
+
+    if(type[2]==0){
+
+        canales[2]+=rojo;
+    }else{
+
         canales[2]*=rojo;
-
-
     }
 
 

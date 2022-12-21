@@ -166,7 +166,7 @@ void transformar_modelo_color(int nfoto,int type,bool guardar=false);
 
 void copiar_portapapeles(int nfoto);
 
-void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int type,bool guardar=false);
+void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int type[],bool guardar=false);
 
 void rotar_y_reescalar(int nfoto, double angulo, double escala,bool guarda = false);
 
