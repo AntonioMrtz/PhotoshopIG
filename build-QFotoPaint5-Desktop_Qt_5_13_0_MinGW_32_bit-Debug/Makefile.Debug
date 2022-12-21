@@ -366,7 +366,7 @@ debug/moc_mainwindow.cpp: ../QFotoPaint5/mainwindow.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\mainwindow.h -o debug\moc_mainwindow.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\mainwindow.h -o debug\moc_mainwindow.cpp
 
 debug/moc_ajuste_rojo_verde_azul.cpp: ../QFotoPaint5/ajuste_rojo_verde_azul.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -475,7 +475,7 @@ debug/moc_ajuste_rojo_verde_azul.cpp: ../QFotoPaint5/ajuste_rojo_verde_azul.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\ajuste_rojo_verde_azul.h -o debug\moc_ajuste_rojo_verde_azul.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\ajuste_rojo_verde_azul.h -o debug\moc_ajuste_rojo_verde_azul.cpp
 
 debug/moc_ajustelineal.cpp: ../QFotoPaint5/ajustelineal.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -584,7 +584,7 @@ debug/moc_ajustelineal.cpp: ../QFotoPaint5/ajustelineal.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\ajustelineal.h -o debug\moc_ajustelineal.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\ajustelineal.h -o debug\moc_ajustelineal.cpp
 
 debug/moc_bajorrelieve.cpp: ../QFotoPaint5/bajorrelieve.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -693,7 +693,7 @@ debug/moc_bajorrelieve.cpp: ../QFotoPaint5/bajorrelieve.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\bajorrelieve.h -o debug\moc_bajorrelieve.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\bajorrelieve.h -o debug\moc_bajorrelieve.cpp
 
 debug/moc_capturarvideo.cpp: ../QFotoPaint5/capturarvideo.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -905,7 +905,7 @@ debug/moc_capturarvideo.cpp: ../QFotoPaint5/capturarvideo.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/background_segm.hpp \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\capturarvideo.h -o debug\moc_capturarvideo.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\capturarvideo.h -o debug\moc_capturarvideo.cpp
 
 debug/moc_color_falso.cpp: ../QFotoPaint5/color_falso.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1014,7 +1014,7 @@ debug/moc_color_falso.cpp: ../QFotoPaint5/color_falso.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\color_falso.h -o debug\moc_color_falso.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\color_falso.h -o debug\moc_color_falso.cpp
 
 debug/moc_ecualizar_histograma.cpp: ../QFotoPaint5/ecualizar_histograma.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1123,7 +1123,7 @@ debug/moc_ecualizar_histograma.cpp: ../QFotoPaint5/ecualizar_histograma.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\ecualizar_histograma.h -o debug\moc_ecualizar_histograma.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\ecualizar_histograma.h -o debug\moc_ecualizar_histograma.cpp
 
 debug/moc_dialognueva.cpp: ../QFotoPaint5/dialognueva.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1232,7 +1232,7 @@ debug/moc_dialognueva.cpp: ../QFotoPaint5/dialognueva.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\dialognueva.h -o debug\moc_dialognueva.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\dialognueva.h -o debug\moc_dialognueva.cpp
 
 debug/moc_brillocontraste.cpp: ../QFotoPaint5/brillocontraste.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1341,7 +1341,7 @@ debug/moc_brillocontraste.cpp: ../QFotoPaint5/brillocontraste.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\brillocontraste.h -o debug\moc_brillocontraste.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\brillocontraste.h -o debug\moc_brillocontraste.cpp
 
 debug/moc_matsatlum.cpp: ../QFotoPaint5/matsatlum.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1450,7 +1450,7 @@ debug/moc_matsatlum.cpp: ../QFotoPaint5/matsatlum.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\matsatlum.h -o debug\moc_matsatlum.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\matsatlum.h -o debug\moc_matsatlum.cpp
 
 debug/moc_modelo_color.cpp: ../QFotoPaint5/modelo_color.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1559,7 +1559,7 @@ debug/moc_modelo_color.cpp: ../QFotoPaint5/modelo_color.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\modelo_color.h -o debug\moc_modelo_color.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\modelo_color.h -o debug\moc_modelo_color.cpp
 
 debug/moc_movimiento.cpp: ../QFotoPaint5/movimiento.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1773,7 +1773,7 @@ debug/moc_movimiento.cpp: ../QFotoPaint5/movimiento.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/background_segm.hpp \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\movimiento.h -o debug\moc_movimiento.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\movimiento.h -o debug\moc_movimiento.cpp
 
 debug/moc_perfilado.cpp: ../QFotoPaint5/perfilado.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1882,7 +1882,7 @@ debug/moc_perfilado.cpp: ../QFotoPaint5/perfilado.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\perfilado.h -o debug\moc_perfilado.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\perfilado.h -o debug\moc_perfilado.cpp
 
 debug/moc_perspectiva.cpp: ../QFotoPaint5/perspectiva.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -1991,7 +1991,7 @@ debug/moc_perspectiva.cpp: ../QFotoPaint5/perspectiva.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\perspectiva.h -o debug\moc_perspectiva.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\perspectiva.h -o debug\moc_perspectiva.cpp
 
 debug/moc_pinchar_estirar.cpp: ../QFotoPaint5/pinchar_estirar.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -2100,7 +2100,7 @@ debug/moc_pinchar_estirar.cpp: ../QFotoPaint5/pinchar_estirar.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\pinchar_estirar.h -o debug\moc_pinchar_estirar.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\pinchar_estirar.h -o debug\moc_pinchar_estirar.cpp
 
 debug/moc_suavizados.cpp: ../QFotoPaint5/suavizados.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -2209,7 +2209,7 @@ debug/moc_suavizados.cpp: ../QFotoPaint5/suavizados.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\suavizados.h -o debug\moc_suavizados.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\suavizados.h -o debug\moc_suavizados.cpp
 
 debug/moc_rotaravideo.cpp: ../QFotoPaint5/rotaravideo.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -2318,7 +2318,7 @@ debug/moc_rotaravideo.cpp: ../QFotoPaint5/rotaravideo.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\rotaravideo.h -o debug\moc_rotaravideo.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\rotaravideo.h -o debug\moc_rotaravideo.cpp
 
 debug/moc_mediaponderada.cpp: ../QFotoPaint5/mediaponderada.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -2531,7 +2531,7 @@ debug/moc_mediaponderada.cpp: ../QFotoPaint5/mediaponderada.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/background_segm.hpp \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\mediaponderada.h -o debug\moc_mediaponderada.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\mediaponderada.h -o debug\moc_mediaponderada.cpp
 
 debug/moc_acercade.cpp: ../QFotoPaint5/acercade.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -2640,7 +2640,7 @@ debug/moc_acercade.cpp: ../QFotoPaint5/acercade.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\acercade.h -o debug\moc_acercade.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\acercade.h -o debug\moc_acercade.cpp
 
 debug/moc_mediadevideo.cpp: ../QFotoPaint5/mediadevideo.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialog \
@@ -2752,7 +2752,7 @@ debug/moc_mediadevideo.cpp: ../QFotoPaint5/mediadevideo.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qbasictimer.h \
 		debug/moc_predefs.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/bin/moc.exe
-	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include C:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -IC:/Users/Usuario/Desktop/QT_WORKSPACE/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\mediadevideo.h -o debug\moc_mediadevideo.cpp
+	C:\Qt\Qt5.13.0\5.13.0\mingw73_32\bin\moc.exe $(DEFINES) --include D:/Github/PhotoshopIG/build-QFotoPaint5-Desktop_Qt_5_13_0_MinGW_32_bit-Debug/debug/moc_predefs.h -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/mkspecs/win32-g++ -ID:/Github/PhotoshopIG/QFotoPaint5 -IC:/OpenCV/OpenCV4.6.0G/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtANGLE -IC:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore -I. -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++ -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include/c++/backward -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include -IC:/Qt/Qt5.13.0/Tools/mingw730_32/lib/gcc/i686-w64-mingw32/7.3.0/include-fixed -IC:/Qt/Qt5.13.0/Tools/mingw730_32/i686-w64-mingw32/include ..\QFotoPaint5\mediadevideo.h -o debug\moc_mediadevideo.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -3075,31 +3075,6 @@ debug/ajuste_rojo_verde_azul.o: ../QFotoPaint5/ajuste_rojo_verde_azul.cpp ../QFo
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_ajuste_rojo_verde_azul.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QRadioButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qradiobutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -3312,31 +3287,6 @@ debug/ajustelineal.o: ../QFotoPaint5/ajustelineal.cpp ../QFotoPaint5/ajustelinea
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_ajustelineal.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QCheckBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qcheckbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -3549,28 +3499,6 @@ debug/bajorrelieve.o: ../QFotoPaint5/bajorrelieve.cpp ../QFotoPaint5/bajorreliev
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_bajorrelieve.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDial \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdial.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QRadioButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qradiobutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -3886,27 +3814,6 @@ debug/capturarvideo.o: ../QFotoPaint5/capturarvideo.cpp ../QFotoPaint5/capturarv
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/tracking.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/background_segm.hpp \
 		ui_capturarvideo.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\capturarvideo.o ..\QFotoPaint5\capturarvideo.cpp
 
@@ -4016,18 +3923,6 @@ debug/color_falso.o: ../QFotoPaint5/color_falso.cpp ../QFotoPaint5/color_falso.h
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_color_falso.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QRadioButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qradiobutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -4454,36 +4349,6 @@ debug/mainwindow.o: ../QFotoPaint5/mainwindow.cpp ../QFotoPaint5/mainwindow.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
 		ui_mainwindow.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QAction \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qaction.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qactiongroup.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QMenu \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qmenu.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QMenuBar \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qmenubar.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QPushButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QStatusBar \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qstatusbar.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QToolButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtoolbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QFileDialog \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qfiledialog.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qdir.h \
@@ -4835,11 +4700,6 @@ debug/imagenes.o: ../QFotoPaint5/imagenes.cpp ../QFotoPaint5/imagenes.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabwidget.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
 		ui_mainwindow.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QAction \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qaction.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qactiongroup.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
@@ -4847,24 +4707,6 @@ debug/imagenes.o: ../QFotoPaint5/imagenes.cpp ../QFotoPaint5/imagenes.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QMenu \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qmenu.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QMenuBar \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qmenubar.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QPushButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QStatusBar \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qstatusbar.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QToolButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtoolbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QWidget \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QMessageBox \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qmessagebox.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialog.h \
@@ -4982,31 +4824,6 @@ debug/dialognueva.o: ../QFotoPaint5/dialognueva.cpp ../QFotoPaint5/dialognueva.h
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_dialognueva.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QGroupBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qgroupbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QPushButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -5221,32 +5038,6 @@ debug/brillocontraste.o: ../QFotoPaint5/brillocontraste.cpp ../QFotoPaint5/brill
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_brillocontraste.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QCheckBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qcheckbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -5459,29 +5250,6 @@ debug/matsatlum.o: ../QFotoPaint5/matsatlum.cpp ../QFotoPaint5/matsatlum.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_matsatlum.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDial \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdial.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -5694,18 +5462,6 @@ debug/modelo_color.o: ../QFotoPaint5/modelo_color.cpp ../QFotoPaint5/modelo_colo
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_modelo_color.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QRadioButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qradiobutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -6022,23 +5778,7 @@ debug/movimiento.o: ../QFotoPaint5/movimiento.cpp ../QFotoPaint5/movimiento.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/tracking.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/background_segm.hpp \
-		ui_movimiento.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h
+		ui_movimiento.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\movimiento.o ..\QFotoPaint5\movimiento.cpp
 
 debug/perfilado.o: ../QFotoPaint5/perfilado.cpp ../QFotoPaint5/perfilado.h \
@@ -6147,27 +5887,6 @@ debug/perfilado.o: ../QFotoPaint5/perfilado.cpp ../QFotoPaint5/perfilado.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_perfilado.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -6380,38 +6099,6 @@ debug/perspectiva.o: ../QFotoPaint5/perspectiva.cpp ../QFotoPaint5/perspectiva.h
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_perspectiva.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QListWidget \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlistwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlistview.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qstyle.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qrubberband.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -6624,27 +6311,6 @@ debug/pinchar_estirar.o: ../QFotoPaint5/pinchar_estirar.cpp ../QFotoPaint5/pinch
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_pinchar_estirar.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -6857,32 +6523,6 @@ debug/suavizados.o: ../QFotoPaint5/suavizados.cpp ../QFotoPaint5/suavizados.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_suavizados.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QCheckBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qcheckbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv_modules.hpp \
@@ -7265,43 +6905,6 @@ debug/rotaravideo.o: ../QFotoPaint5/rotaravideo.cpp ../QFotoPaint5/rotaravideo.h
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
 		ui_rotaravideo.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QComboBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qcombobox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qstyle.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDoubleSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QGroupBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qgroupbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QRadioButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qradiobutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QFileDialog \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qfiledialog.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qdir.h \
@@ -7309,6 +6912,8 @@ debug/rotaravideo.o: ../QFotoPaint5/rotaravideo.cpp ../QFotoPaint5/rotaravideo.h
 		../QFotoPaint5/mainwindow.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QMainWindow \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qmainwindow.h \
+		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabwidget.h \
+		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
 		../QFotoPaint5/video.h \
 		../QFotoPaint5/imagenes.h \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/opencv.hpp \
@@ -7625,44 +7230,7 @@ debug/mediaponderada.o: ../QFotoPaint5/mediaponderada.cpp ../QFotoPaint5/mediapo
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/tracking.hpp \
 		C:/OpenCV/OpenCV4.6.0G/include/opencv2/video/background_segm.hpp \
-		ui_mediaponderada.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QCheckBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qcheckbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QDialogButtonBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QListWidget \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlistwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlistview.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qstyle.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qrubberband.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSlider
+		ui_mediaponderada.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mediaponderada.o ..\QFotoPaint5\mediaponderada.cpp
 
 debug/acercade.o: ../QFotoPaint5/acercade.cpp ../QFotoPaint5/acercade.h \
@@ -7770,25 +7338,7 @@ debug/acercade.o: ../QFotoPaint5/acercade.cpp ../QFotoPaint5/acercade.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qfiledevice.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvector2d.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qtouchdevice.h \
-		ui_acercade.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QCommandLinkButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qcommandlinkbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QFrame \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h
+		ui_acercade.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\acercade.o ..\QFotoPaint5\acercade.cpp
 
 debug/mediadevideo.o: ../QFotoPaint5/mediadevideo.cpp ../QFotoPaint5/mediadevideo.h \
@@ -7900,29 +7450,6 @@ debug/mediadevideo.o: ../QFotoPaint5/mediadevideo.cpp ../QFotoPaint5/mediadevide
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qtimer.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qbasictimer.h \
 		ui_mediadevideo.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/QVariant \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/QIcon \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qicon.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QApplication \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qcoreapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qeventloop.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qdesktopwidget.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qguiapplication.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qinputmethod.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QGroupBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qgroupbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qframe.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QLabel \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qlabel.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QPushButton \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QSpinBox \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtGui/qvalidator.h \
-		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtCore/qregularexpression.h \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/QMessageBox \
 		C:/Qt/Qt5.13.0/5.13.0/mingw73_32/include/QtWidgets/qmessagebox.h \
 		../QFotoPaint5/video.h \

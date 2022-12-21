@@ -266,14 +266,36 @@ void cb_punto (int factual, int x, int y)
     if (difum_pincel==0)
         circle(im, Point(x, y), radio_pincel, color_pincel, -1, LINE_AA);
     else {
-        Mat res(im.size(), im.type(), color_pincel);
-        Mat cop(im.size(), im.type(), CV_RGB(0,0,0));
-        circle(cop, Point(x, y), radio_pincel, CV_RGB(255,255,255), -1, LINE_AA);
+        int tam = radio_pincel+difum_pincel;
+        int posx= tam, posy=tam;
+        Rect roi(x-tam, y-tam, 2*tam+1, 2*tam+1);
+        if(roi.x<0){
+            roi.width+= roi.x;
+            posx+= roi.x;
+            roi.x=0;
+        }
+        if(roi.y<0){
+            roi.width+= roi.y;
+            posx+= roi.y;
+            roi.y=0;
+        }
+        if(roi.x+roi.width > im.cols){
+            roi.width= im.cols-roi.x;
+        }
+        if(roi.y+roi.height > im.rows){
+            roi.height= im.rows -roi.y;
+        }
+
+        Mat frag = im(roi);
+
+        Mat res(frag.size(), frag.type(), color_pincel);
+        Mat cop(frag.size(), frag.type(), CV_RGB(0,0,0));
+        circle(cop, Point(posx, posy), radio_pincel, CV_RGB(255,255,255), -1, LINE_AA);
         blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
         multiply(res, cop, res, 1.0/255.0);
         bitwise_not(cop, cop);
-        multiply(im, cop, im, 1.0/255.0);
-        im= res + im;
+        multiply(frag, cop, frag, 1.0/255.0);
+        frag= res + frag;
     }
     imshow(foto[factual].nombre, im);
     foto[factual].modificada= true;
@@ -310,39 +332,75 @@ void cb_trazo (int factual, int x, int y)
         if (difum_pincel==0)
             line(im, punto_anterior, Point(x,y), color_pincel, radio_pincel*2+1);
         else {
+
+            int tam = radio_pincel+difum_pincel;
             Point nuevoPunto_anterior;
             Point nuevoPunto_actual;
+            Point start_Punto = Point(0,0);
 
             int height, width;
             if(x<punto_anterior.x){
-                width=punto_anterior.x-x;
-                nuevoPunto_anterior.x=width;
-                nuevoPunto_actual.x=0;
-
+                width=punto_anterior.x-x+2*tam;
+                nuevoPunto_anterior.x=width-tam;
+                start_Punto.x=x-tam;
+                nuevoPunto_actual.x=0+tam;
+                if(width+start_Punto.x>im.cols){
+                    width=im.cols-start_Punto.x;
+                    nuevoPunto_anterior.x=width-tam;
+                }
             }else{
-                width=x-punto_anterior.x;
-                nuevoPunto_actual.x=width;
-                nuevoPunto_anterior.x=0;
+                width=x-punto_anterior.x+2*tam;
+                nuevoPunto_actual.x=width-tam;
+                start_Punto.x=punto_anterior.x-tam;
+                nuevoPunto_anterior.x=0+tam;
+                if(width+start_Punto.x>im.cols){
+                    width=im.cols-start_Punto.x;
+                    nuevoPunto_actual.x=width-tam;
+                }
             }
+
+            if(start_Punto.x<0){
+                start_Punto.x=0;
+            }
+
 
             if(y<punto_anterior.y){
-                height=punto_anterior.y-y;
-                nuevoPunto_anterior.y=height;
-                nuevoPunto_actual.y=0;
+                start_Punto.y=y-tam;
+                height=punto_anterior.y-y+2*tam;
+                nuevoPunto_anterior.y=height-tam;
+                nuevoPunto_actual.y=0+tam;
+                if(height+start_Punto.y>im.rows){
+                    height=im.rows-start_Punto.y;
+                    nuevoPunto_anterior.y=height-tam;
+                }
             }else{
-                height=y-punto_anterior.y;
-                nuevoPunto_actual.y=height;
-                nuevoPunto_anterior.y=0;
+                start_Punto.y=punto_anterior.y-tam;
+                height=y-punto_anterior.y+2*tam;
+                nuevoPunto_actual.y=height-tam;
+                nuevoPunto_anterior.y=0+tam;
+                if(height+start_Punto.y>im.rows){
+                    height=im.rows-start_Punto.y;
+                    nuevoPunto_actual.y=height-tam;
+                }
             }
 
-            Mat res(im.size(), im.type(), color_pincel);
-            Mat cop(im.size(), im.type(), CV_RGB(0,0,0));
-            line(cop, punto_anterior, Point(x,y), CV_RGB(255,255,255), radio_pincel*2+1);
+
+            if(start_Punto.y<0){
+                start_Punto.y=0;
+            }
+
+            qDebug("%d %d %d %d %d %d %d %d %d %d %d %d",x,y,punto_anterior.x, punto_anterior.y ,width,height,nuevoPunto_anterior.x,nuevoPunto_anterior.y,nuevoPunto_actual.x,nuevoPunto_actual.y,start_Punto.x,start_Punto.y);
+
+            Rect roi(start_Punto.x,start_Punto.y,width,height);
+            Mat frag = im(roi);
+            Mat res(frag.size(), frag.type(), color_pincel);
+            Mat cop(frag.size(), frag.type(), CV_RGB(0,0,0));
+            line(cop, nuevoPunto_anterior, nuevoPunto_actual, CV_RGB(255,255,255), radio_pincel*2+1);
             blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
             multiply(res, cop, res, 1.0/255.0);
             bitwise_not(cop, cop);
-            multiply(im, cop, im, 1.0/255.0);
-            im= res + im;
+            multiply(frag, cop, frag, 1.0/255.0);
+            frag= res + frag;
         }
     }else{
         cb_punto(factual,x,y);
