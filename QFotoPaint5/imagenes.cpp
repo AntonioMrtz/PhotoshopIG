@@ -310,6 +310,31 @@ void cb_trazo (int factual, int x, int y)
         if (difum_pincel==0)
             line(im, punto_anterior, Point(x,y), color_pincel, radio_pincel*2+1);
         else {
+            Point nuevoPunto_anterior;
+            Point nuevoPunto_actual;
+
+            int height, width;
+            if(x<punto_anterior.x){
+                width=punto_anterior.x-x;
+                nuevoPunto_anterior.x=width;
+                nuevoPunto_actual.x=0;
+
+            }else{
+                width=x-punto_anterior.x;
+                nuevoPunto_actual.x=width;
+                nuevoPunto_anterior.x=0;
+            }
+
+            if(y<punto_anterior.y){
+                height=punto_anterior.y-y;
+                nuevoPunto_anterior.y=height;
+                nuevoPunto_actual.y=0;
+            }else{
+                height=y-punto_anterior.y;
+                nuevoPunto_actual.y=height;
+                nuevoPunto_anterior.y=0;
+            }
+
             Mat res(im.size(), im.type(), color_pincel);
             Mat cop(im.size(), im.type(), CV_RGB(0,0,0));
             line(cop, punto_anterior, Point(x,y), CV_RGB(255,255,255), radio_pincel*2+1);
