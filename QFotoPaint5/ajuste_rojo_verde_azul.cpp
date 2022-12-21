@@ -12,7 +12,6 @@ Ajuste_rojo_verde_azul::Ajuste_rojo_verde_azul(int numfoto,QWidget *parent) :
     verde=0;
     azul=0;
     rojo=0;
-    flag_operacion=0;
 
 }
 
@@ -27,17 +26,11 @@ Ajuste_rojo_verde_azul::~Ajuste_rojo_verde_azul()
 
 void Ajuste_rojo_verde_azul::actualizar(){
 
+    type[2]=ui->checkBox->checkState();
+    type[1]=ui->checkBox_2->checkState();
+    type[0]=ui->checkBox_3->checkState();
 
-    if(flag_operacion==0){
-
-        ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,0);
-
-    }
-    else{
-
-        ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,1);
-
-    }
+    ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,type);
 
 
 
@@ -67,16 +60,6 @@ void Ajuste_rojo_verde_azul::on_horizontalSlider_3_valueChanged(int value)
 }
 
 
-void Ajuste_rojo_verde_azul::on_radioButton_clicked()
-{
-
-    flag_operacion=0;
-}
-
-void Ajuste_rojo_verde_azul::on_radioButton_2_clicked()
-{
-    flag_operacion=1;
-}
 
 void Ajuste_rojo_verde_azul::on_Ajuste_rojo_verde_azul_rejected()
 {
@@ -85,8 +68,18 @@ void Ajuste_rojo_verde_azul::on_Ajuste_rojo_verde_azul_rejected()
 
 void Ajuste_rojo_verde_azul::on_Ajuste_rojo_verde_azul_accepted()
 {
-    ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,flag_operacion,true);
+
+    type[2]=ui->checkBox->checkState();
+    type[1]=ui->checkBox_2->checkState();
+    type[0]=ui->checkBox_3->checkState();
+
+    ajuste_rojo_verde_azul(nfoto,azul,verde,rojo,type,true);
     destroyWindow("Ajuste Rojo Azul Verde");
 
+
+}
+
+void Ajuste_rojo_verde_azul::on_checkBox_stateChanged(int arg1)
+{
 
 }

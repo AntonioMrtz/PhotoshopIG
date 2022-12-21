@@ -39,11 +39,11 @@ private slots:
 private:
     Ui::Ajuste_rojo_verde_azul *ui;
     int nfoto;
-    int flag_operacion;
     double rojo;
     double verde;
     double azul;
     void actualizar();
+    int type[3];
 };
 
 #endif // AJUSTE_ROJO_VERDE_AZUL_H

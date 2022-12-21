@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>599</width>
+    <height>397</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>-40</x>
-     <y>240</y>
+     <x>50</x>
+     <y>320</y>
      <width>341</width>
      <height>32</height>
     </rect>
@@ -29,43 +29,11 @@
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QRadioButton" name="radioButton">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>10</y>
-     <width>95</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Sumar</string>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radioButton_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>40</y>
-     <width>95</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Multiplicar</string>
-   </property>
-  </widget>
   <widget class="QSlider" name="horizontalSlider">
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>90</y>
+     <y>140</y>
      <width>221</width>
      <height>22</height>
     </rect>
@@ -84,7 +52,7 @@
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>130</y>
+     <y>180</y>
      <width>221</width>
      <height>22</height>
     </rect>
@@ -103,7 +71,7 @@
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>170</y>
+     <y>220</y>
      <width>221</width>
      <height>22</height>
     </rect>
@@ -122,7 +90,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>90</y>
+     <y>140</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -135,7 +103,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>130</y>
+     <y>180</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -148,7 +116,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>170</y>
+     <y>220</y>
      <width>55</width>
      <height>16</height>
     </rect>
@@ -161,7 +129,7 @@
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>90</y>
+     <y>140</y>
      <width>42</width>
      <height>22</height>
     </rect>
@@ -177,7 +145,7 @@
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>130</y>
+     <y>180</y>
      <width>42</width>
      <height>22</height>
     </rect>
@@ -193,7 +161,7 @@
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>170</y>
+     <y>220</y>
      <width>42</width>
      <height>22</height>
     </rect>
@@ -203,6 +171,45 @@
    </property>
    <property name="maximum">
     <number>255</number>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>140</y>
+     <width>121</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Multiplicar Rojo</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>180</y>
+     <width>141</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Multiplicar verde</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="checkBox_3">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>220</y>
+     <width>131</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Multiplicar azul</string>
    </property>
   </widget>
  </widget>
