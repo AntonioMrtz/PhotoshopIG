@@ -579,3 +579,15 @@ void MainWindow::on_actionAjuste_rojo_azul_verde_triggered()
     }
 }
 
+
+void MainWindow::on_actionElipse_triggered()
+{
+    ui->toolButton_9->setChecked(true);
+    herr_actual=HER_ELIPSE;
+
+}
+
+void MainWindow::on_toolButton_9_clicked()
+{
+    herr_actual=HER_ELIPSE;
+}

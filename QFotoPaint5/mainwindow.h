@@ -90,6 +90,8 @@ private slots:
     void on_actionRotar_y_reescalar_triggered();
     void on_actionAjuste_rojo_azul_verde_triggered();
     void on_actionEcualizar_histograma_triggered();
+    void on_actionElipse_triggered();
+    void on_toolButton_9_clicked();
 };
 
 extern MainWindow *w;

@@ -40,7 +40,7 @@ struct ventana {
 //    Enumerado con los distintos tipos posibles de herramientas
 //    que se pueden usar. Añadir nuevas aquí
 
-enum tipo_herramienta {HER_PUNTO, HER_LINEA, HER_SELECCION, HER_RECTANGULO,HER_ARCO_IRIS, HER_COPIAR,HER_RELLENAR,HER_TRAZAR};
+enum tipo_herramienta {HER_PUNTO, HER_LINEA, HER_SELECCION, HER_RECTANGULO,HER_ARCO_IRIS, HER_COPIAR,HER_RELLENAR,HER_TRAZAR,HER_ELIPSE};
 
 
 ///////////////////////////////////////////////////////////////////
