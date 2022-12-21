@@ -99,6 +99,7 @@ public:
     QToolButton *toolButton_7;
     QToolButton *toolButton_8;
     QToolButton *toolButton_9;
+    QToolButton *toolButton_10;
     QMenuBar *menuBar;
     QMenu *menuArchivo;
     QMenu *menuEdici_n;
@@ -344,6 +345,15 @@ public:
         toolButton_9->setIcon(icon8);
         toolButton_9->setCheckable(true);
         toolButton_9->setAutoExclusive(true);
+        toolButton_10 = new QToolButton(centralWidget);
+        toolButton_10->setObjectName(QString::fromUtf8("toolButton_10"));
+        toolButton_10->setGeometry(QRect(370, 0, 41, 41));
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8("../../../Descargas/trazos_.jpg"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_10->setIcon(icon9);
+        toolButton_10->setIconSize(QSize(36, 36));
+        toolButton_10->setCheckable(true);
+        toolButton_10->setAutoExclusive(true);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -536,6 +546,7 @@ public:
         toolButton_7->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_8->setText(QCoreApplication::translate("MainWindow", "Arcoiris", nullptr));
         toolButton_9->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_10->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         menuArchivo->setTitle(QCoreApplication::translate("MainWindow", "Archivo", nullptr));
         menuEdici_n->setTitle(QCoreApplication::translate("MainWindow", "Edici\303\263n", nullptr));
         menuOpciones->setTitle(QCoreApplication::translate("MainWindow", "Opciones", nullptr));

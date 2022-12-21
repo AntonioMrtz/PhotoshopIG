@@ -351,7 +351,6 @@ void cb_elipse(int factual, int x, int y)
 
 void cb_trazo (int factual, int x, int y)
 {
-    qDebug("%d %d",x,y);
     Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
     if(punto_anterior.x>-1){
         if (difum_pincel==0)
@@ -574,28 +573,37 @@ Scalar ColorArcoIris(){
 
     static Scalar colorActual= CV_RGB(255,0,0);
     static int estado=0;
+    int incr=8;
     switch(estado){
 
     case 0:
-            colorActual.val[1]+=8;   //TODO OPCIONAL
-            if(colorActual.val[1]==255) estado=1;
+            colorActual.val[1]+=incr;   //TODO OPCIONAL
+            if(colorActual.val[1]>=255) estado=1;
             break;
 
-    case 1: if(--colorActual.val[2]==0) estado=2;
+    case 1:
+        colorActual.val[2]-=incr;
+        if(colorActual.val[2]<=0) estado=2;
             break;
 
-    case 2: if (++colorActual.val[0]==255) estado=3;
+    case 2:
+        colorActual.val[0]+=incr;
+        if(colorActual.val[0]>=255) estado=3;
             break;
 
-    case 3:if (--colorActual.val[1]==0) estado=4;
+    case 3:
+        colorActual.val[1]-=incr;
+        if(colorActual.val[1]<=0) estado=4;
             break;
 
-    case 4 :if(++colorActual[2]==255) estado=5;
+    case 4 :
+        colorActual.val[2]+=incr;
+        if(colorActual.val[2]>=255) estado=5;
             break;
-
-    case 5: if(--colorActual[0]==0) estado=0;
-
-
+    case 5:
+        colorActual.val[0]-=incr;
+        if(colorActual.val[0]<=0) estado=0;
+            break;
     }
 
     return colorActual;
@@ -608,14 +616,36 @@ void cb_arco_iris (int factual, int x, int y)
     if (difum_pincel==0)
         circle(im, Point(x, y), radio_pincel, ColorArcoIris(), -1, LINE_AA);
     else {
-        Mat res(im.size(), im.type(), ColorArcoIris());
-        Mat cop(im.size(), im.type(), CV_RGB(0,0,0));
-        circle(cop, Point(x, y), radio_pincel, CV_RGB(255,255,255), -1, LINE_AA);
+        int tam = radio_pincel+difum_pincel;
+        int posx= tam, posy=tam;
+        Rect roi(x-tam, y-tam, 2*tam+1, 2*tam+1);
+        if(roi.x<0){
+            roi.width+= roi.x;
+            posx+= roi.x;
+            roi.x=0;
+        }
+        if(roi.y<0){
+            roi.width+= roi.y;
+            posx+= roi.y;
+            roi.y=0;
+        }
+        if(roi.x+roi.width > im.cols){
+            roi.width= im.cols-roi.x;
+        }
+        if(roi.y+roi.height > im.rows){
+            roi.height= im.rows -roi.y;
+        }
+
+        Mat frag = im(roi);
+
+        Mat res(frag.size(), frag.type(), ColorArcoIris());
+        Mat cop(frag.size(), frag.type(), CV_RGB(0,0,0));
+        circle(cop, Point(posx, posy), radio_pincel, CV_RGB(255,255,255), -1, LINE_AA);
         blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
         multiply(res, cop, res, 1.0/255.0);
         bitwise_not(cop, cop);
-        multiply(im, cop, im, 1.0/255.0);
-        im= res + im;
+        multiply(frag, cop, frag, 1.0/255.0);
+        frag= res + frag;
     }
     imshow(foto[factual].nombre, im);
     foto[factual].modificada= true;

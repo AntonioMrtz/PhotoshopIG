@@ -361,9 +361,7 @@ void MainWindow::on_actionCaptura_de_c_mara_triggered()
 
 void MainWindow::on_toolButton_8_clicked()
 {
-
-
-
+    herr_actual=HER_ARCO_IRIS;
 }
 
 void MainWindow::on_actionArcoiris_triggered()
@@ -534,6 +532,7 @@ void MainWindow::on_actionEspectro_de_intensidad_triggered()
 
 void MainWindow::on_actionTrazos_triggered()
 {
+     ui->toolButton_10->setChecked(true);
     herr_actual=HER_TRAZAR;
 }
 
@@ -590,4 +589,9 @@ void MainWindow::on_actionElipse_triggered()
 void MainWindow::on_toolButton_9_clicked()
 {
     herr_actual=HER_ELIPSE;
+}
+
+void MainWindow::on_toolButton_10_clicked()
+{
+    herr_actual=HER_TRAZAR;
 }

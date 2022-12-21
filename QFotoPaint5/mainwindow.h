@@ -92,6 +92,7 @@ private slots:
     void on_actionEcualizar_histograma_triggered();
     void on_actionElipse_triggered();
     void on_toolButton_9_clicked();
+    void on_toolButton_10_clicked();
 };
 
 extern MainWindow *w;
