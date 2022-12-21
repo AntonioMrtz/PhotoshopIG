@@ -1,33 +1,32 @@
-#include "ecualizar_histograma.h"
-#include "ui_ecualizar_histograma.h"
-#include "imagenes.h"
-#include "vector"
+#include "ecualizacion_local.h"
+#include "ui_ecualizacion_local.h"
+#include <vector>
 
-Ecualizar_histograma::Ecualizar_histograma(int numfoto,int primerlib,QWidget *parent) :
+#include "imagenes.h"
+
+Ecualizacion_local::Ecualizacion_local(int numfoto,QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Ecualizar_histograma)
+    ui(new Ui::Ecualizacion_local)
 {
     ui->setupUi(this);
     nfoto=numfoto;
-    primerlibre=primerlib;
 }
 
-Ecualizar_histograma::~Ecualizar_histograma()
+Ecualizacion_local::~Ecualizacion_local()
 {
     delete ui;
 }
 
-void Ecualizar_histograma::on_Ecualizar_histograma_accepted()
+void Ecualizacion_local::on_buttonBox_accepted()
 {
-
 
 
     bool ecualizar = ui->checkBox->checkState();
 
     if(ecualizar==true){
 
-        int array[1]={0};
-        ecualizar_histograma(nfoto,primera_libre(),array,1,true);
+        int array[3]={0,1,2};
+        ecualizar_histograma_local(nfoto,primera_libre(),array,3,true);
         return;
     }
 
@@ -73,8 +72,7 @@ void Ecualizar_histograma::on_Ecualizar_histograma_accepted()
    }
 
 
-    ecualizar_histograma(nfoto,primera_libre(),array,array_size,false);
+    ecualizar_histograma_local(nfoto,primera_libre(),array,array_size,false);
 
 
 }
-

@@ -40,7 +40,7 @@ public:
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         checkBox = new QCheckBox(Ecualizar_histograma);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
-        checkBox->setGeometry(QRect(250, 20, 141, 20));
+        checkBox->setGeometry(QRect(190, 20, 201, 20));
         checkBox_2 = new QCheckBox(Ecualizar_histograma);
         checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
         checkBox_2->setGeometry(QRect(30, 110, 81, 20));
@@ -64,7 +64,7 @@ public:
     void retranslateUi(QDialog *Ecualizar_histograma)
     {
         Ecualizar_histograma->setWindowTitle(QCoreApplication::translate("Ecualizar_histograma", "Dialog", nullptr));
-        checkBox->setText(QCoreApplication::translate("Ecualizar_histograma", "Ecualizaci\303\263n canales", nullptr));
+        checkBox->setText(QCoreApplication::translate("Ecualizar_histograma", "Ecualizaci\303\263n conjunta canales", nullptr));
         checkBox_2->setText(QCoreApplication::translate("Ecualizar_histograma", "Canal B", nullptr));
         checkBox_3->setText(QCoreApplication::translate("Ecualizar_histograma", "Canal G", nullptr));
         checkBox_4->setText(QCoreApplication::translate("Ecualizar_histograma", "Canal R", nullptr));

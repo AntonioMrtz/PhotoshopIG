@@ -303,6 +303,10 @@ void cb_punto (int factual, int x, int y)
 
 //---------------------------------------------------------------------------
 
+
+
+//---------------------------------------------------------------------------
+
 void cb_linea (int factual, int x, int y)
 {
     Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
@@ -312,6 +316,27 @@ void cb_linea (int factual, int x, int y)
         Mat res(im.size(), im.type(), color_pincel);
         Mat cop(im.size(), im.type(), CV_RGB(0,0,0));
         line(cop, Point(downx, downy), Point(x,y), CV_RGB(255,255,255), radio_pincel*2+1);
+        blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
+        multiply(res, cop, res, 1.0/255.0);
+        bitwise_not(cop, cop);
+        multiply(im, cop, im, 1.0/255.0);
+        im= res + im;
+    }
+    imshow(foto[factual].nombre, im);
+    foto[factual].modificada= true;
+}
+
+//---------------------------------------------------------------------------
+
+void cb_elipse(int factual, int x, int y)
+{
+    Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
+    if (difum_pincel==0)
+        ellipse(im, Point(downx, downy), Size(abs(x-downx),abs(y-downy)),0,0,360,color_pincel, radio_pincel*2+1);
+    else {
+        Mat res(im.size(), im.type(), color_pincel);
+        Mat cop(im.size(), im.type(), CV_RGB(0,0,0));
+        ellipse(cop, Point(downx, downy), Size(abs(x-downx),abs(y-downy)),0,0,360,CV_RGB(255,255,255), radio_pincel*2+1);
         blur(cop, cop, Size(difum_pincel*2+1, difum_pincel*2+1));
         multiply(res, cop, res, 1.0/255.0);
         bitwise_not(cop, cop);
@@ -446,6 +471,15 @@ void cb_ver_rectangulo (int factual, int x, int y)
 {
     Mat res= foto[factual].img.clone();
     rectangle(res, Point(downx, downy), Point(x,y), color_pincel, radio_pincel*2+1);
+    imshow(foto[factual].nombre, res);
+}
+//---------------------------------------------------------------------------
+
+
+void cb_ver_elipse(int factual, int x, int y)
+{
+    Mat res= foto[factual].img.clone();
+    ellipse(res, Point(downx, downy), Size(abs(x-downx),abs(y-downy)),0,0,360,color_pincel, radio_pincel*2+1);
     imshow(foto[factual].nombre, res);
 }
 
@@ -678,6 +712,16 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
             cb_trazo(factual,x,y);
         else
             punto_anterior= Point(-1,-1);
+            ninguna_accion(factual, x, y);
+        break;
+
+    case HER_ELIPSE:
+
+        if (event==EVENT_LBUTTONUP)
+            cb_elipse(factual, x, y);
+        else if (event==EVENT_MOUSEMOVE && flags==EVENT_FLAG_LBUTTON)
+            cb_ver_elipse(factual, x, y);
+        else
             ninguna_accion(factual, x, y);
         break;
     case HER_COPIAR:
@@ -1478,7 +1522,7 @@ void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanale
 
 
             //Iteramos por los distintos canales R, G y B
-            for(int can=0;can<numCanales;can++){
+            for(int can=0;can<3;can++){
 
                     //Variable usada como contador
                     percentil=0;

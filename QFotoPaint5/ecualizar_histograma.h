@@ -12,7 +12,7 @@ class Ecualizar_histograma : public QDialog
     Q_OBJECT
 
 public:
-    explicit Ecualizar_histograma(int nfoto,QWidget *parent = nullptr);
+    explicit Ecualizar_histograma(int nfoto,int primerlibre,QWidget *parent = nullptr);
     ~Ecualizar_histograma();
 
 private slots:
@@ -23,6 +23,7 @@ private slots:
 private:
     Ui::Ecualizar_histograma *ui;
     int nfoto;
+    int primerlibre;
 };
 
 #endif // ECUALIZAR_HISTOGRAMA_H

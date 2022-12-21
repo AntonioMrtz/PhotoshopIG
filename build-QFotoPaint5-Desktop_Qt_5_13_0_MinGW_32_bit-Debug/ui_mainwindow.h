@@ -83,6 +83,7 @@ public:
     QAction *actionRotar_y_reescalar;
     QAction *actionAjuste_rojo_azul_verde;
     QAction *actionEcualizar_histograma;
+    QAction *actionElipse;
     QWidget *centralWidget;
     QToolButton *toolButton;
     QToolButton *toolButton_2;
@@ -97,6 +98,7 @@ public:
     QPushButton *pushButton;
     QToolButton *toolButton_7;
     QToolButton *toolButton_8;
+    QToolButton *toolButton_9;
     QMenuBar *menuBar;
     QMenu *menuArchivo;
     QMenu *menuEdici_n;
@@ -235,6 +237,8 @@ public:
         actionAjuste_rojo_azul_verde->setObjectName(QString::fromUtf8("actionAjuste_rojo_azul_verde"));
         actionEcualizar_histograma = new QAction(MainWindow);
         actionEcualizar_histograma->setObjectName(QString::fromUtf8("actionEcualizar_histograma"));
+        actionElipse = new QAction(MainWindow);
+        actionElipse->setObjectName(QString::fromUtf8("actionElipse"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         toolButton = new QToolButton(centralWidget);
@@ -323,7 +327,7 @@ public:
         pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
         toolButton_7 = new QToolButton(centralWidget);
         toolButton_7->setObjectName(QString::fromUtf8("toolButton_7"));
-        toolButton_7->setGeometry(QRect(290, 0, 41, 41));
+        toolButton_7->setGeometry(QRect(330, 0, 41, 41));
         QIcon icon7;
         icon7.addFile(QString::fromUtf8(":/imagenes/rectangulo.png"), QSize(), QIcon::Normal, QIcon::Off);
         toolButton_7->setIcon(icon7);
@@ -332,6 +336,14 @@ public:
         toolButton_8 = new QToolButton(centralWidget);
         toolButton_8->setObjectName(QString::fromUtf8("toolButton_8"));
         toolButton_8->setGeometry(QRect(210, 0, 41, 41));
+        toolButton_9 = new QToolButton(centralWidget);
+        toolButton_9->setObjectName(QString::fromUtf8("toolButton_9"));
+        toolButton_9->setGeometry(QRect(290, 0, 41, 41));
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/imagenes/elipse.png"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_9->setIcon(icon8);
+        toolButton_9->setCheckable(true);
+        toolButton_9->setAutoExclusive(true);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -404,6 +416,7 @@ public:
         menuHerramientas->addAction(actionCopiar);
         menuHerramientas->addAction(actionRellenar);
         menuHerramientas->addAction(actionTrazos);
+        menuHerramientas->addAction(actionElipse);
         menuTransformar->addAction(actionBrillo_contraste);
         menuTransformar->addAction(actionInvertir);
         menuTransformar->addAction(menuRotar->menuAction());
@@ -502,6 +515,7 @@ public:
         actionRotar_y_reescalar->setText(QCoreApplication::translate("MainWindow", "Rotar y reescalar", nullptr));
         actionAjuste_rojo_azul_verde->setText(QCoreApplication::translate("MainWindow", "Ajuste rojo/azul/verde", nullptr));
         actionEcualizar_histograma->setText(QCoreApplication::translate("MainWindow", "Ecualizar histograma", nullptr));
+        actionElipse->setText(QCoreApplication::translate("MainWindow", "Elipse", nullptr));
         toolButton->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_2->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -521,6 +535,7 @@ public:
         pushButton->setText(QString());
         toolButton_7->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_8->setText(QCoreApplication::translate("MainWindow", "Arcoiris", nullptr));
+        toolButton_9->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         menuArchivo->setTitle(QCoreApplication::translate("MainWindow", "Archivo", nullptr));
         menuEdici_n->setTitle(QCoreApplication::translate("MainWindow", "Edici\303\263n", nullptr));
         menuOpciones->setTitle(QCoreApplication::translate("MainWindow", "Opciones", nullptr));
