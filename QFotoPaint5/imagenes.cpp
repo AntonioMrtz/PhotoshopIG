@@ -1420,7 +1420,7 @@ void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanale
 
 
             //Iteramos por los distintos canales R, G y B
-            for(int can=0;can<numCanales;can++){
+            for(int can=0;can<3;can++){
 
                     //Variable usada como contador
                     percentil=0;

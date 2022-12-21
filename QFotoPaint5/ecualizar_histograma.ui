@@ -32,14 +32,14 @@
   <widget class="QCheckBox" name="checkBox">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>190</x>
      <y>20</y>
-     <width>141</width>
+     <width>201</width>
      <height>20</height>
     </rect>
    </property>
    <property name="text">
-    <string>Ecualización canales</string>
+    <string>Ecualización conjunta canales</string>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox_2">

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 4.9.1, 2022-12-21T10:56:16. -->
 <!-- Written by QtCreator 4.9.1, 2022-12-21T15:13:31. -->
+=======
+<!-- Written by QtCreator 4.9.1, 2022-12-21T16:17:13. -->
+>>>>>>> 69bb67b ( ambos ecualizar funcionando)
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>

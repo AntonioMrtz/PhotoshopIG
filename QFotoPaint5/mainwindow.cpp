@@ -29,6 +29,7 @@ using namespace cv;
 #include "color_falso.h"
 #include "ajuste_rojo_verde_azul.h"
 #include "ecualizar_histograma.h"
+#include "ecualizacion_local.h"
 QString FiltroImagen = "Todos los formatos (*.jpg *.jpeg *.jpe .jp2 *.tif *.tiff *.png *.gif *.bmp *.dib *.webp *.ppm);;Archivos JPG (*.jpg *.jpeg *.jpe);;Archivos TIF (*.tif *.tiff);;Archivos PNG (*.png);;Archivos GIF (*.gif);;Archivos BMP (*.bmp *.dib);;Otros (*.*)";
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -517,9 +518,10 @@ void MainWindow::on_actionBalance_de_blancos_triggered()
 
 void MainWindow::on_actionEcualizacion_del_histograma_triggered()
 {
-    int canales[3]={0,1,2};
+    int canales[3]={0,1};
     if(foto_activa()!=-1 && primera_libre()!=-1){
-        ecualizar_histograma(foto_activa(),primera_libre(),canales,1,true);
+        Ecualizar_histograma e(foto_activa(),primera_libre());
+        e.exec();
     }
 }
 
@@ -539,7 +541,9 @@ void MainWindow::on_actionEcualizacion_local_triggered()
 {
     int canales[3]={0,1,2};
     if(foto_activa()!=-1 && primera_libre()!=-1){
-        ecualizar_histograma_local(foto_activa(),primera_libre(),canales,3,true);
+        //ecualizar_histograma_local(foto_activa(),primera_libre(),canales,3,true);
+        Ecualizacion_local e(foto_activa());
+        e.exec();
     }
 }
 
@@ -575,11 +579,3 @@ void MainWindow::on_actionAjuste_rojo_azul_verde_triggered()
     }
 }
 
-
-void MainWindow::on_actionEcualizar_histograma_triggered()
-{
-    if(foto_activa()!=-1 && primera_libre()!=-1){
-        Ecualizar_histograma h(foto_activa());
-        h.exec();
-    }
-}

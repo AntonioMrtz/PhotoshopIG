@@ -4,6 +4,7 @@ debug/ajustelineal.o
 debug/bajorrelieve.o
 debug/capturarvideo.o
 debug/color_falso.o
+debug/ecualizacion_local.o
 debug/ecualizar_histograma.o
 debug/mainwindow.o
 debug/imagenes.o
@@ -28,6 +29,7 @@ debug/moc_ajustelineal.o
 debug/moc_bajorrelieve.o
 debug/moc_capturarvideo.o
 debug/moc_color_falso.o
+debug/moc_ecualizacion_local.o
 debug/moc_ecualizar_histograma.o
 debug/moc_dialognueva.o
 debug/moc_brillocontraste.o

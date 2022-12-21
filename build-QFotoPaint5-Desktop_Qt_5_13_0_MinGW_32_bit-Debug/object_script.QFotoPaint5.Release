@@ -4,6 +4,7 @@ release/ajustelineal.o
 release/bajorrelieve.o
 release/capturarvideo.o
 release/color_falso.o
+release/ecualizacion_local.o
 release/ecualizar_histograma.o
 release/mainwindow.o
 release/imagenes.o
@@ -28,6 +29,7 @@ release/moc_ajustelineal.o
 release/moc_bajorrelieve.o
 release/moc_capturarvideo.o
 release/moc_color_falso.o
+release/moc_ecualizacion_local.o
 release/moc_ecualizar_histograma.o
 release/moc_dialognueva.o
 release/moc_brillocontraste.o

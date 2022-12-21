@@ -3,11 +3,13 @@
 #include "imagenes.h"
 #include "vector"
 
-Ecualizar_histograma::Ecualizar_histograma(int nfoto,QWidget *parent) :
+Ecualizar_histograma::Ecualizar_histograma(int numfoto,int primerlib,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Ecualizar_histograma)
 {
     ui->setupUi(this);
+    nfoto=numfoto;
+    primerlibre=primerlib;
 }
 
 Ecualizar_histograma::~Ecualizar_histograma()
@@ -22,10 +24,10 @@ void Ecualizar_histograma::on_Ecualizar_histograma_accepted()
 
     bool ecualizar = ui->checkBox->checkState();
 
-    if(ecualizar==false){
+    if(ecualizar==true){
 
-        int array[0];
-        ecualizar_histograma(nfoto,primera_libre(),array,0,false);
+        int array[1]={0};
+        ecualizar_histograma(nfoto,primera_libre(),array,1,true);
         return;
     }
 
@@ -71,7 +73,7 @@ void Ecualizar_histograma::on_Ecualizar_histograma_accepted()
    }
 
 
-    ecualizar_histograma(nfoto,primera_libre(),array,array_size,ecualizar);
+    ecualizar_histograma(nfoto,primera_libre(),array,array_size,false);
 
 
 }
