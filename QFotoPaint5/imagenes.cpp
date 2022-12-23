@@ -351,18 +351,23 @@ void cb_elipse(int factual, int x, int y)
 
 void cb_trazo (int factual, int x, int y)
 {
-    Mat im= foto[factual].img;  // Ojo: esto no es una copia, sino a la misma imagen
+    Mat im= foto[factual].img;
+    //Si no hay punto anterior dibujamos un punto
     if(punto_anterior.x>-1){
         if (difum_pincel==0)
             line(im, punto_anterior, Point(x,y), color_pincel, radio_pincel*2+1);
         else {
-
+            //Si se quiere realizar suavizado calculamos el ROI para no
+            //hacer las operaciones sobre la imagen completa cuando no es
+            //necesario
             int tam = radio_pincel+difum_pincel;
             Point nuevoPunto_anterior;
             Point nuevoPunto_actual;
             Point start_Punto = Point(0,0);
 
             int height, width;
+            //Calculos en caso de que se salga fuera de los
+            //bordes de la imagen
             if(x<punto_anterior.x){
                 width=punto_anterior.x-x+2*tam;
                 nuevoPunto_anterior.x=width-tam;
@@ -413,8 +418,7 @@ void cb_trazo (int factual, int x, int y)
                 start_Punto.y=0;
             }
 
-            qDebug("%d %d %d %d %d %d %d %d %d %d %d %d",x,y,punto_anterior.x, punto_anterior.y ,width,height,nuevoPunto_anterior.x,nuevoPunto_anterior.y,nuevoPunto_actual.x,nuevoPunto_actual.y,start_Punto.x,start_Punto.y);
-
+            //Hacemos los calculos sobre los puntos calculados
             Rect roi(start_Punto.x,start_Punto.y,width,height);
             Mat frag = im(roi);
             Mat res(frag.size(), frag.type(), color_pincel);
@@ -429,6 +433,7 @@ void cb_trazo (int factual, int x, int y)
     }else{
         cb_punto(factual,x,y);
     }
+    //Actualizamos el nuevo punto anterior
     punto_anterior=Point(x,y);
     imshow(foto[factual].nombre, im);
     foto[factual].modificada= true;
@@ -1444,7 +1449,6 @@ void ecualizar_histograma(int nfotos,int nres, int canales[],int numCanales,bool
 
 void espectro_imagen(int nfotos,int nres){
 
-    //Mat I = imread("D:/Descargas/1.png", IMREAD_GRAYSCALE);
     Mat image = foto[nfotos].img;
     cvtColor(image,image,COLOR_BGR2GRAY);
     Mat escala;
@@ -1461,21 +1465,20 @@ void espectro_imagen(int nfotos,int nres){
 
     int cx = res.cols/2;
     int cy = res.rows/2;
-    Mat q0(res, Rect(0, 0, cx, cy));   // Top-Left - Create a ROI per quadrant
+    Mat q0(res, Rect(0, 0, cx, cy));   // Top-Left - Obtener 4 rectangulos que dividen la imagen
     Mat q1(res, Rect(cx, 0, cx, cy));  // Top-Right
     Mat q2(res, Rect(0, cy, cx, cy));  // Bottom-Left
     Mat q3(res, Rect(cx, cy, cx, cy)); // Bottom-Right
-    Mat tmp;                           // swap quadrants (Top-Left with Bottom-Right)
+    Mat tmp;
+    // Cambiar estos rectangulos de lugar
     q0.copyTo(tmp);
     q3.copyTo(q0);
     tmp.copyTo(q3);
-    q1.copyTo(tmp);                    // swap quadrant (Top-Right with Bottom-Left)
+    q1.copyTo(tmp);
     q2.copyTo(q1);
     tmp.copyTo(q2);
 
-    imshow("magnitud",res);
-
-//    crear_nueva(nres,I);
+    crear_nueva(nres,res);
 }
 
 void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanales,bool ecualizacionConjunta){
