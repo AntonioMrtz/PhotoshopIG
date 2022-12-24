@@ -366,13 +366,27 @@ void cb_trazo (int factual, int x, int y)
             Point start_Punto = Point(0,0);
 
             int height, width;
-            //Calculos en caso de que se salga fuera de los
-            //bordes de la imagen
+            //Calculos necesarios para obtener el ROI para dibujar
+            //la linea
             if(x<punto_anterior.x){
+                //el ancho sera la diferencia de ambos puntos mas
+                //2 veces el tamano del radio y difuminado aplicados
                 width=punto_anterior.x-x+2*tam;
+                //La posicion X del punto anterior vendra dado
+                //por el ancho menos el tamaño de los efectos del
+                //pincel, ya que el rectangulo tiene el tamano justo
+                //y sabemos que el punto anterior esta al final.
                 nuevoPunto_anterior.x=width-tam;
+                //El punto en el que comienza el rectangulo del ROI
+                //viene dado por el punto mas a la izquierda menos
+                //el tamano de los efectos del pincel
                 start_Punto.x=x-tam;
+                //La posicion x del punto actual vendra dado por la
+                //posicion inicial del rectangulo que es siempre 0
+                //mas el tamano de los efectos del pincel
                 nuevoPunto_actual.x=0+tam;
+                //Tenemos que tratar que el rectangulo quede fuera
+                //de la imagen
                 if(width+start_Punto.x>im.cols){
                     width=im.cols-start_Punto.x;
                     nuevoPunto_anterior.x=width-tam;
@@ -418,9 +432,12 @@ void cb_trazo (int factual, int x, int y)
                 start_Punto.y=0;
             }
 
-            //Hacemos los calculos sobre los puntos calculados
+            //Creamos el rectangulo basandonos en los calculos
+            //realizados
             Rect roi(start_Punto.x,start_Punto.y,width,height);
             Mat frag = im(roi);
+            //Hacemos los calculos sobre el fragmento de la imagen
+            //en vez de la imagen completa
             Mat res(frag.size(), frag.type(), color_pincel);
             Mat cop(frag.size(), frag.type(), CV_RGB(0,0,0));
             line(cop, nuevoPunto_anterior, nuevoPunto_actual, CV_RGB(255,255,255), radio_pincel*2+1);
@@ -1037,9 +1054,14 @@ void ver_rellenar(int nfoto, int x, int y)
     Mat originalImage = foto[nfoto].img;
     Mat imres = foto[nfoto].img.clone();
     Rect r;
-
+    //Usamos "floodFill", funcion que inunda los pixeles con el color del pincel
+    //a partir del punto indicado si los valores proximos estan dentro del rango
+    //de tolerancia
     floodFill(imres,Point(x,y),color_pincel,&r,Scalar(radio_pincel,radio_pincel,radio_pincel),Scalar(radio_pincel,radio_pincel,radio_pincel),FLOODFILL_FIXED_RANGE);
+    //Calculamos el porcentaje(de 0 a 1)
     double transparencia = (difum_pincel+1)/121.0;
+    //Con el porcentaje de transparencia juntamos la imagen original y la obtenida
+    //tras aplicarle "floodFill"
     addWeighted(originalImage,transparencia,imres,1-transparencia,0,originalImage);
     foto[nfoto].modificada=true;
 }
@@ -1416,32 +1438,42 @@ void ecualizar_histograma(int nfotos,int nres, int canales[],int numCanales,bool
     Mat img = foto[nfotos].img;
     Mat res;
 
+    //Si no es ecualizacion conjunta tratamos los canales por separado
     if(!ecualizacionConjunta)
     {
     vector<Mat> channels;
-
+    //separamos los distintos canales de la imagen original
     split(img,channels);
-
+    //Ecualizamos cada uno de los canales indicados en el array
+    //"canales" usando la funcion "equalizeHist" de openCV
     for(int i=0;i<numCanales;i++){
         if(canales[i]<4){
             equalizeHist(channels[canales[i]],channels[canales[i]]);
         }
     }
+    //Volvemos a juntar los canales separados
     merge(channels,res);
     }else{
         Mat gris, hist;
+        //Convertimos la imagen a grises, teniendo solo 1 canal
         cvtColor(img,gris,COLOR_BGR2GRAY);
+        //Definimos los parametros para el calculo del histograma
         int canales[1]={0}, bins[1]={256};
         float rango[2]={0,256};
         const float *rangos[]={rango};
+        //Calculamos el histograma de grises
         calcHist(&gris,1,canales,noArray(),hist,1,bins,rangos);
+        //escalamos los valores con 255/(número de pixeles de la imagen)
         hist*= 255.0/norm(hist,NORM_L1);
         Mat lut(1,256,CV_8UC1);
         float acum=0.0;
+        //Calculamos los valores de la matriz para calcular la funcion de
+        //ecualizacion del histograma
         for(int i = 0;i<256;i++){
             lut.at<uchar>(0,i)=acum;
             acum+=hist.at<float>(i);
         }
+        //Aplicamos esa funcion a la imagen objetibo
         LUT(img,lut,res);
     }
     crear_nueva(nres,res);
@@ -1450,33 +1482,53 @@ void ecualizar_histograma(int nfotos,int nres, int canales[],int numCanales,bool
 void espectro_imagen(int nfotos,int nres){
 
     Mat image = foto[nfotos].img;
+    //Convertimos a escala de grises la imagen
     cvtColor(image,image,COLOR_BGR2GRAY);
     Mat escala;
+    // convertimos a 32 bits con un solo canal
+    //y ajustamos los valores entre 0.0 y 1.0
+    //al dividir entre 255
     image.convertTo(escala,CV_32FC1,1.0/255);
     Mat imagenDFT;
+    //Obtenemos la transformada de Fourier indicando
+    //que estamos operando con una senal compleja,
+    //retornando una imagen compleja
     dft(escala, imagenDFT,DFT_COMPLEX_OUTPUT);
     vector<Mat> canales;
+    //Dividimos los canales obtenidos separando
+    //la parte real de la imaginaria
     split(imagenDFT,canales);
+    //Realizamos el modulo de la parte real e imaginaria
+    //destacando las frecuencias mas elevadas obteniendo
+    //la magnitud de la transformada
     pow(canales[0],2,canales[0]);
     pow(canales[1],2,canales[1]);
     pow(canales[0]+canales[1],0.5,imagenDFT);
     Mat res;
+    //Convertimos la imagen a una con valores de
+    //8 bits, obteniend valores entre 0 y 255
     imagenDFT.convertTo(res,CV_8UC1,-1,255);
 
+
+    //Por ultimo centramos los resultados obtenidos
     int cx = res.cols/2;
     int cy = res.rows/2;
-    Mat q0(res, Rect(0, 0, cx, cy));   // Top-Left - Obtener 4 rectangulos que dividen la imagen
-    Mat q1(res, Rect(cx, 0, cx, cy));  // Top-Right
-    Mat q2(res, Rect(0, cy, cx, cy));  // Bottom-Left
-    Mat q3(res, Rect(cx, cy, cx, cy)); // Bottom-Right
+    // Arriba a la izquierda
+    Mat arribaIzq(res, Rect(0, 0, cx, cy));
+    // Arriba a la derecha
+    Mat arribaDer(res, Rect(cx, 0, cx, cy));
+    // Abajo a la izquierda
+    Mat abajoIzq(res, Rect(0, cy, cx, cy));
+    // Abajo a la derecha
+    Mat abajoDer(res, Rect(cx, cy, cx, cy));
     Mat tmp;
     // Cambiar estos rectangulos de lugar
-    q0.copyTo(tmp);
-    q3.copyTo(q0);
-    tmp.copyTo(q3);
-    q1.copyTo(tmp);
-    q2.copyTo(q1);
-    tmp.copyTo(q2);
+    arribaIzq.copyTo(tmp);
+    abajoDer.copyTo(arribaIzq);
+    tmp.copyTo(abajoDer);
+    arribaDer.copyTo(tmp);
+    abajoIzq.copyTo(arribaDer);
+    tmp.copyTo(abajoIzq);
 
     crear_nueva(nres,res);
 }
@@ -1555,7 +1607,7 @@ void ecualizar_histograma_local(int nfotos,int nres, int canales[],int numCanale
 
 
             //Iteramos por los distintos canales R, G y B
-            for(int can=0;can<3;can++){
+            for(int can=0;can<numCanales;can++){
 
                     //Variable usada como contador
                     percentil=0;

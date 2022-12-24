@@ -504,6 +504,7 @@ void MainWindow::on_actionColor_Falso_triggered()
 
 void MainWindow::on_actionRellenar_triggered()
 {
+    ui->toolButton_10->setChecked(true);
     herr_actual=HER_RELLENAR;
 }
 
@@ -594,4 +595,9 @@ void MainWindow::on_toolButton_9_clicked()
 void MainWindow::on_toolButton_10_clicked()
 {
     herr_actual=HER_TRAZAR;
+}
+
+void MainWindow::on_toolButton_11_clicked()
+{
+     herr_actual=HER_RELLENAR;
 }

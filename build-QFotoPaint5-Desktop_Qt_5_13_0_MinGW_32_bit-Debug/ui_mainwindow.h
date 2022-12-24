@@ -100,6 +100,7 @@ public:
     QToolButton *toolButton_8;
     QToolButton *toolButton_9;
     QToolButton *toolButton_10;
+    QToolButton *toolButton_11;
     QMenuBar *menuBar;
     QMenu *menuArchivo;
     QMenu *menuEdici_n;
@@ -354,6 +355,15 @@ public:
         toolButton_10->setIconSize(QSize(36, 36));
         toolButton_10->setCheckable(true);
         toolButton_10->setAutoExclusive(true);
+        toolButton_11 = new QToolButton(centralWidget);
+        toolButton_11->setObjectName(QString::fromUtf8("toolButton_11"));
+        toolButton_11->setGeometry(QRect(410, 0, 41, 41));
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/imagenes/rellenar.png"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_11->setIcon(icon10);
+        toolButton_11->setIconSize(QSize(36, 36));
+        toolButton_11->setCheckable(true);
+        toolButton_11->setAutoExclusive(true);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -547,6 +557,7 @@ public:
         toolButton_8->setText(QCoreApplication::translate("MainWindow", "Arcoiris", nullptr));
         toolButton_9->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         toolButton_10->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
+        toolButton_11->setText(QCoreApplication::translate("MainWindow", "...", nullptr));
         menuArchivo->setTitle(QCoreApplication::translate("MainWindow", "Archivo", nullptr));
         menuEdici_n->setTitle(QCoreApplication::translate("MainWindow", "Edici\303\263n", nullptr));
         menuOpciones->setTitle(QCoreApplication::translate("MainWindow", "Opciones", nullptr));

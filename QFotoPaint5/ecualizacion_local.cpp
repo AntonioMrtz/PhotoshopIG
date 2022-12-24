@@ -71,7 +71,7 @@ void Ecualizacion_local::on_buttonBox_accepted()
         array[i]=vec[i];
    }
 
-
+    qDebug("%d",array_size);
     ecualizar_histograma_local(nfoto,primera_libre(),array,array_size,false);
 
 
