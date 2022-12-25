@@ -455,7 +455,6 @@ void cb_trazo (int factual, int x, int y)
             frag= res + frag;
         }
     }else{
-        qDebug("pUNTO");
         cb_punto(factual,x,y);
     }
     //Actualizamos el nuevo punto anterior
