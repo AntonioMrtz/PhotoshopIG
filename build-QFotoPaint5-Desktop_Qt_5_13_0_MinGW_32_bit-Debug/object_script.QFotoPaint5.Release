@@ -16,6 +16,7 @@ release/movimiento.o
 release/perfilado.o
 release/perspectiva.o
 release/pinchar_estirar.o
+release/rotar_reescalar.o
 release/suavizados.o
 release/video.o
 release/rotaravideo.o
@@ -39,6 +40,7 @@ release/moc_movimiento.o
 release/moc_perfilado.o
 release/moc_perspectiva.o
 release/moc_pinchar_estirar.o
+release/moc_rotar_reescalar.o
 release/moc_suavizados.o
 release/moc_rotaravideo.o
 release/moc_mediaponderada.o

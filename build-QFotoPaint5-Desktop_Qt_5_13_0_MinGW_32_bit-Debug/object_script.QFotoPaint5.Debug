@@ -16,6 +16,7 @@ debug/movimiento.o
 debug/perfilado.o
 debug/perspectiva.o
 debug/pinchar_estirar.o
+debug/rotar_reescalar.o
 debug/suavizados.o
 debug/video.o
 debug/rotaravideo.o
@@ -39,6 +40,7 @@ debug/moc_movimiento.o
 debug/moc_perfilado.o
 debug/moc_perspectiva.o
 debug/moc_pinchar_estirar.o
+debug/moc_rotar_reescalar.o
 debug/moc_suavizados.o
 debug/moc_rotaravideo.o
 debug/moc_mediaponderada.o

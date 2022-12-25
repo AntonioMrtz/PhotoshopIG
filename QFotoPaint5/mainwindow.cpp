@@ -30,6 +30,7 @@ using namespace cv;
 #include "ajuste_rojo_verde_azul.h"
 #include "ecualizar_histograma.h"
 #include "ecualizacion_local.h"
+#include "rotar_reescalar.h"
 QString FiltroImagen = "Todos los formatos (*.jpg *.jpeg *.jpe .jp2 *.tif *.tiff *.png *.gif *.bmp *.dib *.webp *.ppm);;Archivos JPG (*.jpg *.jpeg *.jpe);;Archivos TIF (*.tif *.tiff);;Archivos PNG (*.png);;Archivos GIF (*.gif);;Archivos BMP (*.bmp *.dib);;Otros (*.*)";
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -566,8 +567,10 @@ void MainWindow::on_actionCopiar_a_portapapeles_triggered()
 
 void MainWindow::on_actionRotar_y_reescalar_triggered()
 {
-    if(foto_activa()!=-1){
-        rotar_y_reescalar(foto_activa(),90,2);
+    if(foto_activa()!=-1 && primera_libre()!=-1){
+
+        rotar_escalar r(foto_activa());
+        r.exec();
     }
 
 }
