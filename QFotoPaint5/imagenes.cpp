@@ -1174,26 +1174,26 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
 
 
     if(type[0]==0){
-
+       //canales[0].convertTo(canales[0], CV_8UC3,1, azul);
         canales[0]+=azul;
     }else{
-
+        //canales[0].convertTo(canales[0], CV_8UC3,azul, 0);
         canales[0]*=azul;
     }
 
     if(type[1]==0){
-
+        //canales[1].convertTo(canales[1], CV_8UC3,1, verde);
         canales[1]+=verde;
     }else{
-
+        //canales[1].convertTo(canales[1], CV_8UC3,verde, 0);
         canales[1]*=verde;
     }
 
     if(type[2]==0){
-
+        //canales[2].convertTo(canales[2], CV_8UC3,1, rojo);
         canales[2]+=rojo;
     }else{
-
+        //canales[2].convertTo(canales[2], CV_8UC3,rojo, 0);
         canales[2]*=rojo;
     }
 
