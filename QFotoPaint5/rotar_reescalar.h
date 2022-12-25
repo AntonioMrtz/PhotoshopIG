@@ -16,10 +16,6 @@ public:
     ~rotar_escalar();
 
 private slots:
-    void on_spinBox_valueChanged(int arg1);
-    void actualizar();
-
-    void on_spinBox_2_valueChanged(int arg1);
 
     void on_buttonBox_accepted();
 

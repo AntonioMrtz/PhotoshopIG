@@ -18,8 +18,6 @@ public:
 private slots:
     void on_Ecualizar_histograma_accepted();
 
-    void on_checkBox_2_stateChanged(int arg1);
-
 private:
     Ui::Ecualizar_histograma *ui;
     int nfoto;

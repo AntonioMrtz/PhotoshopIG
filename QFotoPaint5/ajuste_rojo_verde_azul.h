@@ -18,23 +18,15 @@ public:
 private slots:
     void on_horizontalSlider_valueChanged(int value);
 
-    void on_spinBox_valueChanged(const QString &arg1);
-
     void on_horizontalSlider_2_valueChanged(int value);
 
     void on_horizontalSlider_3_valueChanged(int value);
 
     void on_checkBox_stateChanged(int arg1);
 
-    void on_radioButton_clicked();
-
-    void on_radioButton_2_clicked();
-
     void on_Ajuste_rojo_verde_azul_rejected();
 
     void on_Ajuste_rojo_verde_azul_accepted();
-
-    void on_pushButton_clicked();
 
 private:
     Ui::Ajuste_rojo_verde_azul *ui;

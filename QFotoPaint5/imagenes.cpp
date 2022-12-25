@@ -275,8 +275,8 @@ void cb_punto (int factual, int x, int y)
             roi.x=0;
         }
         if(roi.y<0){
-            roi.width+= roi.y;
-            posx+= roi.y;
+            roi.height+= roi.y;
+            posy+= roi.y;
             roi.y=0;
         }
         if(roi.x+roi.width > im.cols){
@@ -402,7 +402,12 @@ void cb_trazo (int factual, int x, int y)
                 }
             }
 
+            //En caso de que se salga fuera de la imagen original
+            //deberemos tenerlo en cuenta para la posicion de los
+            //puntos en el nuevo rectangulo
             if(start_Punto.x<0){
+                nuevoPunto_actual.x+=start_Punto.x;
+                nuevoPunto_anterior.x+=start_Punto.x;
                 start_Punto.x=0;
             }
 
@@ -429,6 +434,8 @@ void cb_trazo (int factual, int x, int y)
 
 
             if(start_Punto.y<0){
+                nuevoPunto_actual.y+=start_Punto.y;
+                nuevoPunto_anterior.y+=start_Punto.y;
                 start_Punto.y=0;
             }
 
@@ -448,6 +455,7 @@ void cb_trazo (int factual, int x, int y)
             frag= res + frag;
         }
     }else{
+        qDebug("pUNTO");
         cb_punto(factual,x,y);
     }
     //Actualizamos el nuevo punto anterior
@@ -759,7 +767,7 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
             ninguna_accion(factual, x, y);
             punto_anterior= Point(-1,-1);
         }
-        else if (event==EVENT_MOUSEMOVE && flags==EVENT_FLAG_LBUTTON)
+        else if ((event==EVENT_MOUSEMOVE || event==EVENT_LBUTTONDOWN) && flags==EVENT_FLAG_LBUTTON)
 
             cb_trazo(factual,x,y);
         else
@@ -984,7 +992,7 @@ void rotar_y_reescalar(int nfoto, double angulo, double escala,bool guarda){
     //especificandole el tamaño de la imagen resultando basandonos en el rectangulo
     //creado anteriormente
     warpAffine(img,res,M,tamanoNecesarioSalida.size());
-    imshow("modo 0",res);
+
 
 
     if(guarda){
