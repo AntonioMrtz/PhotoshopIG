@@ -1144,6 +1144,8 @@ void transformar_modelo_color(int nfoto,int type,bool guardar)
     else if(type==4)
         cvtColor(im,res,COLOR_BGR2YUV);
 
+    // Mostramos los diferentes valores de los canales en el nuevo tipo de imagen
+
     Mat canales[3];
     split(res,canales);
 
@@ -1170,7 +1172,7 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
     // type 0 = sumar
     // type 1 = multiplicar
 
-    //comprobar no pasarse  de 0 - 255
+    // ajustamos el canal dependiendo del valor de entrada
 
 
     if(type[0]==0){
@@ -1197,7 +1199,7 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
         canales[2]*=rojo;
     }
 
-
+    // juntamos los canales para formar la imagen
     merge(canales,3,res);
 
 
@@ -1237,14 +1239,15 @@ void ver_balance_blancos(int nfoto)
 {
     assert(nfoto>=0 && nfoto<MAX_VENTANAS && foto[nfoto].usada);
     Mat res;
+    // obtenemos la imagen en el formato YCrCb para poder manejar los canales Cr y Cb ( luminancia rojo y azul )
     cvtColor(foto[nfoto].img,res,COLOR_RGB2YCrCb);
 
+    // obtenemos la media de los canales y ajustamos los canales para que tengan un valor de 128-media_canal
     Scalar media = mean(res);
     res+= Scalar( 0 , 128-media[1], 128-media[2]);
 
 
     cvtColor(res,res,COLOR_YCrCb2RGB);
-    //imshow("res",res);
 
     crear_nueva(primera_libre(),res);
 
