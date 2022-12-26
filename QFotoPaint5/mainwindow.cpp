@@ -363,12 +363,15 @@ void MainWindow::on_actionCaptura_de_c_mara_triggered()
 void MainWindow::on_toolButton_8_clicked()
 {
     herr_actual=HER_ARCO_IRIS;
+
 }
 
 void MainWindow::on_actionArcoiris_triggered()
 {
-    herr_actual=HER_ARCO_IRIS;
+    qDebug("entro");
     ui->toolButton_8->setChecked(true);
+    herr_actual=HER_ARCO_IRIS;
+
 }
 
 void MainWindow::on_actionGrises_triggered()

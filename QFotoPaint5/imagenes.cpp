@@ -654,8 +654,8 @@ void cb_arco_iris (int factual, int x, int y)
             roi.x=0;
         }
         if(roi.y<0){
-            roi.width+= roi.y;
-            posx+= roi.y;
+            roi.height+= roi.y;
+            posy+= roi.y;
             roi.y=0;
         }
         if(roi.x+roi.width > im.cols){
@@ -786,14 +786,11 @@ void callback (int event, int x, int y, int flags, void *_nfoto)
     case HER_COPIAR:
 
         if (event==EVENT_LBUTTONUP){
-            qDebug("Button Up");
             if(!imagen_copiada){
-                qDebug("copiada");
                 cb_copiar(factual, x, y);
                 imagen_copiada=true;
             }
             else{
-                qDebug("sinCopi");
                 cb_pegar(factual, x, y);
             }
         }
@@ -897,7 +894,7 @@ void ver_suavizado (int nfoto, int ntipo, int tamx, int tamy, bool guardar)
     else if (ntipo == 2)
         blur(img2, img, Size(tamx, tamy));
     else if (ntipo == 3)
-        medianBlur(img2, img, tamx*tamy);
+        medianBlur(img2, img, min(tamx,301));
 
     imshow(foto[nfoto].nombre, img);
     if (guardar) {
@@ -1215,7 +1212,6 @@ void ajuste_rojo_verde_azul(int nfoto,double azul,double verde,double rojo,int t
 
    if (guardar) {
 
-       qDebug("holasaddddddddddddddddd");
        imshow(foto[nfoto].nombre, img);
 
            res.copyTo(foto[nfoto].img);
@@ -1433,7 +1429,7 @@ void ver_histograma(int nfotos,int nres,int canal){
 
         float poshist= 185 - hist.at<float>(i)/vmax*182;
         rectangle(imghist,Point(3+i*391.0/256,185),Point(3+(i+1)*391.0/256,poshist),CV_RGB(canal==2?255:0,canal==1?255:0,canal==0?255:0),-1);
-        //qDebug("Celda %d: %g", i, hist.at<float>(i));
+
     }
 
     crear_nueva(nres,imghist);

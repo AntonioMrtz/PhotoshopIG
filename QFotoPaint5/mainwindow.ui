@@ -339,19 +339,6 @@ p, li { white-space: pre-wrap; }
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QToolButton" name="toolButton_8">
-    <property name="geometry">
-     <rect>
-      <x>210</x>
-      <y>0</y>
-      <width>41</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Arcoiris</string>
-    </property>
-   </widget>
    <widget class="QToolButton" name="toolButton_9">
     <property name="geometry">
      <rect>
@@ -424,6 +411,31 @@ p, li { white-space: pre-wrap; }
      <size>
       <width>36</width>
       <height>36</height>
+     </size>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="toolButton_8">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>0</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Arcoiris</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
      </size>
     </property>
     <property name="checkable">
@@ -526,7 +538,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionCambiar_modelo_de_color"/>
     <addaction name="actionRotar_y_reescalar"/>
     <addaction name="actionAjuste_rojo_azul_verde"/>
-    <addaction name="actionEcualizar_histograma"/>
    </widget>
    <widget class="QMenu" name="menuEfectos">
     <property name="title">
